@@ -9,21 +9,29 @@
         "state": "mn",
         "county": "Benton"
     },
-    "data": "https://services.arcgis.com/cHtpFLI4WlqULV8k/arcgis/rest/services/Benton_Co_Data/FeatureServer/1",
-    "website":"https://www.co.benton.mn.us/274/GIS-Mapping",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HouseNumber",
-        "street": [
-            "StreetName",
-            "StreetType",
-            "StreetDirection"
-        ],
-        "unit": [
-            "Sub_Type1",
-            "Sub_ID1"
-        ],
-        "city": "PostalCommunity"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886528/us/mn/benton.zip",
+                "website": "https://www.co.benton.mn.us/274/GIS-Mapping",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,23 +9,28 @@
         "state": "mn",
         "county": "Koochiching"
     },
-    "data": "http://services3.arcgis.com/8mdusDCY0WncdJVw/ArcGIS/rest/services/Parcels/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "regexp",
-            "field": "ADDR_1",
-            "pattern": "([0-9]*) (.*)",
-            "replace": "$1"
-        },
-        "street": {
-            "function": "regexp",
-            "field": "ADDR_1",
-            "pattern": "([0-9]*) (.*)",
-            "replace": "$2"
-        },
-        "city": "CITY",
-        "postcode": "ZipCode5"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885800/us/mn/koochiching.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

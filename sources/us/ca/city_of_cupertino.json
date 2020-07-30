@@ -16,20 +16,29 @@
         "state": "ca",
         "city": "Cupertino"
     },
-    "data": "https://gis.cupertino.org/cupgis/rest/services/Public/AmazonData/MapServer/0",
-    "attribution": "City of Cupertino",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSE_NO",
-        "street": [
-            "PREFIX",
-            "STREET_NAM",
-            "SUFFIX",
-            "SUFFIX_DIR"
-        ],
-        "city": "CITY",
-        "postcode": "ZIP",
-        "region": "STATE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886403/us/ca/city_of_cupertino.zip",
+                "attribution": "City of Cupertino",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

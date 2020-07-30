@@ -9,19 +9,33 @@
         "state": "nc",
         "county": "Montgomery"
     },
-    "data": "https://www.webgis.net/arcgis/rest/services/NC/Montgomery/MapServer/0",
-    "license": {
-        "text": "Indemnification",
-        "attribution": false,
-        "share-alike": false
-    },
-    "protocol": "ESRI",
-    "conform": {
-        "street": [
-            "StrName",
-            "StrType"
-        ],
-        "number": "HouseNum",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886391/us/nc/montgomery.zip",
+                "license": {
+                    "text": "Indemnification",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

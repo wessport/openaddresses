@@ -9,25 +9,28 @@
         "state": "tx",
         "county": "Hidalgo"
     },
-    "data": "http://hidgis.co.hidalgo.tx.us/arcgis/rest/services/Planning_Department_081017/MapServer/35",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "SITEUNQID",
-        "number": [
-            "HNO",
-            "PRM"
-        ],
-        "street": [
-            "PRD",
-            "RD",
-            "STS",
-            "POD"
-        ],
-        "unit": "UNIT",
-        "postcode": "PC",
-        "city": "MSAGCOMMUN",
-        "district": "COUNTY",
-        "region": "STATE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/458307/us/tx/hidalgo_county.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

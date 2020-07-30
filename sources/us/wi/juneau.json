@@ -9,12 +9,29 @@
         "state": "wi",
         "county": "Juneau"
     },
-    "data": "https://gis2.msa-ps.com/ArcGIS/rest/services/StreetsAddress/MapServer/2",
-    "protocol": "ESRI",
-    "note": "Number col contains letters & Needs to be reprojected!",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSENUM",
-        "street": "STNAME"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/778040/us/wi/juneau.zip",
+                "protocol": "http",
+                "note": "Number col contains letters & Needs to be reprojected!",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

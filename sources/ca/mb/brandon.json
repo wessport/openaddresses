@@ -5,17 +5,35 @@
         "city": "Brandon",
         "geometry": {
             "type": "Point",
-            "coordinates": [-99.976, 49.850]
+            "coordinates": [
+                -99.976,
+                49.85
+            ]
         }
     },
-    "data": "http://opendata.brandon.ca/OpenDataService/CIVIC_ADDRESSES.zip",
-    "website": "http://opengov.brandon.ca/OpenDataService/opendata.html",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "number": "CIVIC_ADDR",
-        "street": "STREET",
-        "unit": "UNIT_NUM",
-        "format": "shapefile-polygon"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886522/ca/mb/brandon.zip",
+                "website": "http://opengov.brandon.ca/OpenDataService/opendata.html",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

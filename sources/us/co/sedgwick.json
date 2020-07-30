@@ -8,18 +8,29 @@
         "country": "us",
         "state": "co"
     },
-    "data": "http://maps.co.gov/copubgis/rest/services/SedgwickCounty/SedgwickServices1031/MapServer/3",
-    "note": "source contains separated fields but they're unreliably-populated",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "Situs_Addr"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "Situs_Addr"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/709394/us/co/sedgwick.zip",
+                "note": "source contains separated fields but they're unreliably-populated",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,25 +9,28 @@
         "state": "in",
         "county": "Allen"
     },
-    "data": "https://gis.acimap.us/projectservicesadmin/rest/services/Accela/Accela_Production/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-      "number": [
-        "HOUSE_NUMBER",
-        "HOUSE_SUFFIX"
-      ],
-      "street": [
-        "PREFIX",
-        "NAME",
-        "TYPE",
-        "SUFFIX"
-      ],
-      "unit": [
-        "UNIT",
-        "UNIT_DESIGNATOR"
-      ],
-      "district": "COUNTY",
-      "postcode": "ZIP",
-      "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885727/us/in/allen.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

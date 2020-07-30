@@ -9,29 +9,30 @@
         "state": "al",
         "county": "Montgomery"
     },
-    "data": "http://gis.montgomeryal.gov/server/rest/services/Buildings/MapServer/0",
-    "protocol": "ESRI",
-    "website": "http://montgomeryal.gov",
-    "attribution": "City of Montgomery",
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "ST_NUM",
-            "NUM_SUFX"
-        ],
-        "street": [
-            "PRE_DIR",
-            "PRE_TYPE",
-            "ST_NAME",
-            "POST_TYPE",
-            "POST_DIR"
-        ],
-        "unit": [
-            "SUB_UNIT",
-            "UNIT_ID"
-        ],
-        "postcode": "ZIPCODE",
-        "city": "PLACE",
-        "region": "STATE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885378/us/al/montgomery.zip",
+                "protocol": "http",
+                "website": "http://montgomeryal.gov",
+                "attribution": "City of Montgomery",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

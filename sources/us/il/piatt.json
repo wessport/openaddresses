@@ -9,17 +9,28 @@
         "state": "il",
         "county": "Piatt"
     },
-    "data": "http://maps.piattcounty.org/arcgispiatt/rest/services/Webmap_Piatt/AddressPointLabels/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "House",
-        "street": [
-            "Dir",
-            "Street"
-        ],
-        "unit": "Suffix",
-        "city": "Community",
-        "postcode": "ZipCode"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/186649/us/il/piatt.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

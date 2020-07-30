@@ -9,22 +9,28 @@
         "state": "or",
         "county": "Wasco"
     },
-    "data": "http://216.110.207.61/arcgis/rest/services/BaseMap/MapServer/8",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "STRUCTNO",
-        "street": [
-            "PREDIR",
-            "PRETYPE",
-            "STREETNAME",
-            "STREETTYPE",
-            "SUFDIR"
-        ],
-        "unit": [
-            "UNIT_TYPE",
-            "UNIT_NO"
-        ],
-        "id": "STRUCTNO"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/619654/us/or/wasco.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

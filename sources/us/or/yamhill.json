@@ -9,21 +9,28 @@
         "state": "or",
         "county": "Yamhill"
     },
-    "data": "http://54.186.47.160:6080/arcgis/rest/services/Private_Mod2/Yamhill_Private_Mod2/MapServer/29",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "addhouse",
-        "street": [
-            "Streetdir",
-            "StreetName",
-            "StreetType"
-        ],
-        "unit": [
-            "unittype",
-            "unitnum"
-        ],
-        "city": "city",
-        "id": "TXACCOUN_1"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/708740/us/or/yamhill.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

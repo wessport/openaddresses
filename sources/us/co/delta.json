@@ -9,18 +9,28 @@
         "state": "co",
         "county": "Delta"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "Site_HseNu",
-        "street": [
-            "Prefix_Dir",
-            "Site_St",
-            "Site_St_Ty"
-        ],
-        "city": "Site_City",
-        "postcode": "Site_Zip",
-        "region": "Site_State"
-    },
-    "data": "http://maps.deltacounty.com/arcgis/rest/services/Prcl_Base/MapServer/1",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/354208/us/co/delta.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

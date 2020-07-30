@@ -17,22 +17,28 @@
         "county": "Greenville",
         "city": "Greenville"
     },
-    "data": "https://citygis.greenvillesc.gov/arcgis/rest/services/OpenData/OpenData_Property/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSENUM",
-        "street": [
-            "PREFIX",
-            "STREETNAME",
-            "TYPE",
-            "SUFFIXDIRECTION",
-            "SUFFIXMODIFIER"
-        ],
-        "unit": [
-            "UNITTYPE",
-            "UNIT"
-        ],
-        "postcode": "ZIPCODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/789907/us/sc/city_of_greenville.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

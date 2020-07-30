@@ -4,13 +4,29 @@
         "state": "on",
         "county": "LaSalle"
     },
-    "protocol": "http",
-    "data": "https://data.openaddresses.io/cache/ca-on-lasalle.geojson",
-    "conform":{
-        "format": "geojson",
-        "number": "STR_NO",
-        "street": "STR_NAME",
-        "postcode": "POSTAL"
-    },
-    "note": "Token Required - http://gisweb.countyofessex.on.ca/svllasalle24/Viewer.html?Viewer=Public && gisservices.countyofessex.on.ca/arcgis/rest/services/LaSalle/LaSalleREST/MapServer/158"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/128435/ca/on/lasalle.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "note": "Token Required - http://gisweb.countyofessex.on.ca/svllasalle24/Viewer.html?Viewer=Public && gisservices.countyofessex.on.ca/arcgis/rest/services/LaSalle/LaSalleREST/MapServer/158",
+                "compression": "zip"
+            }
+        ]
+    }
 }

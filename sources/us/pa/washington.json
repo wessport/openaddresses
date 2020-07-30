@@ -9,14 +9,29 @@
         "state": "pa",
         "county": "Washington"
     },
-    "website": "https://www.co.washington.pa.us/545/Parcel-Viewer",
-    "data": "https://wcsvrgis.washcopa.org/arcgis1051/rest/services/AGOL/Building_Centroids/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "SAN",
-        "street": ["PRD", "STN", "STS", "POD"],
-        "city": "Municipality",
-        "accuracy": 1
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "https://www.co.washington.pa.us/545/Parcel-Viewer",
+                "data": "http://data.openaddresses.io/runs/885489/us/pa/washington.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

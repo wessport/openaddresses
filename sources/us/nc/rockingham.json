@@ -9,22 +9,28 @@
         "state": "nc",
         "county": "Rockingham"
     },
-    "data": "https://www.webgis.net/arcgis/rest/services/NC/Rockingham/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDRESS_NU",
-        "street": [
-            "ROAD_PRE",
-            "STREET_NAM",
-            "STREET_TYP",
-            "ROAD_SUF"
-        ],
-        "unit": [
-            "BUILDING_N",
-            "APARTMENT"
-        ],
-        "city": "CITY",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886947/us/nc/rockingham.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

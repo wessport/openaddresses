@@ -16,20 +16,29 @@
         "state": "va",
         "city": "Falls Church"
     },
-    "data": "https://services1.arcgis.com/2hmXRAz4ofcdQP6p/arcgis/rest/services/Address_Point/FeatureServer/0",
-    "protocol": "ESRI",
-    "website": "http://www.fallschurchva.gov/158/Maps",
-    "conform": {
-        "format": "geojson",
-        "number": "House_Numb",
-        "street": [
-            "DIRECTION",
-            "STREET",
-            "SUFFIX"
-        ],
-        "unit": "UNIT",
-        "city": "CITY",
-        "region": "STATE",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886801/us/va/city_of_falls_church.zip",
+                "protocol": "http",
+                "website": "http://www.fallschurchva.gov/158/Maps",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

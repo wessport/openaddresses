@@ -9,18 +9,29 @@
         "state": "nc",
         "county": "Cleveland"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "ParAddr",
-        "street": [
-            "ParDirPref",
-            "ParRdName",
-            "ParRdType",
-            "ParDirSuff"
-        ],
-        "unit": "ParAddrA"
-    },
-    "website": "http://www.webgis.net/nc/Cleveland/",
-    "data": "https://www.webgis.net/arcgis/rest/services/NC/Cleveland/MapServer/11",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "website": "http://www.webgis.net/nc/Cleveland/",
+                "data": "http://data.openaddresses.io/runs/886946/us/nc/cleveland.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

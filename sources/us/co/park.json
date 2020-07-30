@@ -9,21 +9,28 @@
         "state": "co",
         "county": "Park"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "Address",
-        "street": [
-            "PreDir",
-            "USPSPrefix",
-            "Name",
-            "USPSSuffix",
-            "SuffixDir"
-        ],
-        "unit": "UNIT",
-        "postcode": "ZipCode",
-        "city": "MSAG_COMMUNITY",
-        "region": "State"
-    },
-    "data": "http://maps.parkco.us/arcgis/rest/services/basemaps/Parcels/MapServer/7",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/885989/us/co/park.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

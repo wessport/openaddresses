@@ -9,17 +9,28 @@
         "state": "wy",
         "county": "Sublette"
     },
-    "compression": "zip",
-    "data": "http://sublette.greenwoodmap.com/download/ownership_shp.zip",
-    "protocol": "http",
-    "conform": {
-        "format": "shapefile",
-        "file": "address.shp",
-        "number": "streetnum",
-        "street": [
-            "streetname",
-            "streetsuf"
-        ],
-        "id": "pidn"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "compression": "zip",
+                "data": "http://data.openaddresses.io/runs/886902/us/wy/sublette.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

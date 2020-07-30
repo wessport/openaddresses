@@ -9,12 +9,28 @@
         "state": "wi",
         "county": "Richland"
     },
-    "data": "https://gis.co.richland.wi.us/arcgis/rest/services/RichlandCo_GIS_Public/MapServer/6",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "numb",
-        "street": "street",
-        "city": "twn"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886495/us/wi/richland.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -3,15 +3,38 @@
         "country": "br",
         "state": "rs",
         "city": "Canoas",
-        "geometry": { "type": "Point", "coordinates": [-51.18, -29.93] }
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -51.18,
+                -29.93
+            ]
+        }
     },
-    "data": "https://geo.canoas.rs.gov.br/server/rest/services/lote_portal_101218/FeatureServer/0",
-    "website": "https://geo.canoas.rs.gov.br",
-    "attribution": "Prefeitura Municipal de Canoas",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "econumero",
-        "street": "logrnome"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/586361/br/rs/canoas.zip",
+                "website": "https://geo.canoas.rs.gov.br",
+                "attribution": "Prefeitura Municipal de Canoas",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -16,17 +16,28 @@
             ]
         }
     },
-    "data": "https://web1.mobile311.com/arcgis/rest/services/NewMexico/RuidosoNM/MapServer/20",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "STR_NO",
-        "street": [
-            "STR_PREFIX",
-            "STR_NAME",
-            "STR_SUFFIX"
-        ],
-        "unit": "UNIT_NO",
-        "city": "CITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/875956/us/nm/city_of_ruidoso.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

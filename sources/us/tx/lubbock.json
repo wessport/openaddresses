@@ -9,20 +9,29 @@
         "state": "tx",
         "county": "Lubbock"
     },
-    "data": "https://pubgis.ci.lubbock.tx.us/server/rest/services/DefaultMap_New/MapServer/0",
-    "website": "https://ci.lubbock.tx.us/departments/gis-data-services/public-data/rest-services-new",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDR",
-        "street": [
-            "PREFIX",
-            "STREET",
-            "STREET_TYPE"
-        ],
-        "unit": "SUITE",
-        "city": "City",
-        "region": "State",
-        "postcode": "ZipCodes"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885664/us/tx/lubbock.zip",
+                "website": "https://ci.lubbock.tx.us/departments/gis-data-services/public-data/rest-services-new",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

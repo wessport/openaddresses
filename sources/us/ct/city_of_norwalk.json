@@ -2,21 +2,37 @@
     "coverage": {
         "geometry": {
             "type": "Point",
-            "coordinates": [ -118.0849, 33.9093 ]
+            "coordinates": [
+                -118.0849,
+                33.9093
+            ]
         },
         "country": "us",
         "state": "ct",
         "city": "Norwalk"
     },
-    "data": "http://host.cdmsmithgis.com/arcgis/rest/services/NorwalkCT_OpsLayers/MapServer/7",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "StreetNum",
-        "street": {
-            "function": "remove_prefix",
-            "field": "StreetName",
-            "field_to_remove": "StreetNum"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885991/us/ct/city_of_norwalk.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

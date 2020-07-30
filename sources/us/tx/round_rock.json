@@ -16,20 +16,35 @@
         "state": "tx",
         "city": "Round Rock"
     },
-    "website": "http://www.roundrocktexas.gov/departments/gis/downloadable-gis-files/",
-    "data": "http://www.roundrocktexas.gov/wp-content/uploads/2014/12/address.zip",
-    "license": {
-        "text": "Indemnification",
-        "attribution": false,
-        "share-alike": false
-    },
-    "year": "2014",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "street": "RD_FULLNAM",
-        "number": "ADDR_NUMBE",
-        "postcode": "ZIP",
-        "format": "shapefile"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "http://www.roundrocktexas.gov/departments/gis/downloadable-gis-files/",
+                "data": "http://data.openaddresses.io/runs/886080/us/tx/round_rock.zip",
+                "license": {
+                    "text": "Indemnification",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "year": "2014",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

@@ -9,14 +9,30 @@
         "state": "al",
         "county": "Calhoun"
     },
-    "data": "https://data.openaddresses.io/cache/uploads/trescube/c1d4e6/us-al-calhoun.geojson.zip",
-    "note": "source times out after 66k records, but originally sourced from http://gis.calhouncounty.org/arcgis2/rest/services/ParcelViewer/MapServer/68",
-    "protocol": "http",
-    "compression": "zip",
-    "attribution": "Calhoun County",
-    "conform": {
-        "format": "geojson",
-        "number": "STREET_NUM",
-        "street": "STREET_NAME"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885566/us/al/calhoun.zip",
+                "note": "source times out after 66k records, but originally sourced from http://gis.calhouncounty.org/arcgis2/rest/services/ParcelViewer/MapServer/68",
+                "protocol": "http",
+                "compression": "zip",
+                "attribution": "Calhoun County",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

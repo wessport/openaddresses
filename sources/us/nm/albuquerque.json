@@ -17,16 +17,28 @@
         "county": "Bernalillo",
         "city": "Albuquerque"
     },
-    "data": "https://coagisweb.cabq.gov/arcgis/rest/services/public/cadastral/MapServer/6",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "STREETNUMBER",
-        "street": [
-            "STREETNAME",
-            "STREETDESIGNATION",
-            "STREETQUADRANT"
-        ],
-        "unit": "APARTMENT"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885338/us/nm/albuquerque.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

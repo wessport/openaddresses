@@ -9,15 +9,28 @@
         "state": "nv",
         "county": "Carson City"
     },
-    "data": "http://gis.carson.org/arcgis/rest/services/CarsonCity/CarsonCityNV_OpenData/FeatureServer/37",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "StrNumb",
-        "street": [
-            "StrDir",
-            "StrName"
-        ],
-        "unit": "Unit"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/531891/us/nv/carson_city.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

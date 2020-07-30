@@ -9,17 +9,29 @@
         "state": "ca",
         "county": "Solano"
     },
-    "attribution": "Solano County",
-    "data": "https://regis.solanocounty.com/server/rest/services/iSolano/Addresses/MapServer/1",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "APN",
-        "number": "SITENUM",
-        "unit": "UNITBLDG",
-        "street": "SITEROAD",
-        "postcode": "ZIP",
-        "city": "CITY",
-        "region": "STATE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Solano County",
+                "data": "http://data.openaddresses.io/runs/885379/us/ca/solano.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

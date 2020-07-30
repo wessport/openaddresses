@@ -1,15 +1,37 @@
 {
     "coverage": {
         "country": "ca",
-        "geometry": { "type": "Point", "coordinates": [-119.3, 50.5] }
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -119.3,
+                50.5
+            ]
+        }
     },
-    "data": "http://tnrdmap.tnrd.ca/arcgis/rest/services/Basemap_Detail_Cache/MapServer/3",
-    "website": "https://www.tnrd.ca/content/mapping-services-gis-overview",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "StreetNo",
-        "street": "StreetName",
-        "city": "Community"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/318721/ca/bc/thompson-nicola-regional-district.zip",
+                "website": "https://www.tnrd.ca/content/mapping-services-gis-overview",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

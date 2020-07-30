@@ -9,19 +9,29 @@
         "state": "ny",
         "county": "Ulster"
     },
-    "website": "https://gis.ny.gov/gisdata/inventories/details.cfm?DSID=1165",
-    "data": "https://gis.ulstercountyny.gov/arcgis/rest/services/Tax_Parcels/Tax_Parcels/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "PARCEL_ADDRESS"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "PARCEL_ADDRESS"
-        },
-        "city": "PARCEL_CITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "https://gis.ny.gov/gisdata/inventories/details.cfm?DSID=1165",
+                "data": "http://data.openaddresses.io/runs/671792/us/ny/ulster.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

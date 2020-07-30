@@ -9,14 +9,28 @@
         "state": "mn",
         "county": "Carlton"
     },
-    "data": "https://gis.co.carlton.mn.us/arcgis/rest/services/OpenData/AddressPoints_CarltonCountyMN/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDNUM",
-        "street": "StreetName",
-        "city": "USPS_City",
-        "region": "STATE_CODE",
-        "postcode": "Zip5"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886386/us/mn/carlton.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

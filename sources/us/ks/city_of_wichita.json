@@ -16,19 +16,28 @@
         "state": "ks",
         "city": "Witchita"
     },
-    "data": "http://gismaps.wichita.gov/agsweb/rest/services/COWGIS/Property_and_Location/MapServer/4",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "Prop_Addr"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "Prop_Addr"
-        },
-        "postcode": "Prop_zip",
-        "city": "Prop_City"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885512/us/ks/city_of_wichita.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

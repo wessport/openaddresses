@@ -11,21 +11,35 @@
             ]
         }
     },
-    "data": "https://services6.arcgis.com/ONZht79c8QWuX759/arcgis/rest/services/Address_Points/FeatureServer/0",
-    "website": "https://data.peelregion.ca/",
-    "license": {"url": "https://data.peelregion.ca/pages/license", "attribution": false, "share-alike": false},
-    "language": "en",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "file": "AddressPoints_csv.csv",
-        "id": "ROPADRID",
-        "number": "STREETNUM",
-        "unit": "UNIT_IDENTIFIER",
-        "street": ["STREETNAME", "STREETTYPE", "STREETDIRECTION"],
-        "city": "MUNICIPALITY",
-        "lat": "LATITUDE",
-        "lon": "LONGITUDE",
-        "accuracy": 1
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885513/ca/on/peel-region.zip",
+                "website": "https://data.peelregion.ca/",
+                "license": {
+                    "url": "https://data.peelregion.ca/pages/license",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "language": "en",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

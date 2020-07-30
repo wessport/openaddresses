@@ -9,19 +9,29 @@
         "state": "tx",
         "county": "BrazosCad"
     },
-    "note": "source used to be date stamped .zip and routinely unavailable, eg - http://www.brazoscad.org/data/_uploaded/file/GIS/shp_files_4_24_15.zip",
-    "data": "http://mapsatbis.com/bisgis/rest/services/BrazosWeb/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "number": "BrazosCad.DBO.Accounts.situs_num",
-        "street": [
-            "BrazosCad.DBO.Accounts.situs_street_prefx",
-            "BrazosCad.DBO.Accounts.situs_street",
-            "BrazosCad.DBO.Accounts.situs_street_sufix"
-        ],
-        "city": "BrazosCad.DBO.Accounts.situs_city",
-        "region": "BrazosCad.DBO.Accounts.situs_state",
-        "postcode": "BrazosCad.DBO.Accounts.situs_zip",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "note": "source used to be date stamped .zip and routinely unavailable, eg - http://www.brazoscad.org/data/_uploaded/file/GIS/shp_files_4_24_15.zip",
+                "data": "http://data.openaddresses.io/runs/392073/us/tx/brazos.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

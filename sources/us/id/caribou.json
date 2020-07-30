@@ -1,29 +1,36 @@
 {
-  "coverage": {
-      "US Census": {
-          "geoid": "16029", 
-          "name": "Caribou County", 
-          "state": "Idaho"
-      },
-      "country": "us",
-      "state": "id",
-      "county": "Caribou"
-  },
-  "data": "https://opendata.arcgis.com/datasets/a8ad676c58274e3196c05b7b906efae6_0.zip",
-  "protocol": "http",
-  "conform": {
-      "format": "shapefile",
-      "number": "AN",
-      "street": [
-          "PreDir",
-          "Street",
-          "Suffix",
-          "SuffixDir"
-      ],
-      "unit": [
-          "SecUnit",
-          "SecRange"
-      ],
-      "city": "CityCode"
-  }
+    "coverage": {
+        "US Census": {
+            "geoid": "16029",
+            "name": "Caribou County",
+            "state": "Idaho"
+        },
+        "country": "us",
+        "state": "id",
+        "county": "Caribou"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/829884/us/id/caribou.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
+    }
 }

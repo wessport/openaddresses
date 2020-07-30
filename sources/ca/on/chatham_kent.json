@@ -4,18 +4,28 @@
         "state": "on",
         "county": "Chatham-Kent"
     },
-    "protocol": "http",
-    "data": "https://data.openaddresses.io/cache/ca-on-chatham_kent.zip",
-    "compression": "zip",
-    "conform":{
-        "format": "shapefile",
-        "number": "NUMBER",
-        "street": [
-            "NAME",
-            "TYPE",
-            "DIRECTION"
-        ],
-        "unit": "UNIT",
-        "city": "COMMUNITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/886308/ca/on/chatham_kent.zip",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

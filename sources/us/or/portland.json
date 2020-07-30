@@ -16,27 +16,30 @@
         "city": "Portland",
         "state": "or"
     },
-    "compression": "zip",
-    "conform": {
-        "number": "address_number_char",
-        "lon": "x",
-        "lat": "y",
-        "format": "csv",
-        "street": [
-            "str_predir_code",
-            "street_name",
-            "street_type_code",
-            "str_postdir_code"
-        ],
-        "unit": "unit_value",
-        "city": "city",
-        "district": "county",
-        "postcode": "zip_code",
-        "region": "state_abbrev",
-        "srs": "EPSG:2913"
-    },
-    "skip": false,
-    "note": "zipped csv",
-    "data": "ftp://ftp02.portlandoregon.gov/CivicApps/address.zip",
-    "protocol": "ftp"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "skip": false,
+                "note": "zipped csv",
+                "data": "http://data.openaddresses.io/runs/885881/us/or/portland.zip",
+                "protocol": "http"
+            }
+        ]
+    }
 }

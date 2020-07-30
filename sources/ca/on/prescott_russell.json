@@ -4,13 +4,29 @@
         "state": "on",
         "county": "Prescott Russell"
     },
-    "protocol": "http",
-    "data": "https://data.openaddresses.io/cache/uploads/trescube/52ef4e/ca-on-prescott_russell.geojson.zip",
-    "conform":{
-        "format": "geojson",
-        "number": "Street_Number",
-        "street": "Street_Name",
-        "unit": "Unit_Number"
-    },
-    "note": "Token Required - http://www.prescott-russell.on.ca/en/planning/cartography-a-geomatics"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/885937/ca/on/prescott_russell.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "note": "Token Required - http://www.prescott-russell.on.ca/en/planning/cartography-a-geomatics",
+                "compression": "zip"
+            }
+        ]
+    }
 }

@@ -3,16 +3,36 @@
         "country": "ca",
         "state": "on",
         "city": "Sault Ste. Marie",
-        "geometry": { "type": "Point", "coordinates": [-84.549, 46.537] }
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -84.549,
+                46.537
+            ]
+        }
     },
-    "protocol": "ESRI",
-    "data": "https://mapservices.ssmic.com/arcgis/rest/services/CitySSM/CITYSSM_SooMapsZoneBase/MapServer/1",
-    "conform":{
-        "format": "geojson",
-        "number": "CIVICNUMBER",
-        "unit": "UNIT",
-        "street": "STREETNAME",
-        "city": "MUNICIPALITY",
-        "postcode": "POSTALCODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/885986/ca/on/city_of_sault_ste_marie.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

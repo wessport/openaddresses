@@ -9,21 +9,28 @@
         "state": "mn",
         "county": "Todd"
     },
-    "data": "http://gis.mytoddcounty.com/toddcounty/rest/services/PZ_Parcels/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "BLDGNUM",
-        "street": [
-            "PRE_DIR",
-            "PRE_TYPE",
-            "ST_NAME",
-            "ST_TYPE",
-            "POST_DIR"
-        ],
-        "unit": "SECUNIT",
-        "city": "ZIPNAME",
-        "district": "MCN",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886262/us/mn/todd.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -4,11 +4,28 @@
         "state": "on",
         "county": "Amherstburg"
     },
-    "protocol": "ESRI",
-    "data": "http://mapamherstburg.ca/arcgis/rest/services/Parcels/MapServer/2",
-    "conform":{
-        "format": "geojson",
-        "number": "ADD1",
-        "street": "STREETNAME"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/884478/ca/on/amherstburg.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

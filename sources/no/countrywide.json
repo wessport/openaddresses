@@ -1,18 +1,34 @@
 {
     "coverage": {
-        "ISO 3166": {"alpha2": "NO", "country": "Norway"},
+        "ISO 3166": {
+            "alpha2": "NO",
+            "country": "Norway"
+        },
         "country": "no"
     },
-    "data": "https://data.openaddresses.io/cache/no.zip",
-    "website": "http://data.kartverket.no/download/content/elveg-utm-33-hele-landet",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "lon": "x",
-        "lat": "y",
-        "number": "HUSNR",
-        "street": "GATENAVN",
-        "postcode": "POSTNR",
-        "format": "csv"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885557/no/countrywide.zip",
+                "website": "http://data.kartverket.no/download/content/elveg-utm-33-hele-landet",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

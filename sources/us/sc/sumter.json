@@ -9,18 +9,28 @@
         "state": "sc",
         "county": "Sumter"
     },
-    "data": "http://svr4.sumtercountysc.org:6080/arcgis/rest/services/Parcel_Search/County_Map_PS/MapServer/5",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "FULL_ADDRESS",
-        "street": {
-            "function": "remove_prefix",
-            "field": "O_ADDRESS",
-            "field_to_remove": "FULL_ADDRESS"
-        },
-        "city": "COMMUNITY",
-        "region": "STATE",
-        "postcode": "ZIPCODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886024/us/sc/sumter.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

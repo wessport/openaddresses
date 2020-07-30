@@ -9,19 +9,28 @@
         "state": "mn",
         "county": "Washington"
     },
-    "data": "https://services1.arcgis.com/3fjYPqJf7qalQMlb/arcgis/rest/services/address_points/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ANUMBER",
-        "street": "ST_CONCAT",
-        "unit": [
-            "SUB_TYPE1",
-            "SUB_ID1"
-        ],
-        "city": "MSAG_C",
-        "district": "CO_NAME",
-        "region": "STATE_CODE",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885751/us/mn/washington.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

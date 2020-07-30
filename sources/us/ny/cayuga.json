@@ -9,15 +9,29 @@
         "state": "ny",
         "county": "Cayuga"
     },
-    "website": "https://gis.ny.gov/gisdata/inventories/details.cfm?DSID=1138",
-    "data": "http://gis.cayugacounty.us/arcgis/rest/services/Flexviewer/MapContents/MapServer/1",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "PT_ID",
-        "number": "HOUSE_NUM",
-        "street": "STREET",
-        "unit": "APT_NUM",
-        "city": "TOWN_NAME"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "https://gis.ny.gov/gisdata/inventories/details.cfm?DSID=1138",
+                "data": "http://data.openaddresses.io/runs/885176/us/ny/cayuga.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

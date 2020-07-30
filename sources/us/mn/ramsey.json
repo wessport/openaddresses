@@ -9,22 +9,34 @@
         "state": "mn",
         "county": "Ramsey"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "ANUMBER",
-        "street": ["StreetPreModifier", "StreetPrefixDirectional", "StreetPreType","ST_NAME","StreetPostType","StreetPostDirectional","StreetPostModifier"],
-        "unit": ["SubType1","SubNumber1"],
-        "city": "PostalCity",
-        "postcode": "ZIP",
-        "district": "CO_NAME",
-        "notes": "Comments"
-    },
-    "license": {
-        "text": "Indemnification",
-        "attribution": false,
-        "share-alike": false
-    },
-    "note": "This source has been provided by the county as the new official source of addresses.",
-    "data": "https://maps.co.ramsey.mn.us/arcgis/rest/services/AddressEditor/AddressPointsAll/MapServer/0",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "license": {
+                    "text": "Indemnification",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "note": "This source has been provided by the county as the new official source of addresses.",
+                "data": "http://data.openaddresses.io/runs/890674/us/mn/ramsey.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

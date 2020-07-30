@@ -9,19 +9,28 @@
         "state": "nc",
         "county": "Vance"
     },
-    "data": "https://web1.mobile311.com/arcgis/rest/services/NorthCarolina/Vance/MapServer/93",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "st_number",
-        "street": [
-            "st_prefixd",
-            "st_name",
-            "st_type",
-            "st_sfx",
-            "st_suffixd"
-        ],
-        "unit": "unit",
-        "city": "community"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885626/us/nc/vance.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

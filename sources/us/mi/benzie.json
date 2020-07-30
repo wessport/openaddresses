@@ -1,19 +1,37 @@
 {
     "coverage": {
-        "US Census": {"geoid": "26019", "name": "Benzie County", "state": "Michigan"},
+        "US Census": {
+            "geoid": "26019",
+            "name": "Benzie County",
+            "state": "Michigan"
+        },
         "country": "us",
         "state": "mi",
         "county": "Benzie"
     },
-    "note": "Aquired via FOIA by ingalls 2017/11",
-    "data": "https://data.openaddresses.io/cache/uploads/ingalls/us-mi-benzie.zip",
-    "protocol": "http",
-    "conform": {
-        "format": "shapefile",
-        "unit": "FEAPT",
-        "number": "FENUM",
-        "street": "RDNAME",
-        "city": "COMM",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "note": "Aquired via FOIA by ingalls 2017/11",
+                "data": "http://data.openaddresses.io/runs/886407/us/mi/benzie.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

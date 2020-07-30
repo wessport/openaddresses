@@ -1,19 +1,37 @@
 {
     "coverage": {
-        "US Census": {"geoid": "06059", "name": "Orange County", "state": "California"},
+        "US Census": {
+            "geoid": "06059",
+            "name": "Orange County",
+            "state": "California"
+        },
         "country": "us",
         "state": "ca",
         "county": "Orange",
         "city": "Newport Beach"
     },
-    "data": "http://nbgis.newportbeachca.gov/gispub/GISDataDownload/Address%20Points/shapefile/Address%20Points.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "id": "PARCEL_NO",
-        "unit": "SUITE",
-        "number": "A_NBR",
-        "street": "ADDR"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886274/us/ca/city_of_newport_beach.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

@@ -9,14 +9,28 @@
         "state": "ia",
         "county": "Dubuque"
     },
-    "data": "http://gis.dbqco.org/arcgis/rest/services/BaseMaps/GeneralPurpose/MapServer/2",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "TESTHNUM",
-        "street": "ROAD",
-        "city": "CITY",
-        "postcode": "ZIP_CODE",
-        "id": "ID"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886174/us/ia/dubuque.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

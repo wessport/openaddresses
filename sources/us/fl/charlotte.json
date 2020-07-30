@@ -9,16 +9,30 @@
         "state": "fl",
         "county": "Charlotte"
     },
-    "attribution": "Charlotte County",
-    "data": "https://data.charlottecountyfl.gov/ccgis/data/zips/addresses.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "website": "https://www.charlottecountyfl.gov/services/gis/Pages/Shapefile-Gallery.aspx",
-    "conform": {
-        "format": "shapefile",
-        "number": "number",
-        "street": "street",
-        "unit": "UNIT",
-        "postcode": "zipcode"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Charlotte County",
+                "data": "http://data.openaddresses.io/runs/885771/us/fl/charlotte.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "website": "https://www.charlottecountyfl.gov/services/gis/Pages/Shapefile-Gallery.aspx",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

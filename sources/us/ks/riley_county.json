@@ -9,24 +9,28 @@
         "state": "ks",
         "county": "Riley"
     },
-    "conform": {
-        "format": "geojson",
-        "id": "SITEADDID",
-        "number": "ADDRNUM",
-        "street": [
-            "ROADPREMOD",
-            "ROADPREDIR",
-            "ROADNAME",
-            "ROADTYPE",
-            "ROADPOSTDIR"
-        ],
-        "unit": [
-            "ALTUNITTYPE",
-            "ALTUNITID"
-        ],
-        "city": "PSTLCITY",
-        "postcode": "PSTLZIP5"
-    },
-    "data": "https://services.arcgis.com/6WmEmDp2YlKJjhJt/arcgis/rest/services/AddressPoints/FeatureServer/0",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/411234/us/ks/riley_county.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

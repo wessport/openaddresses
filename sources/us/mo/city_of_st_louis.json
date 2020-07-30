@@ -16,20 +16,30 @@
             ]
         }
     },
-    "data": "http://stlcin.missouri.org/citydata/downloads/pargeocd.zip",
-    "license": "http://stlcin.missouri.org/citydata/downloads/terms.cfm",
-    "protocol": "http",
-    "compression": "zip",
-    "website": "http://stlcin.missouri.org/citydata/downloads/",
-    "conform": {
-        "number": "housenum",
-        "street": [
-            "predir",
-            "streetname",
-            "streettype",
-            "sufdir"
-        ],
-        "unit": "UNITNUM",
-        "format": "shapefile"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885941/us/mo/city_of_st_louis.zip",
+                "license": "http://stlcin.missouri.org/citydata/downloads/terms.cfm",
+                "protocol": "http",
+                "compression": "zip",
+                "website": "http://stlcin.missouri.org/citydata/downloads/",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

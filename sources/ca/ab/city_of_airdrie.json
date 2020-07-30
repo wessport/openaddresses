@@ -3,21 +3,42 @@
         "country": "ca",
         "state": "ab",
         "city": "Airdrie",
-        "geometry": { "type": "Point", "coordinates": [-114.0717, 51.2855] }
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -114.0717,
+                51.2855
+            ]
+        }
     },
-    "data": "https://services1.arcgis.com/bctnJobT0aahg98G/ArcGIS/rest/services/Airdrie_Address_Points/FeatureServer/0",
-    "website": "https://data-airdrie.opendata.arcgis.com/datasets/airdrie-address-points",
-    "license": {
-        "url": "https://data-airdrie.opendata.arcgis.com/pages/our-open-licence",
-        "attribution": true,
-        "share-alike": false
-    },
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "CivicNum",
-        "street": "FullStreet",
-        "unit": "UnitNum",
-        "city": "Community"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886269/ca/ab/city_of_airdrie.zip",
+                "website": "https://data-airdrie.opendata.arcgis.com/datasets/airdrie-address-points",
+                "license": {
+                    "url": "https://data-airdrie.opendata.arcgis.com/pages/our-open-licence",
+                    "attribution": true,
+                    "share-alike": false
+                },
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

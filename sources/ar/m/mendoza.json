@@ -4,12 +4,29 @@
         "state": "m",
         "city": "Mendoza"
     },
-    "data": "http://www.ciudaddemendoza.gov.ar/ArcGIS/rest/services/Catastro/MapServer/33",
-    "website": "http://www.ciudaddemendoza.gov.ar/mapas-online/",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": ["NUMERO", "NUMERO_EXT"],
-        "street": "CALLE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/646895/ar/m/mendoza.zip",
+                "website": "http://www.ciudaddemendoza.gov.ar/mapas-online/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

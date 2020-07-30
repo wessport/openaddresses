@@ -4,13 +4,29 @@
         "state": "on",
         "county": "Seguin Township"
     },
-    "data": "http://www.wpsgn.ca/arcgis/rest/services/OpenData/WPSGN_OPENDATA/MapServer/1",
-    "website": "http://www.seguin.ca/en/live/mapsgis.asp",
-    "protocol": "ESRI",
-    "conform": {
-        "number": "CivicNumber",
-        "street": "CivicAddress",
-        "city": "Municipality",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/105098/ca/on/seguin.zip",
+                "website": "http://www.seguin.ca/en/live/mapsgis.asp",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

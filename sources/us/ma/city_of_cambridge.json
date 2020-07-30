@@ -16,13 +16,29 @@
         "state": "ma",
         "city": "Cambridge"
     },
-    "data": "https://services1.arcgis.com/WnzC35krSYGuYov4/arcgis/rest/services/ADDRESS_AddressPoints/FeatureServer/0",
-    "website": "https://hub.arcgis.com/datasets/CambridgeGIS::address-address-points",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "address_id",
-        "number": "StNm",
-        "street": "StName"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/837439/us/ma/city_of_cambridge.zip",
+                "website": "https://hub.arcgis.com/datasets/CambridgeGIS::address-address-points",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

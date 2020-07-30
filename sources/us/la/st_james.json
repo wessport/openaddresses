@@ -9,16 +9,30 @@
         "state": "la",
         "county": "St. James Parish"
     },
-    "data": "http://stjamesassessor.com/Downloads/DownloadFile.asp?FileID=16670",
-    "website": "http://stjamesassessor.com/gis-data",
-    "year": "2017",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "number": "ADDRESS",
-        "street": "ST_LABEL",
-        "city": "COMMUNITY",
-        "postcode": "ZIPCODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/627410/us/la/st_james.zip",
+                "website": "http://stjamesassessor.com/gis-data",
+                "year": "2017",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

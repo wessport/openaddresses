@@ -4,12 +4,29 @@
         "state": "on",
         "county": "Haliburton"
     },
-    "protocol": "ESRI",
-    "data": "http://gis.haliburtoncounty.ca/arcgis/rest/services/Public/SearchLayers/MapServer/0",
-    "website": "https://haliburtoncounty.ca/services/planning-and-gis/gis/",
-    "conform":{
-        "format": "geojson",
-        "number": "ADDNUM",
-        "street": "STREET"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/437759/ca/on/haliburton.zip",
+                "website": "https://haliburtoncounty.ca/services/planning-and-gis/gis/",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

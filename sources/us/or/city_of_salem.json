@@ -16,19 +16,29 @@
         "state": "or",
         "city": "Salem"
     },
-    "website": "http://opendata.arcgis.com/datasets/salem::primary-address-1?geometry=-127.378%2C44.245%2C-118.683%2C45.606",
-    "data": "https://services.arcgis.com/kIA6yS9KDGqZL7U3/arcgis/rest/services/Primary_Address/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "OBJECTID",
-        "number": "ADDR_NUM",
-        "street": {
-            "function": "remove_prefix",
-            "field": "FULL_NAME",
-            "field_to_remove": "ADDR_NUM"
-        },
-        "city": "CITY",
-        "district": "COUNTY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "http://opendata.arcgis.com/datasets/salem::primary-address-1?geometry=-127.378%2C44.245%2C-118.683%2C45.606",
+                "data": "http://data.openaddresses.io/runs/885994/us/or/city_of_salem.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

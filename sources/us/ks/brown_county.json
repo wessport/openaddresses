@@ -9,17 +9,28 @@
         "state": "ks",
         "county": "Brown"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "add_num",
-        "street": [
-            "road_pre",
-            "road_name",
-            "road_type",
-            "road_post"
-        ],
-        "postcode": "zip"
-    },
-    "data": "http://72.205.198.131/ArcGIS/rest/services/Brown/Brown/MapServer/33",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/160638/us/ks/brown_county.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

@@ -9,18 +9,28 @@
         "state": "ks",
         "county": "Greenwood"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "addnum",
-        "street": [
-            "predir",
-            "st_name",
-            "st_type",
-            "postdir"
-        ],
-        "city": "community",
-        "postcode": "zipcode"
-    },
-    "data": "http://72.205.198.131/ArcGIS/rest/services/Greenwood/Greenwood/MapServer/30",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/161042/us/ks/greenwood_county.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

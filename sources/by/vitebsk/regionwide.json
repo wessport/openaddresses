@@ -6,29 +6,28 @@
         },
         "country": "by"
     },
-    "data": "http://vitebsk.gismap.by/ArcGIS/rest/services/Vblotsset/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "regexp",
-            "field": "ADDRESS",
-            "pattern": "^(?:.*?)\\b(?:(?:ул|ал|бул|пер|пл|пр)\\.?\\s*[^,]+)(?:,|\\s+)\\s*(?:д\\.?(?=\\d|\\s)|дом|№)?\\s*([\\d]+\\w?\\b)(?:,?\\s*кв\\.?\\s*[\\d]+)?\\s*$"
-        },
-        "unit": {
-            "function": "regexp",
-            "field": "ADDRESS",
-            "pattern": "^(?:.*?)\\b(?:(?:ул|ал|бул|пер|пл|пр)\\.?\\s*[^,]+)(?:,|\\s+)\\s*(?:д\\.?(?=\\d|\\s)|дом|№)?\\s*(?:[\\d]+\\w?\\b)(?:,?\\s*)(кв\\.?\\s*[\\d]+)\\s*$"
-        },
-        "street": {
-            "function": "regexp",
-            "field": "ADDRESS",
-            "pattern": "^(?:.*?)\\b((?:ул|ал|бул|пер|пл|пр)\\.?\\s*[^,]+)(?:,|\\s+)\\s*(?:д\\.?(?=\\d|\\s)|дом|№)?\\s*(?:[\\d]+\\w?\\b)(?:,?\\s*кв\\.?\\s*[\\d]+)?\\s*$"
-        },
-        "city": {
-            "function": "regexp",
-            "field": "ADDRESS",
-            "pattern": "^(?:.*?)\\b((?:(?:г|аг|гп|пгт)(?:\\.|\\s+)|(?:д(?:\\.\\s+|\\.(?=\\w)|\\s+)(?!\\d)))(?:\\s*\\w+(?=[\\s,]|\\-\\d+))+(?:\\-[\\d]+)?)" 
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/279444/by/vitebsk/regionwide.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

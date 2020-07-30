@@ -4,16 +4,29 @@
         "state": "on",
         "county": "Halton"
     },
-    "protocol": "http",
-    "data": "https://data.openaddresses.io/cache/ca-on-halton.zip",
-    "note": "Obtained through MFIPPA Request by @ingalls <nicholas.ingalls@gmail.com>",
-    "compression": "zip",
-    "conform":{
-        "format": "shapefile",
-        "number": ["CIVICNUMPR", "CIVICNUM", "CIVICNUMSU"],
-        "street": "FULLSTREET",
-        "unit": "UNIT",
-        "city": "MUNINAME",
-        "region": "PROVINCE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/885874/ca/on/halton.zip",
+                "note": "Obtained through MFIPPA Request by @ingalls <nicholas.ingalls@gmail.com>",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

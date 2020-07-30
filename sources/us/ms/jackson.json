@@ -9,15 +9,28 @@
         "state": "ms",
         "county": "Jackson"
     },
-    "data": "https://webmap.co.jackson.ms.us/arcgis/rest/services/JacksonCounty/Parcel_2_Web/MapServer/2",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "STRN",
-        "street": [
-            "STRD",
-            "STRNM",
-            "STYPE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/708210/us/ms/jackson.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
         ]
     }
 }

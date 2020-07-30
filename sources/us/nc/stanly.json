@@ -9,20 +9,29 @@
         "state": "nc",
         "county": "Stanly"
     },
-    "data": "ftp://ftp.stanlygis.net/gisdata/Layer Zip Files/address_points.zip",
-    "protocol": "ftp",
-    "compression": "zip",
-    "website": "http://www.stanlygis.net/",
-    "conform": {
-        "format": "shapefile",
-        "number": "ADDRNUM",
-        "unit": "Apartment",
-        "street": [
-            "ROAD_PRE",
-            "ROAD_NAME",
-            "ROAD_TYPE",
-            "ROAD_SUF"
-        ],
-        "city": "City"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/748947/us/nc/stanly.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "website": "http://www.stanlygis.net/",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

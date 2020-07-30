@@ -9,11 +9,28 @@
         "state": "al",
         "county": "Colbert"
     },
-    "data": "https://web5.kcsgis.com/kcsgis/rest/services/Colbert/Public/MapServer/43",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "street": "Situs_Street_Name",
-        "number": "Situs_House_No"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885677/us/al/colbert.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

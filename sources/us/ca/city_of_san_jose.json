@@ -12,22 +12,34 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -121.74, 37.35
+                -121.74,
+                37.35
             ]
         }
     },
-    "protocol": "http",
-    "compression": "zip",
-    "data": "https://github.com/sanjosegis/gis-open-data/blob/master/Parcels/ParcelGeoJS.zip?raw=true",
-    "website": "https://github.com/sanjosegis/gis-open-data/blob/master/README_Disclaimer.md",
-    "conform": {
-        "format": "geojson",
-        "id": "APN",
-        "number": "SNUM",
-        "street": [
-            "SDIR",
-            "SNAM",
-            "STYP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "compression": "zip",
+                "data": "http://data.openaddresses.io/runs/885523/us/ca/city_of_san_jose.zip",
+                "website": "https://github.com/sanjosegis/gis-open-data/blob/master/README_Disclaimer.md",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
         ]
     }
 }

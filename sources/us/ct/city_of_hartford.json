@@ -16,18 +16,29 @@
         "state": "ct",
         "city": "Hartford"
     },
-    "attribution": "Ciy of Hartford",
-    "data": "http://gis1.hartford.gov/arcgis/rest/services/GPSBasemapForFlex/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "STREETNUM",
-        "street": [
-            "CV_STPREFIX",
-            "CV_STNAME",
-            "CV_STTYPE",
-            "CV_STSUFFIX"
-        ],
-        "unit": "UNITNUM"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Ciy of Hartford",
+                "data": "http://data.openaddresses.io/runs/504771/us/ct/city_of_hartford.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

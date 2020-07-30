@@ -7,21 +7,30 @@
         },
         "country": "us",
         "state": "ny",
-        "county":"Sullivan"
+        "county": "Sullivan"
     },
-    "data": "https://secure.scgnet.us/arcgis/rest/services/911_Addressing_Data/FeatureServer/1",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDRNUM",
-        "street": "FULLNAME",
-        "unit": [
-            "UNITTYPE",
-            "UNITID"
-        ],
-        "city": "PSTLCITY",
-        "district": "CountyName",
-        "region": "STATE",
-        "postcode": "ZIPCode"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885483/us/ny/sullivan.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

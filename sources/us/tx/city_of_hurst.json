@@ -8,24 +8,36 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -97.180,
-              	32.835
+                -97.18,
+                32.835
             ]
         },
         "country": "us",
         "state": "tx",
         "city": "Hurst"
     },
-    "protocol": "ESRI",
-    "data": "http://gis4.dfwmaps.com/arcgis/rest/services/ICHurst/Hurst_BaseLayers_VE/MapServer/0",
-    "conform": {
-        "format": "geojson",
-        "number": "STREET_NUM",
-        "street": [
-            "PREFIX",
-            "STREET_NAM",
-            "STREET_TYP",
-            "SUFFIX"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/498013/us/tx/city_of_hurst.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
         ]
     }
 }

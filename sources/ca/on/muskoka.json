@@ -4,15 +4,30 @@
         "state": "on",
         "city": "muskoka region"
     },
-    "data": "https://data.openaddresses.io/cache/ca-on-muskoka.zip",
-    "website": "http://map.muskoka.on.ca/Exponare/gis_opendata.html",
-    "attribution": "Muskoka Region",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "number": "StreetNumb",
-        "street": "StreetName",
-        "unit": "StreetUnit",
-        "format": "shapefile"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886377/ca/on/muskoka.zip",
+                "website": "http://map.muskoka.on.ca/Exponare/gis_opendata.html",
+                "attribution": "Muskoka Region",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

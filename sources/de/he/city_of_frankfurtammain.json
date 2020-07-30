@@ -1,25 +1,46 @@
 {
-	"coverage": {
-		"country": "de",
-		"state": "he",
-		"city": "Frankfurt am Main",
-		"geometry": { "type": "Point", "coordinates": [8.68, 50.12] }
-	},
-  "data": "https://services.arcgis.com/OLiydejKCZTGhvWg/arcgis/rest/services/Frankfurt_am_Main_Hauskoordinaten/FeatureServer/0",
-	"website": "http://www.offenedaten.frankfurt.de/",
-	"license": {
-		"url": "http://www.govdata.de/dl-de/by-2-0",
-		"text": "Datenlizenz Deutschland Namensnennung",
-		"attribution": true,
-		"share-alike": false,
-		"attribution name": "Stadtvermessungsamt Frankfurt am Main"
-	},
-	"protocol": "ESRI",
-	"conform": {
-		"format": "geojson",
-		"city": "Field16",
-		"street": "Field14",
-		"number": "Field10",
-		"postcode": "Field15"
-	}
+    "coverage": {
+        "country": "de",
+        "state": "he",
+        "city": "Frankfurt am Main",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                8.68,
+                50.12
+            ]
+        }
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/540422/de/he/city_of_frankfurtammain.zip",
+                "website": "http://www.offenedaten.frankfurt.de/",
+                "license": {
+                    "url": "http://www.govdata.de/dl-de/by-2-0",
+                    "text": "Datenlizenz Deutschland Namensnennung",
+                    "attribution": true,
+                    "share-alike": false,
+                    "attribution name": "Stadtvermessungsamt Frankfurt am Main"
+                },
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
+    }
 }

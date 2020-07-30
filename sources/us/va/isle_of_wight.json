@@ -9,11 +9,28 @@
         "state": "va",
         "county": "Isle of Wight"
     },
-    "protocol": "ESRI",
-    "data": "http://services.arcgis.com/Dc6hhMQCpvLlOmSY/arcgis/rest/services/Address_Points/FeatureServer/0",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDRESS",
-        "street": "ROADNAME"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/808548/us/va/isle_of_wight.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

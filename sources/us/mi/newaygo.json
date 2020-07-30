@@ -9,16 +9,28 @@
         "state": "mi",
         "county": "Newaygo"
     },
-    "data": "http://arcgisweb.countyofnewaygo.com:6080/arcgis/rest/services/WebMaps/NewaygoCounty/MapServer/2",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "P_NUMB",
-        "street": [
-            "P_DIR",
-            "P_STREET"
-        ],
-        "city": "P_CITY",
-        "postcode": "P_ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885729/us/mi/newaygo.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -7,28 +7,28 @@
         "country": "us",
         "state": "co"
     },
-    "data": "https://data.colorado.gov/api/views/ge5d-pvi7/rows.csv?accessType=DOWNLOAD",
-    "protocol": "http",
-    "conform": {
-        "format": "csv",
-        "lat": "Latitude",
-        "lon": "Longitude",
-        "number": [
-            "AddrNum",
-            "NumSuf"
-        ],
-        "street": [
-            "PreDir",
-            "PreType",
-            "StreetName",
-            "PostType",
-            "PostDir"
-        ],
-        "unit": [
-            "UnitType",
-            "UnitNumber"
-        ],
-        "postcode": "Zipcode",
-        "city": "PlaceName"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885503/us/co/statewide.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

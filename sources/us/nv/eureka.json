@@ -9,15 +9,28 @@
         "state": "nv",
         "county": "Eureka"
     },
-    "data": "https://services7.arcgis.com/npQRqzUHX9auAwvE/ArcGIS/rest/services/parcels/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "PLOC_",
-        "street": [
-            "PLOCDR",
-            "PLOCNM"
-        ],
-        "city": "PTOWN"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886541/us/nv/eureka.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

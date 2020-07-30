@@ -9,20 +9,28 @@
         "state": "co",
         "county": "Clear Creek"
     },
-    "protocol": "http",
-    "data": "https://gisftp02.state.co.us/c.StateLevelAgencies/GOV/OIT/CSO/GIS/CY2016/Parcels/ParcelsByCounty_SHP/ClearCreek.zip",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "number": {
-            "function": "prefixed_number",
-            "field": "situsAdd"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "situsAdd"
-        },
-        "city": "sitAddCity",
-        "postcode": "sitAddZip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/337772/us/co/clear_creek.zip",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

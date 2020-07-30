@@ -9,22 +9,28 @@
         "state": "ak",
         "county": "Ketchikan Gateway"
     },
-    "data": "http://web1.mobile311.com/arcgis/rest/services/Alaska/Ketchikan/MapServer/17",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "LOC_STNO",
-        "street": [
-            "LOC_STNAME",
-            "LOC_SUFFIX",
-            "LOC_POSTDI"
-        ],
-        "unit": [
-            "LOC_UNITTY",
-            "LOC_UNIT"
-        ],
-        "city": "LOC_CITY",
-        "region": "LOC_STATE",
-        "postcode": "LOC_ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/797895/us/ak/ketchikan.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

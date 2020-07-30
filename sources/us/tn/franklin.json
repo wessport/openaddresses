@@ -9,20 +9,29 @@
         "state": "tn",
         "county": "Franklin"
     },
-    "data": "http://gis.franklin-gov.com/publicmaps/rest/services/Maps/PublicSafety/MapServer/18",
-    "protocol": "ESRI",
-    "website": "http://gis.franklin-gov.com/public-maps-gallery/",
-    "conform": {
-        "format": "geojson",
-        "number": "stnumc",
-        "street": "compstname",
-        "unit": [
-            "unit_type",
-            "unit_num"
-        ],
-        "city": "city",
-        "district": "county",
-        "region": "state",
-        "postcode": "zip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/748268/us/tn/franklin.zip",
+                "protocol": "http",
+                "website": "http://gis.franklin-gov.com/public-maps-gallery/",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

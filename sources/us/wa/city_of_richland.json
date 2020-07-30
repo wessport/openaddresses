@@ -17,18 +17,29 @@
         "county": "Benton",
         "city": "Richland"
     },
-    "note": "This is building footprint data with addresses merged in given to us from local government",
-    "data": "https://data.openaddresses.io/cache/uploads/iandees/d6ae04/CoRAddressPoly.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile-polygon",
-        "number": "AddressNo",
-        "unit": [
-            "AddUnitTyp",
-            "AddressUni"
-        ],
-        "street": "StreetName",
-        "postcode": "ZipCode"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "note": "This is building footprint data with addresses merged in given to us from local government",
+                "data": "http://data.openaddresses.io/runs/886420/us/wa/city_of_richland.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

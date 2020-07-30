@@ -9,13 +9,29 @@
         "state": "nc",
         "county": "Alleghany"
     },
-    "website": "http://www.webgis.net/nc/Alleghany/",
-    "data": "https://www.webgis.net/arcgis/rest/services/NC/Alleghany/MapServer/2",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDRESS",
-        "street": "ROADNAME",
-        "unit": "APARTMENT"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "http://www.webgis.net/nc/Alleghany/",
+                "data": "http://data.openaddresses.io/runs/886758/us/nc/alleghany.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

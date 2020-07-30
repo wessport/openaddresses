@@ -9,12 +9,28 @@
         "state": "ks",
         "county": "Thomas"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "add_",
-        "street": "street",
-        "postcode": "zip"
-    },
-    "data": "http://72.205.198.131/ArcGIS/rest/services/Thomas/Thomas/MapServer/30",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/160027/us/ks/thomas_county.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

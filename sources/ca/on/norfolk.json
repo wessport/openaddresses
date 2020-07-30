@@ -4,17 +4,29 @@
         "state": "on",
         "county": "Norfolk"
     },
-    "website": "http://norfolk.maps.arcgis.com/apps/webappviewer/index.html",
-    "data": "http://gis2.norfolkcounty.ca/arcgis/rest/services/Services_HealthSocialServices/Haldimand_Norfolk_Base/MapServer/6",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "NUMBER_",
-        "street": [
-            "Bell_Name",
-            "Bell_Suf",
-            "Bell_Dir"
-        ],
-        "unit": "UnitNumber"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "http://norfolk.maps.arcgis.com/apps/webappviewer/index.html",
+                "data": "http://data.openaddresses.io/runs/885961/ca/on/norfolk.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

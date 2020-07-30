@@ -4,16 +4,30 @@
         "state": "ca",
         "city": "Walnut Creek"
     },
-    "year": "2019",
-    "data": "https://data.openaddresses.io/cache/uploads/ingalls/us-ca-city_of_walnut_creek.zip",
-    "note": "Obtained Via FOIA Request",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "unit": "UNITID",
-        "number": "ADDRNUM",
-        "street": "FULLNAME",
-        "city": "MUNICIPALI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "year": "2019",
+                "data": "http://data.openaddresses.io/runs/886352/us/ca/city_of_walnut_creek.zip",
+                "note": "Obtained Via FOIA Request",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

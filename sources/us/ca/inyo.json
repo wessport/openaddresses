@@ -9,19 +9,29 @@
         "state": "ca",
         "county": "Inyo"
     },
-    "data": "https://services.arcgis.com/0jRlQ17Qmni5zEMr/ArcGIS/rest/services/AddressPolys/FeatureServer/0",
-    "website": "http://inyocounty.us/gis/GISPage_Data.htm",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "FULL_ADDR"
-        },
-        "street": [
-            "PreDir",
-            "Name",
-            "Type"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886275/us/ca/inyo.zip",
+                "website": "http://inyocounty.us/gis/GISPage_Data.htm",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
         ]
     }
 }

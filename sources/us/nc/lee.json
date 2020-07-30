@@ -9,23 +9,31 @@
         "state": "nc",
         "county": "Lee"
     },
-    "conform": {
-        "format": "shapefile",
-        "number": "NEWADDR",
-        "street": [
-            "ROADPRE",
-            "ROADNAME",
-            "ROADTYPE"
-        ],
-        "unit": "NEWADDRSUF",
-        "city": "CITY",
-        "region": "STATE",
-        "postcode": "ZIPCODE"
-    },
-    "website": "http://www.leecountync.gov/Departments/GISStrategicServices/DownloadGISLayers.aspx",
-    "data": "http://files.leecountync.gov/LinkClick.aspx?fileticket=FDcGBF8P0Qg%3d&tabid=292",
-    "year": "2013",
-    "protocol": "http",
-    "compression": "zip",
-    "note": "not direct link"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "website": "http://www.leecountync.gov/Departments/GISStrategicServices/DownloadGISLayers.aspx",
+                "data": "http://data.openaddresses.io/runs/570352/us/nc/lee.zip",
+                "year": "2013",
+                "protocol": "http",
+                "compression": "zip",
+                "note": "not direct link"
+            }
+        ]
+    }
 }

@@ -1,25 +1,36 @@
 {
     "coverage": {
-        "US Census": {"geoid": "35011", "name": "De Baca County", "state": "New Mexico"},
+        "US Census": {
+            "geoid": "35011",
+            "name": "De Baca County",
+            "state": "New Mexico"
+        },
         "country": "us",
         "state": "nm",
         "county": "De Baca"
     },
-    "data": "https://data.openaddresses.io/cache/uploads/ingalls/us-nm-debaca.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "file": "DeBacaCoParcelMaint/DBCOAddr.shp",
-        "number": "NEW_ADD",
-        "street": [
-            "PREFIX",
-            "ROAD_NAME",
-            "SUFFIX",
-            "POSTDIR"
-        ],
-        "city": "CITY",
-        "region": "STATE",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886948/us/nm/de_baca.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

@@ -9,13 +9,28 @@
         "state": "ak",
         "county": "Haines"
     },
-    "data": "https://data.openaddresses.io/cache/uploads/trescube/8a6b5f/us-ak-haines.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-      "format": "shapefile",
-      "number": "Address",
-      "street": "Full_Road_",
-      "unit": "SubAddress"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886907/us/ak/haines.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

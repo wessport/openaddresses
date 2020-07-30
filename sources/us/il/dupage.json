@@ -9,18 +9,28 @@
         "state": "il",
         "county": "DuPage"
     },
-    "data": "http://gis.dupageco.org/arcgis/rest/services/ParcelSearch/DuPageAssessmentParcelViewer/MapServer/4",
-    "protocol": "ESRI",
-    "conform": {
-        "number": "PROPSTNUM",
-        "street": [
-            "PROPSTDIR",
-            "PROPSTNAME"
-        ],
-        "unit": "PROPAPT",
-        "city": "PROPCITY",
-        "region": "PROPSTATE",
-        "postcode": "PROPZIP",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/890645/us/il/dupage.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

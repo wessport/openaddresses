@@ -10,13 +10,28 @@
         "country": "se",
         "city": "Vaxholm"
     },
-    "data": "http://gis.osteraker.se/arcgis/rest/services/Vaxholm/Vaxholm_detaljplan_adresser/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADRESSPL_1",
-        "street": "ADROMRADE",
-        "city": "POSTORT",
-        "postcode": "POSTNR"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/154627/se/municipality_of_vaxholm.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

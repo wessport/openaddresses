@@ -9,19 +9,28 @@
         "state": "co",
         "county": "Montrose"
     },
-    "data": "https://mcmap2.montrosecounty.net/arcgis/rest/services/MontroseCOaddress/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "FSA"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "FSA"
-        },
-        "postcode": "ZIPCODE",
-        "city": "PCN"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886171/us/co/montrose.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

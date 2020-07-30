@@ -9,20 +9,29 @@
         "state": "pa",
         "county": "Northampton"
     },
-    "data": "https://gis.northamptoncounty.org/arcgisweb/rest/services/Assessment_Services/Land_Records_LGM/MapServer/3",
-    "website": "https://gis.northamptoncounty.org/public/",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HouseNumber",
-        "street": [
-            "PreDirectional",
-            "StreetName",
-            "PostType",
-            "PostDirectional"
-        ],
-        "unit": "Unit",
-        "city": "Muni",
-        "postcode": "Zip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/890790/us/pa/northampton.zip",
+                "website": "https://gis.northamptoncounty.org/public/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

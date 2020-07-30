@@ -9,12 +9,29 @@
         "state": "ca",
         "county": "Calaveras"
     },
-    "data": "https://gisportal.co.calaveras.ca.us/arcserver/rest/services/OpenData/PARCELS_Open_Data/MapServer/0",
-    "website": "https://opendata-calaveras-gis.opendata.arcgis.com/",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "STRNUM",
-        "street": "STREET"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885618/us/ca/calaveras.zip",
+                "website": "https://opendata-calaveras-gis.opendata.arcgis.com/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

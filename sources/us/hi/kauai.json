@@ -9,18 +9,28 @@
         "state": "hi",
         "county": "kauai"
     },
-    "data": "https://services1.arcgis.com/0DaVqrPt2eyXUS9g/ArcGIS/rest/services/AddressPoints/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ST_NUM",
-        "street": [
-            "DIRPRE",
-            "FEANME",
-            "FEATYP",
-            "DIRSUF"
-        ],
-        "unit": "LV_APT",
-        "region": "STATE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886333/us/hi/kauai.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

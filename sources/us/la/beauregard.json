@@ -9,11 +9,28 @@
         "state": "la",
         "county": "Beauregard"
     },
-    "data": "http://services.geoportalmaps.com/arcgis/rest/services/Beauregard_Services/MapServer/12",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "Address_Nu",
-        "street": "Street_Nam"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886143/us/la/beauregard.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,16 +9,28 @@
         "state": "ga",
         "county": "Cobb"
     },
-    "protocol": "ESRI",
-    "data": "http://www.cobbgis.org:81/arcgislb1/rest/services/tax/cobbparcelsmap_wgs/MapServer/3",
-    "conform": {
-        "format": "geojson",
-        "number": "ST_NUMBER",
-        "street": {
-            "function": "remove_prefix",
-            "field": "SITUS_ADDR",
-            "field_to_remove": "ST_NUMBER"
-        },
-        "unit": "UNIT_NUM"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/888002/us/ga/cobb.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

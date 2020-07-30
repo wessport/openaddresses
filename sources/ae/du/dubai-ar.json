@@ -3,13 +3,29 @@
         "country": "ae",
         "city": "Dubai"
     },
-    "data": "http://www.makani.ae/arcgis/rest/services/DMap_EL_2015/MapServer/14",
-    "protocol": "ESRI",
-    "language": "ar",
-    "conform": {
-        "number": "MAKANI",
-        "street": "ROADNAMEAR",
-        "district": "COMM_NAM_1",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/247736/ae/du/dubai-ar.zip",
+                "protocol": "http",
+                "language": "ar",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

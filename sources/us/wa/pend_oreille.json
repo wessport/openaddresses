@@ -1,27 +1,37 @@
 {
-	"coverage": {
-		"US Census": {
-			"geoid": "53051",
-			"name": "Pend Oreille County",
-			"state": "Washington"
-		},
-		"country": "us",
-		"state": "wa",
-		"county": "Pend Oreille"
-	},
-	"data": "https://gis.pendoreilleco.org/arcgis/rest/services/Pend_Oreille_Co_Parcels/MapServer/0",
-	"website":"https://gis.pendoreilleco.org/POCGISWeb/",
-	"protocol": "ESRI",
-	"conform": {
-		"format": "geojson",
-		"number": "situs_num",
-		"street": [
-			"situs_pref",
-			"situs_st",
-			"situs_sufi"
-		],
-		"city": "situs_city",
-		"postcode": "situs_zip",
-		"region": "situs_stat"
-	}
+    "coverage": {
+        "US Census": {
+            "geoid": "53051",
+            "name": "Pend Oreille County",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "county": "Pend Oreille"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886081/us/wa/pend_oreille.zip",
+                "website": "https://gis.pendoreilleco.org/POCGISWeb/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
+    }
 }

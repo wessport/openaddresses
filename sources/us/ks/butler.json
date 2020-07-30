@@ -9,23 +9,28 @@
         "state": "ks",
         "county": "Butler"
     },
-    "protocol": "ESRI",
-    "data": "http://ww1.bucoks.com/arcgis/rest/services/BuCoKs_NGAddressPoints/MapServer/0",
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "HNO",
-            "HNS"
-        ],
-        "unit": "UNIT",
-        "street": [
-            "PRD",
-            "STP",
-            "RD",
-            "STS"
-        ],
-        "city": "MUNI",
-        "region": "COUNTY",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/629582/us/ks/butler.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

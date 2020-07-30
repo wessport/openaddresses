@@ -9,19 +9,30 @@
         "state": "fl",
         "county": "Bay"
     },
-    "attribution": "Bay County",
-    "data": "http://www.baycountyfl.gov/gis/downloads/address.zip",
-    "website": "http://www.baycountyfl.gov/gis/downloads2.php?agreecheck=on",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "street": "fullname",
-        "number": "house",
-        "unit": [
-          "UNITTYPE",
-          "UNIT"
-        ],
-        "format": "shapefile",
-        "postcode": "zip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Bay County",
+                "data": "http://data.openaddresses.io/runs/299538/us/fl/bay.zip",
+                "website": "http://www.baycountyfl.gov/gis/downloads2.php?agreecheck=on",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

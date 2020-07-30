@@ -9,18 +9,28 @@
         "state": "nd",
         "county": "Bottineau"
     },
-    "data": "https://services.arcgis.com/4YineAQdtmx0tv46/ArcGIS/rest/services/BottineauNDFeatures/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "DLVRY_ADD"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "DLVRY_ADD"
-        },
-        "city": "COMMUNITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886760/us/nd/bottineau.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

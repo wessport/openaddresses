@@ -12,18 +12,35 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -71.6483, 42.8359
+                -71.6483,
+                42.8359
             ]
         }
     },
-    "note": "Processed Using scripts/us/nh/milton/run",
-    "data": "https://data.openaddresses.io/cache/uploads/ingalls/us-nh-milton.geojson",
-    "website": "http://gis.milford.nh.gov/milfordnh/",
-    "protocol": "http",
-    "conform": {
-        "number": "ST_NUM",
-        "street": "ST_NAME",
-        "accuracy": 2,
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "note": "Processed Using scripts/us/nh/milton/run",
+                "data": "http://data.openaddresses.io/runs/886454/us/nh/milford.zip",
+                "website": "http://gis.milford.nh.gov/milfordnh/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

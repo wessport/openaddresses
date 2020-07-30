@@ -17,16 +17,28 @@
         "county": "Campbell",
         "city": "Wright"
     },
-    "data": "http://gis.ccgov.net/arcgis/rest/services/BaseMapRebuild/MapServer/2",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSE",
-        "unit": "UNIT",
-        "street": [
-            "DIRECTION",
-            "STREET",
-            "SUFFIX"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/357504/us/wy/city_of_wright.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
         ]
     }
 }

@@ -2,7 +2,10 @@
     "coverage": {
         "geometry": {
             "type": "Point",
-            "coordinates": [ -98.377394, 30.540117 ]
+            "coordinates": [
+                -98.377394,
+                30.540117
+            ]
         },
         "US Census": {
             "geoid": "4834862",
@@ -13,19 +16,28 @@
         "state": "tx",
         "city": "Horseshoe Bay"
     },
-    "data": "https://services2.arcgis.com/PGv0SS9sE3M9RybT/arcgis/rest/services/DeerTrapping2018/FeatureServer/1",
-    "protocol": "ESRI",
-    "conform": {
-        "id": "SITE_ID",
-        "number": [
-            "ADDR_NUM",
-            "ADDNUM_SUF"
-        ],
-        "street": "FULL_NAME",
-        "unit": "UNIT",
-        "district": "COUNTY",
-        "region": "STATE",
-        "postcode": "ZIP",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886699/us/tx/city_of_horseshoe_bay.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

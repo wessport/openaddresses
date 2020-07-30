@@ -10,26 +10,30 @@
         "country": "us",
         "state": "tx"
     },
-    "year": "2016",
-    "note": "CAPCOG is a consortium serving Bastrop, Blanco, Burnet, Caldwell, Fayette, Hays, Lee, Llano, Travis, and Williamson Counties",
-    "data": "https://services5.arcgis.com/8DjE4f6iFLArDhsU/arcgis/rest/services/AddressPoints_March2017/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "ADDNUM_PRE",
-            "ADDR_NUM",
-            "ADDNUM_SUF"
-        ],
-        "street": [
-            "PRE_DIR",
-            "PRE_TYPE",
-            "ST_NAME",
-            "ST_TYPE"
-        ],
-        "city": "POSTAL_COM",
-        "district": "COUNTY",
-        "region": "STATE",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "year": "2016",
+                "note": "CAPCOG is a consortium serving Bastrop, Blanco, Burnet, Caldwell, Fayette, Hays, Lee, Llano, Travis, and Williamson Counties",
+                "data": "http://data.openaddresses.io/runs/885404/us/tx/capcog.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

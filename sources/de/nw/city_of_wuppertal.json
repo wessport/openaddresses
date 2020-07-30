@@ -11,15 +11,29 @@
         "state": "nw",
         "city": "Wuppertal"
     },
-    "data": "http://daten.wuppertal.de/Infrastruktur_Bauen_Wohnen/Wohngebaeude-Baujahr-Adresse_EPSG3857_SHAPE.zip",
-    "website": "http://www.offenedaten-wuppertal.de/dataset/wohngeb%C3%A4ude-baujahre-wuppertal",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "srs": "EPSG:3857",
-        "format": "shapefile",
-        "street": "STR_NAME",
-        "number": "HAUSNR",
-        "unit": "ADR_ZUSATZ"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886379/de/nw/city_of_wuppertal.zip",
+                "website": "http://www.offenedaten-wuppertal.de/dataset/wohngeb%C3%A4ude-baujahre-wuppertal",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

@@ -11,18 +11,28 @@
             ]
         }
     },
-    "data": "https://services1.arcgis.com/JOTjMnANji9YTrZ2/ArcGIS/rest/services/GISOpenDataMap/FeatureServer/4",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "ADD_ID",
-        "number": "ADDNUM",
-        "street": [
-            "STREETNAME",
-            "STREETTYPE",
-            "DIRECTION"
-        ],
-        "unit": "BLDG_UNIT",
-        "city": "MUNICIPALITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886291/ca/on/city_of_peterborough.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

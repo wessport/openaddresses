@@ -1,32 +1,37 @@
 {
-	"coverage": {
-		"US Census": {
-			"geoid": "28047",
-			"name": "Harrison County",
-			"state": "Mississippi"
-		},
-		"country": "us",
-		"state": "ms",
-		"county": "Harrison"
-	},
-	"data": "http://services3.geopowered.com/arcgis/rest/services/ATGEO/HarrisonMS_parcels/MapServer/0",
-	"website": "http://harrisonms.geopowered.com/propertysearch/",
-	"protocol": "ESRI",
-	"conform": {
-		"format": "geojson",
-		"number": {
-			"function": "regexp",
-			"field": "addCalc",
-			"pattern": "^([0-9]+)"
-		},
-		"street": {
-			"function": "regexp",
-			"field": "addCalc",
-			"pattern": "^(?:[0-9]+ )(.*)",
-			"replace": "$1"
-		},
-		"city": "SITUS_CITY",
-		"postcode": "SITUS_ZIP",
-		"region": "SITUS_STAT"
-	}
+    "coverage": {
+        "US Census": {
+            "geoid": "28047",
+            "name": "Harrison County",
+            "state": "Mississippi"
+        },
+        "country": "us",
+        "state": "ms",
+        "county": "Harrison"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/141681/us/ms/harrison.zip",
+                "website": "http://harrisonms.geopowered.com/propertysearch/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
+    }
 }

@@ -4,13 +4,28 @@
         "state": "on",
         "county": "Leeds And Grenville"
     },
-    "protocol": "ESRI",
-    "data": "http://services3.arcgis.com/KQcdsE7S72bcD7R8/ArcGIS/rest/services/CivicAddress/FeatureServer/0",
-    "conform":{
-        "format": "geojson",
-        "unit": "UNITNUM",
-        "number": "CIVICNUM",
-        "street": "STREET",
-        "city": "GEOTOWNSHP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/831885/ca/on/leeds_grenville.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

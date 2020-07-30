@@ -9,16 +9,28 @@
         "state": "wi",
         "county": "Adams"
     },
-    "data": "https://services5.arcgis.com/cmcEK45KcVMmaCd7/ArcGIS/rest/services/Addressing/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "unit": "UNIT",
-        "number": [
-            "prefix",
-            "numb",
-            "suffix"
-        ],
-        "street": "street"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886371/us/wi/adams.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

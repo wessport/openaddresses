@@ -9,11 +9,28 @@
         "state": "ms",
         "county": "Pontotoc"
     },
-    "protocol": "ESRI",
-    "data": "http://services.geoportalmaps.com/arcgis/rest/services/Pontotoc_Services/MapServer/5",
-    "conform": {
-        "format": "geojson",
-        "number": "StreetNumber",
-        "street": "StreetName"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/885899/us/ms/pontotoc.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

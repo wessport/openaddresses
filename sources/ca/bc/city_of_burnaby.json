@@ -11,19 +11,33 @@
             ]
         }
     },
-    "data": "https://gis.burnaby.ca/arcgis/rest/services/OpenData/OpenData4/MapServer/7",
-    "license": {
-        "url": "https://www.burnaby.ca/opendata/licence.html",
-        "attribution": true
-    },
-    "note": "separate fields are available for street but street name is spelled-out ordinals instead of numeric version, eg: EIGHTH vs 8TH (latter is preferred which is contained in ADDRESS field)",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ST_NMBR",
-        "street": {
-            "function": "postfixed_street",
-            "field": "ADDRESS"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885793/ca/bc/city_of_burnaby.zip",
+                "license": {
+                    "url": "https://www.burnaby.ca/opendata/licence.html",
+                    "attribution": true
+                },
+                "note": "separate fields are available for street but street name is spelled-out ordinals instead of numeric version, eg: EIGHTH vs 8TH (latter is preferred which is contained in ADDRESS field)",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

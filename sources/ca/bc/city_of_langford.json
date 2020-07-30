@@ -11,12 +11,28 @@
             ]
         }
     },
-    "data": "https://maps.cityoflangford.ca:6443/arcgis/rest/services/Streets_Addresses_External/City_of_Langford_Address_Streets/MapServer/1",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "Civ_Num",
-        "street": "Str_Name",
-        "unit": "Unit_Num"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/797909/ca/bc/city_of_langford.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

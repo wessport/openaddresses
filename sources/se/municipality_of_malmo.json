@@ -3,20 +3,35 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                12.950,
+                12.95,
                 55.571
             ]
         },
         "country": "se",
         "city": "Malmö"
     },
-    "data": "http://kartor.malmo.se/arcgis/rest/services/atlaskarta/MapServer/14",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADRESSPLAT",
-        "street": "ADRESSOMR",
-        "city": "POSTORT",
-        "postcode": "POSTNR"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886019/se/municipality_of_malmo.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

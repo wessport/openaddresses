@@ -9,26 +9,35 @@
         "state": "fl",
         "county": "Walton"
     },
-    "license": {
-        "url": "http://www.co.walton.fl.us/index.aspx?nid=926",
-        "text": "Indemnification",
-        "attribution": false,
-        "share-alike": false
-    },
-    "data": "https://www.co.walton.fl.us/DocumentCenter/View/31583/AddressPoints_20190226",
-    "website": "http://www.co.walton.fl.us/index.aspx?NID=926",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "number": "AddrNum",
-        "street": [
-            "RoadPreDir",
-            "RoadName",
-            "RoadType",
-            "RoadPostDi"
-        ],
-        "city": "Municipali",
-        "postcode": "ZipCode"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "license": {
+                    "url": "http://www.co.walton.fl.us/index.aspx?nid=926",
+                    "text": "Indemnification",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "data": "http://data.openaddresses.io/runs/886446/us/fl/walton.zip",
+                "website": "http://www.co.walton.fl.us/index.aspx?NID=926",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

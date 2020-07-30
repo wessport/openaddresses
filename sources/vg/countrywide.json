@@ -6,17 +6,29 @@
         },
         "country": "vg"
     },
-    "data": "https://www.bvimapping.gov.vg/arcgis/rest/services/MAPS/ADDRESSES/FeatureServer/0",
-    "website": "https://www.bvimapping.gov.vg/NAS/",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "ADDRESS"
-        },
-        "street": "STREET_NAM",
-        "city": "Island",
-        "postcode": "Postal_Code"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886653/vg/countrywide.zip",
+                "website": "https://www.bvimapping.gov.vg/NAS/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

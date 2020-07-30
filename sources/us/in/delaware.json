@@ -9,18 +9,28 @@
         "state": "in",
         "county": "Delaware"
     },
-    "data": "https://data.openaddresses.io/cache/uploads/trescube/f39920/DelawareCoIndianaAddressPts_04102017.shp.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "number": "HOUSE",
-        "street": [
-            "DIR",
-            "STREET"
-        ],
-        "unit": "SUFFIX",
-        "city": "COMMUNITY",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886406/us/in/delaware.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

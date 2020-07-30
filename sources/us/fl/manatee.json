@@ -9,29 +9,35 @@
         "state": "fl",
         "county": "Manatee"
     },
-    "attribution": "Manatee County",
-    "data": "http://www.mymanatee.org/gisapps/data/shape/ADDRESS.zip",
-    "website": "http://www.mymanatee.org/home/government/departments/information-technology/gis-home/gis-datadownload.html",
-    "license": {
-        "text": "Public Domain",
-        "attribution": false,
-        "share-alike": false
-    },
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile-polygon",
-        "number": "ST_NUM",
-        "street": [
-          "SDIRPRE",
-          "SFEANME",
-          "SFEATYP",
-          "SDIRSUF"
-        ],
-        "unit": "LV_APT",
-        "city": "POSTAL_COM",
-        "district": "COUNTY_NAM",
-        "region": "STATE",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Manatee County",
+                "data": "http://data.openaddresses.io/runs/885615/us/fl/manatee.zip",
+                "website": "http://www.mymanatee.org/home/government/departments/information-technology/gis-home/gis-datadownload.html",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

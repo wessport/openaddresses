@@ -9,17 +9,28 @@
         "state": "fl",
         "county": "Sumter"
     },
-    "data": "https://gis.sumtercountyfl.gov/sumtergis/rest/services/Interactive/Addresses/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADD_NUM",
-        "unit": [
-            "UNITTYPE",
-            "UNITNUM"
-        ],
-        "street": "FULLSTREET",
-        "city": "CITY",
-        "postcode": "POST_CODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885440/us/fl/sumter.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

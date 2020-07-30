@@ -4,13 +4,28 @@
         "state": "on",
         "county": "Stormont, Dundas and Glengarry"
     },
-    "protocol": "ESRI",
-    "data": "http://services5.arcgis.com/zEv9BLFdYq38maPG/ArcGIS/rest/services/CivicAddress_Public/FeatureServer/0",
-    "conform":{
-        "format": "geojson",
-        "number": "Civic_Num",
-        "street": "Street_Nam",
-        "unit": "UnitNum",
-        "city": "Municipali"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/430467/ca/on/stormont_dundas_glengarry.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

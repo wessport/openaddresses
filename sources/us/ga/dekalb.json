@@ -9,15 +9,28 @@
         "state": "ga",
         "county": "Dekalb"
     },
-    "protocol": "ESRI",
-    "data": "http://maps.dekalbcountyga.gov/arcgis/rest/services/TaxParcels/MapServer/20",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDRESS_NUMBER",
-        "street": "FULL_STREET_NAME",
-        "unit": ["UNIT_TYPE", "UNIT"],
-        "city": "CITY",
-        "postcode": "ZIP",
-        "region": "STATE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/885411/us/ga/dekalb.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

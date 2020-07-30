@@ -9,26 +9,29 @@
         "state": "nc",
         "county": "New Hanover"
     },
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "NUMBER",
-            "SUBNUM"
-        ],
-        "street": [
-            "DIR",
-            "STREET",
-            "TYPE"
-        ],
-        "unit": [
-            "UTYPE",
-            "UNIT"
-        ],
-        "city": "CITY",
-        "region": "STATE",
-        "postcode": "ZIPCODE"
-    },
-    "data": "https://gis.nhcgov.com/server/rest/services/Layers/Addressing/MapServer/0",
-    "protocol": "ESRI",
-    "website": "https://hub.arcgis.com/datasets/97957240f03c44b1a116c95346321cff_0"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/885824/us/nc/new_hanover.zip",
+                "protocol": "http",
+                "website": "https://hub.arcgis.com/datasets/97957240f03c44b1a116c95346321cff_0",
+                "compression": "zip"
+            }
+        ]
+    }
 }

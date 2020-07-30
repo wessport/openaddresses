@@ -9,18 +9,28 @@
         "state": "il",
         "county": "Morgan"
     },
-    "data": "http://services2.bhamaps.com/arcgis/rest/services/AGS_morgan_co_il_gis/MapServer/1",
-    "protocol": "ESRI",
-    "conform": {
-        "number": "HNUM",
-        "street": [
-            "PRE_DIR",
-            "STREET",
-            "TYPE"
-        ],
-        "city": "CITY",
-        "region": "STATE",
-        "postcode": "ZIP",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/130666/us/il/morgan.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

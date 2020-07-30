@@ -9,26 +9,28 @@
         "state": "ks",
         "county": "Douglas"
     },
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "HNO",
-            "HNS"
-        ],
-        "street": [
-            "PRD",
-            "RD",
-            "STS"
-        ],
-        "unit": [
-            "UNIT_TYPE",
-            "UNIT"
-        ],
-        "city": "MUNI",
-        "district": "COUNTY",
-        "region": "STATE",
-        "postcode": "ZIP"
-    },
-    "data": "http://gis.lawrenceks.org/arcgis/rest/services/AddressPoints/MapServer/0",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/245796/us/ks/douglas.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

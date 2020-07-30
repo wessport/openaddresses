@@ -9,21 +9,28 @@
         "state": "az",
         "county": "Cochise"
     },
-    "data": "https://data.openaddresses.io/cache/uploads/iandees/bfb7f4/Dev_Address_V.csv.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "csv",
-        "lat": "DEC_LAT",
-        "lon": "DEC_LONG",
-        "number": "HOUSE",
-        "unit": "UNIT",
-        "street": [
-            "PREFIX",
-            "NAME",
-            "SUFFIX"
-        ],
-        "postcode": "ZIP_CODE",
-        "city": "LOCALITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886350/us/az/cochise.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

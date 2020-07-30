@@ -2,20 +2,37 @@
     "coverage": {
         "geometry": {
             "type": "Point",
-            "coordinates": [ -79.1496276, 37.4148911 ]
+            "coordinates": [
+                -79.1496276,
+                37.4148911
+            ]
         },
         "country": "us",
         "state": "va",
         "city": "Lynchburg"
     },
-    "data": "https://mapviewer.lynchburgva.gov/arcgis/rest/services/OpenData/ODPDynamic/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "unit": "UnitNumber",
-        "number": "HouseNumber",
-        "street": "StreetName",
-        "city": "City",
-        "postcode": "ZipCode"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886213/us/va/city_of_lynchburg.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

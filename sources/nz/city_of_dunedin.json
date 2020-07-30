@@ -10,16 +10,29 @@
         "country": "nz",
         "city": "Dunedin"
     },
-    "data": "https://apps.dunedin.govt.nz/arcgis/rest/services/Public/Street_Map/MapServer/2",
-    "protocol": "ESRI",
-    "website": "https://www.dunedin.govt.nz/do-it-online/maps-and-photos/street-map",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSENO",
-        "street": [
-            "ROADNAME",
-            "ROADTYPE"
-        ],
-        "city": "LOCALITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885690/nz/city_of_dunedin.zip",
+                "protocol": "http",
+                "website": "https://www.dunedin.govt.nz/do-it-online/maps-and-photos/street-map",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

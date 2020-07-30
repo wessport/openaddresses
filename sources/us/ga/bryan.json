@@ -9,16 +9,28 @@
         "state": "ga",
         "county": "Bryan"
     },
-    "data": "http://bryangis.bryan-county.org/arcgis/rest/services/PropertyDetails/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSE_NO",
-        "street": [
-            "STDIRECT",
-            "STREET_N_1",
-            "STTYPE"
-        ],
-        "unit": "UNIT"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886260/us/ga/bryan.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

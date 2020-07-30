@@ -9,19 +9,28 @@
         "state": "ia",
         "county": "Des Moines"
     },
-    "data": "https://www.dmcwebgis.com/arcgis/rest/services/Base/AddressMar/MapServer/0/",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSE",
-        "unit": "Unit",
-        "street": [
-            "DIR",
-            "STREET",
-            "STREET_TYP",
-            "SUFF"
-        ],
-        "city": "COMMUNITY",
-        "id": "FID"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/829356/us/ia/des_moines.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,12 +9,29 @@
         "state": "al",
         "county": "Talladega"
     },
-    "data": "http://web3.kcsgis.com/kcsgis/rest/services/Talladega/Public/MapServer/51",
-    "protocol": "ESRI",
-    "attribution": "Talladega County",
-    "conform": {
-        "format": "geojson",
-        "street": "SitusAddName",
-        "number": "SitusAddNumber"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/672287/us/al/talladega.zip",
+                "protocol": "http",
+                "attribution": "Talladega County",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

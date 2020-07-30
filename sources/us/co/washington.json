@@ -9,12 +9,28 @@
         "state": "co",
         "county": "Washington"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "LOC_NUMBER",
-        "street": "LOC_STREET",
-        "city": "MUNI"
-    },
-    "data": "http://gis.co.washington.ny.us/arcgis/rest/services/WashingtonCounty/MapServer/4",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/885933/us/co/washington.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

@@ -1,19 +1,37 @@
 {
     "coverage": {
-        "US Census": {"geoid": "20043", "name": "Doniphan County", "state": "Kansas"},
+        "US Census": {
+            "geoid": "20043",
+            "name": "Doniphan County",
+            "state": "Kansas"
+        },
         "country": "us",
         "state": "ks",
         "county": "Doniphan"
     },
-    "conform": {
-        "format": "csv",
-        "number": "NUM",
-        "street": "street",
-        "postcode": "",
-        "lon": "x",
-        "lat": "y"
-    },
-    "data": "https://data.openaddresses.io/cache/us-ks-doniphan_county.csv",
-    "website": "http://jade.kgs.ku.edu/orka2/MainPage.aspx",
-    "protocol": "http"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/886934/us/ks/doniphan_county.zip",
+                "website": "http://jade.kgs.ku.edu/orka2/MainPage.aspx",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

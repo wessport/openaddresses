@@ -9,20 +9,28 @@
         "state": "ks",
         "county": "Wabaunsee"
     },
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "add_num",
-            "add_num_su"
-        ],
-        "street": [
-            "road_pre",
-            "road_name",
-            "road_type"
-        ],
-        "city": "community",
-        "postcode": "zipcode"
-    },
-    "data": "http://72.205.198.131/ArcGIS/rest/services/Wabaunsee/Wabaunsee/MapServer/43",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/161182/us/ks/wabaunsee_county.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

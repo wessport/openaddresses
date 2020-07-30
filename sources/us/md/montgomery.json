@@ -9,23 +9,29 @@
         "state": "md",
         "county": "Montgomery"
     },
-    "data": "https://mcatlas.org/arcgis3/rest/services/overlays/Address_Labels/MapServer/0",
-    "website": "https://gisportal.montgomerycountymd.gov/portal/home/index.html",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "ADDR_NUMBER",
-            "ADDR_NUMBER_SUFFIX"
-        ],
-        "unit": "UNIT",
-        "street": [
-            "PRE_DIR",
-            "ST_NAME",
-            "ST_TYPE",
-            "SUF_DIR"
-        ],
-        "city": "CITY",
-        "postcode": "ZIPCODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/884961/us/md/montgomery.zip",
+                "website": "https://gisportal.montgomerycountymd.gov/portal/home/index.html",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -3,16 +3,37 @@
         "country": "ca",
         "state": "on",
         "county": "Haldimand",
-        "geometry": { "type": "Point", "coordinates": [-80.1, 42.9] }
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -80.1,
+                42.9
+            ]
+        }
     },
-    "protocol": "ESRI",
-    "data": "https://maps.haldimandcounty.on.ca/arcgis/rest/services/ParcelsNoOwners/MapServer/0",
-    "website": "http://www.opendata.haldimandcounty.on.ca",
-    "conform":{
-        "format": "geojson",
-        "number": "STREET_NO",
-        "street": "STREET_NAME",
-        "unit": "STREET_UNIT",
-        "city": "ZONE_MUN"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/886167/ca/on/haldimand.zip",
+                "website": "http://www.opendata.haldimandcounty.on.ca",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

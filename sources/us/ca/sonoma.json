@@ -9,24 +9,31 @@
         "state": "ca",
         "county": "Sonoma"
     },
-    "attribution": "Sonoma County",
-    "data": "https://github.com/datadesk/us-ca-sonoma-county-sc_base_adr_addresses-shp/blob/master/sc_base_adr_addresses.zip?raw=true",
-    "website": "http://sonomacounty.ca.gov/ISD/Systems-and-Programming/Geographic-Information-Systems/",
-    "protocol": "http",
-    "compression": "zip",
-    "note": "Provided in response to a public records request in December 2014 and uploaded to GitHub for public hosting.",
-    "conform": {
-        "format": "shapefile",
-        "number": ["Num", "NumExt"],
-        "street": [
-            "PreDir",
-            "Name",
-            "Type",
-            "SufDir"
-        ],
-        "unit": "Unit",
-        "city": "Mun",
-        "postcode": "ZipCode",
-        "accuracy": 2
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Sonoma County",
+                "data": "http://data.openaddresses.io/runs/885762/us/ca/sonoma.zip",
+                "website": "http://sonomacounty.ca.gov/ISD/Systems-and-Programming/Geographic-Information-Systems/",
+                "protocol": "http",
+                "compression": "zip",
+                "note": "Provided in response to a public records request in December 2014 and uploaded to GitHub for public hosting.",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

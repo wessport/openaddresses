@@ -9,19 +9,35 @@
         "state": "va",
         "county": "Bedford"
     },
-    "website": "http://www.co.bedford.va.us/GIS/index.asp",
-    "data": "http://bedfordco.dreamhosters.com/SHPFiles/E911Address.zip",
-    "license": {
-        "text": "Indemnification",
-        "attribution": false,
-        "share-alike": false
-    },
-    "year": "2014",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "number": "ADDRESS",
-        "street": "ROADNAME"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "http://www.co.bedford.va.us/GIS/index.asp",
+                "data": "http://data.openaddresses.io/runs/58177/us/va/bedford.zip",
+                "license": {
+                    "text": "Indemnification",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "year": "2014",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

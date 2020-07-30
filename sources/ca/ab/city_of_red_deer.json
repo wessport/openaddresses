@@ -11,17 +11,32 @@
             ]
         }
     },
-    "data": "https://data.reddeer.ca/datasets/parceladdresses/download/shapefile",
-    "protocol": "http",
-    "compression": "zip",
-    "license": {
-        "url": "https://data.reddeer.ca/About",
-        "attribution": true
-    },
-    "conform": {
-        "format": "shapefile",
-        "number": "house_id",
-        "unit": "unit_num",
-        "street": "name"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886253/ca/ab/city_of_red_deer.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "license": {
+                    "url": "https://data.reddeer.ca/About",
+                    "attribution": true
+                },
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

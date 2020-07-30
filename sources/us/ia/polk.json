@@ -9,22 +9,28 @@
         "state": "ia",
         "county": "Polk"
     },
-    "data": "http://gis.polkcountyiowa.gov/arcgis/rest/services/Public/basemap/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "HouseNbr",
-            "HouseNbrEx"
-        ],
-        "street": [
-            "DirPre",
-            "Name",
-            "StreetType",
-            "DirSuf"
-        ],
-        "city": "City",
-        "postcode": "Zip",
-        "district": "County"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/482465/us/ia/polk.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

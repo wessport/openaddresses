@@ -17,19 +17,28 @@
         "county": "Providence",
         "city": "Cranston"
     },
-    "data": "https://gis.cranstonri.org/arcgis/rest/services/Assessor_Web/MapServer/17",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "ESiteID",
-        "number": "HouseNumbe",
-        "street": [
-            "PD",
-            "SN",
-            "ST",
-            "SD"
-        ],
-        "city": "ZN",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886140/us/ri/city_of_cranston.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

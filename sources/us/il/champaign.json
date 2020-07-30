@@ -9,14 +9,28 @@
         "state": "il",
         "county": "Champaign"
     },
-    "data": "http://www.maps.ccgisc.org/arcgismaps/rest/services/Webmap_Champaign/AddressPointLabels/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "UniqueID",
-        "number": "AddNum",
-        "unit": "SubAddress",
-        "street": "StreetName",
-        "postcode": "Zip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/213002/us/il/champaign.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

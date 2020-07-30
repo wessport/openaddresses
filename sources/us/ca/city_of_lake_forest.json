@@ -4,15 +4,28 @@
         "state": "ca",
         "city": "Lake Forest"
     },
-    "data": "http://gis.lakeforestca.gov/ArcGIS/rest/services/LFGeoToolsBaseMap/MapServer/13",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "unit": "UnitDesgnator",
-        "number": "AddressNumber",
-        "street": "StreetName",
-        "city": "CommunityName",
-        "postcode": "ZIPCode",
-        "region": "State"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/891207/us/ca/city_of_lake_forest.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

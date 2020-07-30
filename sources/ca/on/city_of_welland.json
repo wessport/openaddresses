@@ -3,27 +3,39 @@
         "country": "ca",
         "state": "on",
         "city": "Welland",
-        "geometry": { "type": "Point", "coordinates": [-79.25, 42.99] }
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -79.25,
+                42.99
+            ]
+        }
     },
-    "data": "http://www.welland.ca/open/Datasheets/Welland_civic_addresses.zip",
-    "website": "http://www.welland.ca/open/OpendataResp.asp?utitle=Civic%20Addresses",
-    "license": "http://www.welland.ca/open/OpendataTermUse.asp",
-    "year": "2014",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "number": {
-            "function": "regexp",
-            "field": "address",
-            "pattern": "^(\\S+)"
-        },
-        "street": {
-            "function": "regexp",
-            "field": "address",
-            "pattern": "^(?:\\S+ )(.*)",
-            "replace": "$1"
-        },
-        "format": "shapefile",
-        "srs": "EPSG:26917"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/689421/ca/on/city_of_welland.zip",
+                "website": "http://www.welland.ca/open/OpendataResp.asp?utitle=Civic%20Addresses",
+                "license": "http://www.welland.ca/open/OpendataTermUse.asp",
+                "year": "2014",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

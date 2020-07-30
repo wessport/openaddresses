@@ -9,24 +9,29 @@
         "state": "mn",
         "county": "Beltrami"
     },
-    "protocol": "ESRI",
-    "website": "http://www.co.beltrami.mn.us/Departments/gis/gis.html",
-    "data": "http://arcgis.co.beltrami.mn.us/arcgis/rest/services/BeltramiBasemap/MapServer/0",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "regexp",
-            "field": "ADDRESS",
-            "pattern": "([0-9]*) (.*)",
-            "replace": "$1"
-        },
-        "street": {
-            "function": "regexp",
-            "field": "ADDRESS",
-            "pattern": "([0-9]*) (.*)",
-            "replace": "$2"
-        },
-        "postcode": "ZIPCODE",
-        "city": "CITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "website": "http://www.co.beltrami.mn.us/Departments/gis/gis.html",
+                "data": "http://data.openaddresses.io/runs/886134/us/mn/beltrami.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

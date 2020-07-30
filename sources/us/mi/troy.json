@@ -1,35 +1,44 @@
 {
-  "coverage": {
-    "geometry": {
-        "type": "Point",
-        "coordinates": [
-            -83.183,
-            42.578
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -83.183,
+                42.578
+            ]
+        },
+        "US Census": {
+            "geoid": "2680700",
+            "name": "City of Troy",
+            "state": "Michigan"
+        },
+        "country": "us",
+        "state": "mi",
+        "city": "Troy"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885846/us/mi/troy.zip",
+                "website": "http://www.troymi.gov/Resources/Maps.aspx",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
         ]
-    },
-    "US Census": {
-        "geoid": "2680700",
-        "name": "City of Troy",
-        "state": "Michigan"
-    },
-    "country": "us",
-    "state": "mi",
-    "city": "Troy"
-  },
-  "data": "http://gis.troymi.gov/arcgis/rest/services/LandManagement/MapServer/12",
-  "website": "http://www.troymi.gov/Resources/Maps.aspx",
-  "protocol": "ESRI",
-  "conform": {
-    "format": "geojson",
-    "number": "PropAddressNumber",
-    "street": [
-      "PropAddressDir",
-      "PropAddressStreet"
-    ],
-    "unit": "PropAddressApt",
-    "postcode": "PropAddressZip",
-    "city": "PropAddressCity",
-    "region": "PropAddressState",
-    "id": "PIN88"
-  }
+    }
 }

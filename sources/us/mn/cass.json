@@ -9,13 +9,28 @@
         "state": "mn",
         "county": "Cass"
     },
-    "data": "http://cassweb3.co.cass.mn.us/arcgis/rest/services/Basic_Layers2/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "number": "NUMBER",
-        "street": "RD_NAME",
-        "city": "POST_OFFIC",
-        "postcode": "ZIP",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/875584/us/mn/cass.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

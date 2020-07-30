@@ -9,20 +9,28 @@
         "state": "in",
         "county": "Wayne"
     },
-    "data": "https://gisweb3.co.wayne.in.us/arcgis/rest/services/Address_Point/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-      "format": "geojson",
-      "number": "ADDRESS",
-      "street": [
-          "PD",
-          "PT",
-          "SN",
-          "ST",
-          "SD"
-      ],
-      "unit": "UNIT",
-      "city": "NEWCITST",
-      "postcode": "NEWZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885804/us/in/wayne.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

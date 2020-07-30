@@ -9,13 +9,28 @@
         "state": "wv",
         "county": "Raleigh"
     },
-    "protocol": "ESRI",
-    "data": "http://services.arcgis.com/7qDWTH3pTiLOFaZS/arcgis/rest/services/Raleigh_Co_EOC_Address_Sites/FeatureServer/0",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDR_LABEL",
-        "street": "SA_STREET",
-        "city": "TOWN",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/886179/us/wv/raleigh.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

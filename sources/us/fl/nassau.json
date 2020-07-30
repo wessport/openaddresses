@@ -9,17 +9,28 @@
         "state": "fl",
         "county": "Nassau"
     },
-    "data": "https://maps.nassauflpa.com/ncflpa_arcgis/rest/services/nassau/TaxMap4_CitrixV2/MapServer/9",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDRESS",
-        "street": {
-            "function": "remove_prefix",
-            "field": "FULLADDRESS",
-            "field_to_remove": "ADDRESS"
-        },
-        "city": "COMMUNITY",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886029/us/fl/nassau.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

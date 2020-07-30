@@ -9,15 +9,28 @@
         "state": "fl",
         "county": "St. Lucie"
     },
-    "data": "http://www.stlucieco.gov/home/showdocument?id=2739",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "number": "StreetNumb",
-        "street": "StreetLabe",
-        "unit": "AptSuite",
-        "postcode": "ZipCode",
-        "format": "shapefile",
-        "file": "AddressMaster.shp"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885734/us/fl/st-lucie.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

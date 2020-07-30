@@ -2,19 +2,37 @@
     "coverage": {
         "geometry": {
             "type": "Point",
-            "coordinates": [ -73.1332, 41.1845 ]
+            "coordinates": [
+                -73.1332,
+                41.1845
+            ]
         },
         "country": "us",
         "state": "ct",
         "city": "Stratford"
     },
-    "data": "https://gis.ctmetro.org/arcgis/rest/services/Stratford/Stratford_Parcels_NAD83/MapServer/2",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "Parcel_ID",
-        "number": "St_number",
-        "street": [ "St_Prefix", "St_Name", "St_Type", "St_Suffix" ],
-        "city": "City"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/561072/us/ct/city_of_stratford.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

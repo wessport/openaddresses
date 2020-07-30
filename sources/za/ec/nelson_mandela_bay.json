@@ -11,15 +11,31 @@
         "state": "ec",
         "city": "Nelson Mandela Bay"
     },
-    "data": "http://www.nelsonmandelabay.gov.za/datarepository/documents/address-points.zip",
-    "website": "http://www.nelsonmandelabay.gov.za/Documents.aspx?catID=66&pageID=227",
-    "skip": false,
-    "year": "2018",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "number": "StreetNo",
-        "street": "StreetName"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885969/za/ec/nelson_mandela_bay.zip",
+                "website": "http://www.nelsonmandelabay.gov.za/Documents.aspx?catID=66&pageID=227",
+                "skip": false,
+                "year": "2018",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

@@ -9,22 +9,29 @@
         "state": "mn",
         "county": "Yellow Medicine"
     },
-    "data": "https://gis.co.ym.mn.gov/arcgis/rest/services/Link/DataLayers/MapServer/40",
-    "protocol": "ESRI",
-    "note": "polygon",
-    "conform": {
-        "number": {
-            "function": "regexp",
-            "field": "PROPERTY_ADDRESS",
-            "pattern": "^([0-9]+)"
-        },
-        "street": {
-            "function": "regexp",
-            "field": "PROPERTY_ADDRESS",
-            "pattern": "^(?:[0-9]+ )(.*)",
-            "replace": "$1"
-        },
-        "postcode": "PROPERTY_ZIP",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886361/us/mn/yellow_medicine.zip",
+                "protocol": "http",
+                "note": "polygon",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,16 +9,28 @@
         "state": "ks",
         "county": "Kingman"
     },
-    "data": "http://72.205.198.131/ArcGIS/rest/services/Kingman/Kingman/MapServer/38",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "kmsde.sde.KingmanAA.prop_add",
-        "street": [
-            "kmsde.sde.KingmanAA.prop_dir",
-            "kmsde.sde.KingmanAA.prop_st",
-            "kmsde.sde.KingmanAA.prop_suf"
-        ],
-        "postcode": "kmsde.sde.KingmanAA.prop_zip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/160479/us/ks/kingman_county.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

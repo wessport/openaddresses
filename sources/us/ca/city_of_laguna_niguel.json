@@ -4,13 +4,28 @@
         "state": "ca",
         "city": "Laguna Niguel"
     },
-    "data": "http://gis.cityoflagunaniguel.org:6080/arcgis/rest/services/AddressPoints4/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "unit": "UNIT",
-        "number": "STNUM",
-        "street": "NAMESUFF",
-        "postcode": "SITEZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885955/us/ca/city_of_laguna_niguel.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -16,18 +16,28 @@
         "state": "tx",
         "city": "Denison"
     },
-    "data": "http://gis4.dfwmaps.com/arcgis/rest/services/ICDenison/Denison_BaseLayers_VE/MapServer/8",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "SitusNumbe",
-        "street": [
-            "SitusStree",
-            "SitusStr_1",
-            "SitusStr_2"
-        ],
-        "city": "SitusCity",
-        "region": "SitusState",
-        "postcode": "SitusZip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/499505/us/tx/city_of_denison.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

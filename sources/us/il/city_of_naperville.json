@@ -16,16 +16,28 @@
         "state": "il",
         "city": "Naperville"
     },
-    "protocol": "ESRI",
-    "data": "http://gis.naperville.il.us/arcgis/rest/services/OpenData/OpenDataMapService/FeatureServer/10",
-    "conform": {
-        "format": "geojson",
-        "number": "ADD_NUM",
-        "street": [
-            "STREET_NAME",
-            "STREET_SUFFIX"
-        ],
-        "city": "CITY",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/886015/us/il/city_of_naperville.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -16,23 +16,28 @@
         "state": "mo",
         "city": "Kansas City"
     },
-    "protocol": "http",
-    "data": "https://data.kcmo.org/api/views/3639-4c86/rows.csv?accessType=DOWNLOAD",
-    "conform": {
-        "format": "csv",
-        "lat": "Latitude",
-        "lon": "Longitude",
-        "number": [
-            "Address Number",
-            "Fraction"
-        ],
-        "street": [
-            "Prefix",
-            "Street",
-            "Street Type"
-        ],
-        "unit": "Suite",
-        "city": "City",
-        "region": "State"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/885950/us/mo/city_of_kansas_city.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

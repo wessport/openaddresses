@@ -9,25 +9,28 @@
         "state": "oh",
         "county": "Harrison"
     },
-    "data": "http://gis3.oit.ohio.gov/LBRS/_downloads/HAS_ADDS.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-      "number": "ADDR_NUM",
-      "street": [
-          "PRE_DIR",
-          "STR_NAME",
-          "STR_TYPE",
-          "SUF_DIR"
-      ],
-      "unit": [
-          "UNIT_TYPE",
-          "UNIT_NUM"
-      ],
-      "city": "CITY",
-      "district": "COUNTY",
-      "region": "STATE",
-      "format": "shapefile",
-      "postcode": "zip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886690/us/oh/harrison.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

@@ -9,24 +9,28 @@
         "state": "co",
         "county": "Denver"
     },
-    "conform": {
-        "format": "shapefile",
-        "number": [
-            "ADDRESS__1",
-            "ADDRESS__2"
-        ],
-        "street": [
-          "PREDIRECTI",
-          "STREET_NAM",
-          "POSTTYPE",
-          "POSTDIRECT"
-        ],
-        "unit": [
-          "COMPOSITE_",
-          "COMPOSIT_U"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/885658/us/co/denver.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
         ]
-    },
-    "data": "https://www.denvergov.org/media/gis/DataCatalog/addresses/shape/addresses.zip",
-    "protocol": "http",
-    "compression": "zip"
+    }
 }

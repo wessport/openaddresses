@@ -9,21 +9,30 @@
         "state": "ak",
         "county": "Kenai Peninsula Borough"
     },
-    "attribution": "Copyright © 2015 Kenai Peninsula Borough",
-    "data": "ftp://ftp.borough.kenai.ak.us/GIS/Downloads/Shapefiles/PhysicalAddress.zip",
-    "website": "http://www.kpb.us/gis-dept/kpb-data-downloads/cadastre",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "street": [
-            "STREET_PRE",
-            "STREET_NAM",
-            "STREET_SUF",
-            "STREET_POS"
-        ],
-        "number": "HouseNumbe",
-        "format": "shapefile",
-        "postcode": "ZIP_CODE",
-        "city": "COMM_NAME"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Copyright © 2015 Kenai Peninsula Borough",
+                "data": "http://data.openaddresses.io/runs/886204/us/ak/kenai_peninsula_borough.zip",
+                "website": "http://www.kpb.us/gis-dept/kpb-data-downloads/cadastre",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

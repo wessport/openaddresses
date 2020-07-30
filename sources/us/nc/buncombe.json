@@ -9,19 +9,29 @@
         "state": "nc",
         "county": "Buncombe"
     },
-    "data": "http://gisdownload.buncombecounty.org/addresses.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "website": "http://www.buncombecounty.org/Governing/Depts/GIS/DataDownload.aspx",
-    "conform": {
-        "number": "street_num",
-        "street": [
-            "street_pre",
-            "street_nam",
-            "street_typ",
-            "street_pos"
-        ],
-        "format": "shapefile",
-        "postcode": "postal_cod"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886126/us/nc/buncombe.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "website": "http://www.buncombecounty.org/Governing/Depts/GIS/DataDownload.aspx",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

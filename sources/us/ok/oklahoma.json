@@ -9,19 +9,28 @@
         "state": "ok",
         "county": "Oklahoma"
     },
-    "data": "https://gis.okc.gov/arcgis/rest/services/Accela/AGIS_PPLS_DEV/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "ADDRESS",
-            "ADDRESS2"
-        ],
-        "street": [
-            "ST_PRE",
-            "ST_NAME",
-            "ST_TYPE"
-        ],
-        "unit": "UNIT"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/591036/us/ok/oklahoma.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,11 +9,28 @@
         "state": "al",
         "county": "Blount"
     },
-    "data": "http://web3.kcsgis.com/kcsgis/rest/services/Blount/Public/MapServer/32",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "AL08_CAMA_dbo_vw_Parcel_CAMA_SitusAddNumber",
-        "street": "AL08_CAMA_dbo_vw_Parcel_CAMA_SitusAddName"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/860020/us/al/blount.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

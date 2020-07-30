@@ -9,20 +9,29 @@
         "state": "nc",
         "county": "Madison"
     },
-    "data": "https://services3.arcgis.com/NwIC4HArqo0JlKGT/ArcGIS/rest/services/Madison_Addresses_01212020_shp/FeatureServer/0",
-    "protocol": "ESRI",
-    "website": "http://www.madisongis.com",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDNUM",
-        "street": [
-            "PREDIR",
-            "STREETNAME",
-            "STREETTYPE",
-            "SUFDIR"
-        ],
-        "unit": "LOC",
-        "city": "CITY",
-        "district": "COUNTY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886433/us/nc/madison.zip",
+                "protocol": "http",
+                "website": "http://www.madisongis.com",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

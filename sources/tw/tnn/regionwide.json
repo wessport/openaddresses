@@ -6,27 +6,28 @@
         },
         "country": "tw"
     },
-    "data": "http://water.tainan.gov.tw/tnwrbarcgis/rest/services/TNRW/Address/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number":{
-            "function": "regexp",
-            "field": "NO",
-            "pattern": "^([0-9\uff10-\uff19]+\u865f?)"
-        },
-        "unit":{
-            "function": "regexp",
-            "field": "NO",
-            "pattern": "^(?:[0-9\uff10-\uff19]+\u865f?)(.*)"
-        },
-        "street": {
-            "function": "join",
-            "fields": ["ROADNAME","LANE"],
-            "separator": ""
-        },
-        "city": "VILLAGE",
-        "district": "DISTRICT",
-        "region": "COUNTY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/884676/tw/tnn/regionwide.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

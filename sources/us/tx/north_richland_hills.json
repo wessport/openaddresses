@@ -3,8 +3,8 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -97.260,
-                32.860
+                -97.26,
+                32.86
             ]
         },
         "US Census": {
@@ -16,11 +16,28 @@
         "state": "tx",
         "city": "North Richland Hills"
     },
-    "data": "http://gis4.dfwmaps.com/arcgis/rest/services/ICNRH/NRH_Baselayers_VE/MapServer/1",
-    "protocol": "ESRI",
-    "conform": {
-        "number": "STNO",
-        "street": "STREETNAME",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/497719/us/tx/north_richland_hills.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

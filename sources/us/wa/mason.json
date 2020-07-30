@@ -9,19 +9,32 @@
         "state": "wa",
         "county": "Mason"
     },
-    "license": "http://www.co.mason.wa.us/gis/disclaimer.php",
-    "protocol": "http",
-    "compression": "zip",
-    "note": "point shapefile Site_Address.shp, address columns: ADDRESS, ZIP_CD",
-    "year": "2014",
-    "data": "http://www.arcgis.com/sharing/rest/content/items/986434ffd63b4c7ba618953d5e049ae9/data",
-    "website": "http://www.co.mason.wa.us/gis/",
-    "conform":{
-        "format": "shapefile",
-        "srs": "EPSG:2927",
-        "street": "STREET",
-        "number": "STREETNUMB",
-        "unit": "STRNUMSUFF",
-        "postcode": "ZIP_CD"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "license": "http://www.co.mason.wa.us/gis/disclaimer.php",
+                "protocol": "http",
+                "compression": "zip",
+                "note": "point shapefile Site_Address.shp, address columns: ADDRESS, ZIP_CD",
+                "year": "2014",
+                "data": "http://data.openaddresses.io/runs/689099/us/wa/mason.zip",
+                "website": "http://www.co.mason.wa.us/gis/",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

@@ -4,12 +4,29 @@
         "state": "on",
         "county": "northumberland"
     },
-    "data": "http://maps.northumberlandcounty.ca/arcgis/rest/services/Internal_Parcel_Update_July2017/MapServer/0",
-    "website": "http://northumberlandcounty.ca/en/location_maps/",
-    "protocol": "ESRI",
-    "conform": {
-        "number": "StreetNum",
-        "street": "StreetName",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/586501/ca/on/northumberland.zip",
+                "website": "http://northumberlandcounty.ca/en/location_maps/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

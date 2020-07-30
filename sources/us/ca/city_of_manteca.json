@@ -17,25 +17,28 @@
         "county": "San Joaquin",
         "city": "Manteca"
     },
-    "data": "https://gisweb.ci.manteca.ca.us/arcgis/rest/services/layers/ParcelAddresses/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "SITUS_ADDRESS"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "SITUS_ADDRESS",
-            "may_contain_units": true
-        },
-        "unit": {
-            "function": "postfixed_unit",
-            "field": "SITUS_ADDRESS"
-        },
-        "city": "LOC_CITY",
-        "region": "LOC_ST",
-        "postcode": "LOC_ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/397409/us/ca/city_of_manteca.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

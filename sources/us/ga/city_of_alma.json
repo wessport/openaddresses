@@ -17,16 +17,28 @@
         "county": "Bacon",
         "city": "Alma"
     },
-    "data": "http://www.sgrcmaps.com/arcgis/rest/services/Alma/PropertyInformation/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSE_NO",
-        "street": [
-            "STDIRECT",
-            "STREET_NAM"
-        ],
-        "unit": "UNIT",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886021/us/ga/city_of_alma.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

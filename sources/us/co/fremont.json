@@ -9,22 +9,28 @@
         "state": "co",
         "county": "Fremont"
     },
-    "data": "http://fremontgis.com/arcgis_102/rest/services/Map_Layers/MapServer/137",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "GL_HSE_NUM",
-        "street": [
-            "GL_DIR_PFX",
-            "GL_STR_NAM",
-            "GL_TYP_SFX",
-            "GL_PSL_SFX"
-        ],
-        "unit": [
-            "GL_UNIT_TYP",
-            "GL_UNIT_ID"
-        ],
-        "city": "PO_NAME",
-        "postcode": "PO_ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/657087/us/co/fremont.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

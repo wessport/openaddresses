@@ -9,20 +9,28 @@
         "state": "tn",
         "county": "Hamilton"
     },
-    "data": "https://mapsdev.hamiltontn.gov/hcwa/rest/services/Base_Map/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "STNUM",
-        "street": [
-            "DIRPFX",
-            "PRETYPE",
-            "STNAME",
-            "TYPESFX",
-            "DIRSFX"
-        ],
-        "unit":"UNIT",
-        "city":"CITY",
-        "postcode": "ZIPCODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885439/us/tn/hamilton.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

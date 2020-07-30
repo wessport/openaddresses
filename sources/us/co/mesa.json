@@ -9,23 +9,30 @@
         "state": "co",
         "county": "Mesa"
     },
-    "attribution": "Mesa County",
-    "data": "https://emap.mesacounty.us/datadownload/FileShapeFiles/E911_AddressPoints.zip",
-    "protocol": "http",
-    "website": "https://gis.mesacounty.us",
-    "conform": {
-        "format": "shapefile",
-        "number": "HOUSE_NUMB",
-        "street": [
-            "PREFIX_DIR",
-            "PREFIX_TYP",
-            "STREET_NAM",
-            "STREET_TYP",
-            "SUFFIX_DIR"
-        ],
-        "unit": "UNIT",
-        "city": "CITY",
-        "region": "STATE",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Mesa County",
+                "data": "http://data.openaddresses.io/runs/885879/us/co/mesa.zip",
+                "protocol": "http",
+                "website": "https://gis.mesacounty.us",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

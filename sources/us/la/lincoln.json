@@ -9,16 +9,28 @@
         "state": "la",
         "county": "Lincoln"
     },
-    "protocol": "ESRI",
-    "data": "http://webserv.lincolnparish.org/arcgis/rest/services/Lincoln_Parish_Data/MapServer/0",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSE_NUM",
-        "street": {
-            "function": "regexp",
-            "field": "FUL_NAME",
-            "pattern": "^(.+?)(?: Pvt)?$"
-        },
-        "unit": "UNIT"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/401947/us/la/lincoln.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

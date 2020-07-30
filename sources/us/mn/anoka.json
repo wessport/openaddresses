@@ -9,20 +9,28 @@
         "state": "mn",
         "county": "Anoka"
     },
-    "data": "http://gisservices.co.anoka.mn.us/anoka_gis/rest/services/Address_Pts_Edit/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "LOC_NUMB",
-        "street": [
-            "LOC_PREFIX",
-            "LOC_NAME",
-            "LOC_TYPE",
-            "LOC_SUFFIX"
-        ],
-        "unit": "LOC_UNIT",
-        "city": "LOC_CITY",
-        "region": "LOC_STATE",
-        "postcode": "LOC_ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885634/us/mn/anoka.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

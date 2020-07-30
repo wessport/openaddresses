@@ -4,7 +4,7 @@
             "type": "Point",
             "coordinates": [
                 -118.226,
-                33.800
+                33.8
             ]
         },
         "US Census": {
@@ -16,19 +16,28 @@
         "state": "ca",
         "city": "Long Beach"
     },
-    "data": "http://tsdgis.longbeach.gov/webgis/rest/services/HANSENBLLIC/BLAddrDetail/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "ADDRESS",
-            "FRACTION"
-        ],
-        "street": [
-            "PREFIX",
-            "ST_NAME",
-            "ST_TYPE",
-            "SUFFIX"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/884708/us/ca/city_of_long_beach.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
         ]
     }
 }

@@ -9,28 +9,28 @@
         "state": "wi",
         "county": "Winnebago"
     },
-    "data": "https://wcgis3.co.winnebago.wi.us/wings/rest/services/Address/SiteAddressPoint/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "SITEADDID",
-        "number": [
-            "PREADDRNUM",
-            "ADDRNUM",
-            "ADDRNUMSUF"
-        ],
-        "street": "FULLNAME",
-        "unit": "UNITID",
-        "city": {
-            "function": "regexp",
-            "field": "PSTLCSZ",
-            "pattern": "^(.*?)\\s+WI\\s+"
-        },
-        "postcode": {
-            "function": "regexp",
-            "field": "PSTLCSZ",
-            "pattern": "\\s+(\\d+)$"
-        },
-        "accuracy": 1
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885829/us/wi/winnebago.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

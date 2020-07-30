@@ -16,18 +16,28 @@
             ]
         }
     },
-    "protocol": "ESRI",
-    "data": "http://www.centralilmaps.com/arcgis/rest/services/ArcGISOnline/City_of_West_Peoria/MapServer/1",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSE_",
-        "street": [
-          "DIR",
-          "STREET",
-          "HSESFX"
-        ],
-        "city": "CITY",
-        "region": "STATE",
-        "postcode": "PZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/601140/us/il/city_of_west_peoria.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

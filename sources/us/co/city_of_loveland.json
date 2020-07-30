@@ -16,22 +16,30 @@
         "state": "co",
         "city": "Loveland"
     },
-    "attribution": "City of Loveland",
-    "data": "http://maps.cityofloveland.org/Data/AddressPoint.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "website": "http://www.ci.loveland.co.us/index.aspx?page=436",
-    "conform": {
-        "format": "shapefile",
-        "number": {
-            "function": "prefixed_number",
-            "field": "ADDRESS"
-        },
-        "street": {
-            "function": "regexp",
-            "field": "ADDRESS",
-            "pattern": "^(?:[0-9]+ )(.*) ?(#[0-9A-Z]+|GAR[0-9]+|BLDG?#?[0-9]+|1/2)?$",
-            "replace": "$1"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "City of Loveland",
+                "data": "http://data.openaddresses.io/runs/886240/us/co/city_of_loveland.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "website": "http://www.ci.loveland.co.us/index.aspx?page=436",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

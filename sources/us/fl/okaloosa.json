@@ -9,25 +9,28 @@
         "state": "fl",
         "county": "Okaloosa"
     },
-    "data": "http://gis.okaloosafl.com/gisdata/Property_Appraiser/Shapefiles/parcel.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "number": {
-            "field": "HOUSE_NO",
-            "function": "regexp",
-            "pattern": "^([0-9]+)",
-            "replace": "$1"
-        },
-        "street": [
-            "STREET",
-            "ST_MD",
-            "ST_DIR"
-        ],
-        "unit": "ST_UNIT",
-        "city": "ST_CITY",
-        "postcode": "ST_ZIP5",
-        "format": "shapefile",
-        "file": "Public_Data/public.shp"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/600981/us/fl/okaloosa.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

@@ -1,22 +1,36 @@
 {
     "coverage": {
-        "US Census": {"geoid": "35057", "name": "Torrance County", "state": "New Mexico"},
+        "US Census": {
+            "geoid": "35057",
+            "name": "Torrance County",
+            "state": "New Mexico"
+        },
         "country": "us",
         "state": "nm",
         "county": "Torrance"
     },
-    "data": "https://data.openaddresses.io/cache/uploads/ingalls/us-nm-torrance.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "file": "Addpoints.shp",
-        "number": "New_add",
-        "street": [
-            "PREFIX",
-            "ROAD_NAME",
-            "SUFFIX",
-            "POSTDIR"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886689/us/nm/torrance.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
         ]
     }
 }

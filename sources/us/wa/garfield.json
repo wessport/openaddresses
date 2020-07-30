@@ -9,30 +9,29 @@
         "state": "wa",
         "county": "Garfield"
     },
-    "data": "https://services5.arcgis.com/1UmAlNNRc6UDVQ4y/ArcGIS/rest/services/Garfield_parcels/FeatureServer/0",
-    "website": "https://www.arcgis.com/home/item.html?id=25f924757dd845d19e7d6f516729f0ff",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "ADD_2"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "ADD_2"
-        },
-        "postcode": {
-            "function": "regexp",
-            "field": "ADD_3",
-            "pattern": "(.*)(\\d{5})$",
-            "replace": "$2"
-        },
-        "city": {
-            "function": "regexp",
-            "field": "ADD_3",
-            "pattern": "(.*?)(, WA)(.*)",
-            "replace": "$1"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/402225/us/wa/garfield.zip",
+                "website": "https://www.arcgis.com/home/item.html?id=25f924757dd845d19e7d6f516729f0ff",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

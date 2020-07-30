@@ -9,22 +9,35 @@
         "state": "fl",
         "county": "Lee"
     },
-    "data": "http://leegis.leegov.com/FTPData/Shapefiles/LandRecords/ParcelCondoAddressPoints.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "website": "http://www.leegov.com/gis/data",
-    "license": {
-        "text": "Indemnification",
-        "url": "http://www.leegov.com/gis/data/gis-data",
-        "attribution": false,
-        "share-alike": false
-    },
-    "conform": {
-        "format": "shapefile",
-        "number": "SITENUMBER",
-        "street": "SITESTREET",
-        "unit": "SITEUNIT",
-        "city": "SITECITY",
-        "postcode": "SITEZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885410/us/fl/lee.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "website": "http://www.leegov.com/gis/data",
+                "license": {
+                    "text": "Indemnification",
+                    "url": "http://www.leegov.com/gis/data/gis-data",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

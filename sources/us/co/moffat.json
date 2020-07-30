@@ -9,13 +9,28 @@
         "state": "co",
         "county": "Moffat"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "STREETNO",
-        "street": "STREETNAME",
-        "city": "CITY",
-        "postcode": "ZIPCODE"
-    },
-    "data": "http://gisweb.co.rio-blanco.co.us/arcgis/rest/services/MoffatCOfeatures/MapServer/22",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/165545/us/co/moffat.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

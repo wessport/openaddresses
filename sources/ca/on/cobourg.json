@@ -4,12 +4,29 @@
         "state": "on",
         "county": "Cobourg"
     },
-    "data": "http://gis.cobourg.ca/arcgis/rest/services/BaseMaps/Cobourg_VectorBase/MapServer/57",
-    "website": "http://gis.cobourg.ca/",
-    "protocol": "ESRI",
-    "conform": {
-        "number": "Address",
-        "street": "STREET_NAM",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/147234/ca/on/cobourg.zip",
+                "website": "http://gis.cobourg.ca/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

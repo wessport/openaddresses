@@ -9,13 +9,28 @@
         "state": "mn",
         "county": "Hubbard"
     },
-    "data": "https://gis.co.hubbard.mn.us/arcgis/rest/services/OpenData/AddressPoints/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "BUILDING",
-        "street": "BASENAME",
-        "city": "POSTAL",
-        "postcode": "POSTAL_CODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/884980/us/mn/hubbard.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

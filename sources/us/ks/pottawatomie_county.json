@@ -9,26 +9,28 @@
         "state": "ks",
         "county": "Pottawatomie"
     },
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "NUMBER_",
-            "SUB_NUM"
-        ],
-        "street": [
-            "PRE_DIR",
-            "STR_NAM",
-            "STR_TYPE",
-            "SUF_DIR"
-        ],
-        "unit": [
-            "UNIT_TYPE",
-            "UNIT_NUM"
-        ],
-        "city": "CITY",
-        "region": "ST",
-        "postcode": "ZIP5"
-    },
-    "data": "http://www2.pottcounty.org/arcgis2/rest/services/AddressAll/MapServer/1",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/886384/us/ks/pottawatomie_county.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

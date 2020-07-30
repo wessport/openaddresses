@@ -11,15 +11,28 @@
             ]
         }
     },
-    "data": "https://maps.vaughan.ca/arcgis/rest/services/PLANitTest/PLANit/MapServer/9",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "STREETNUM",
-        "street": [
-            "STREETNAME",
-            "SUFFIX"
-        ],
-        "unit": "UNIT"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/436699/ca/on/city_of_vaughan.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

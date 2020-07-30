@@ -9,19 +9,28 @@
         "state": "mi",
         "county": "Oakland"
     },
-    "data": "https://gisservices.oakgov.com/arcgis/rest/services/Enterprise/EnterpriseOpenParcelDataMapService/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "SITESTREETNUMBER",
-        "street": [
-            "SITEPREFIXONE",
-            "SITESTREETNAME",
-            "SITESTREETTYPE",
-            "SITESUFFIXONE"
-        ],
-        "city": "SITECITY",
-        "postcode": "SITEZIPCODE",
-        "region": "SITESTATE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885447/us/mi/oakland.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

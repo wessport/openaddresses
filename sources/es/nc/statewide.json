@@ -6,27 +6,33 @@
             "alpha2": "ES-NC"
         }
     },
-    "data": "http://www.navarra.es/appsext/DescargarFichero/default.aspx?codigoAcceso=OpenData&fichero=GestorDireccionesPostales\\OpenAddresses.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "license": {
-        "text": "CC-BY 4.0",
-        "attribution": true,
-        "share-alike": false
-    },
-    "conform": {
-        "format": "csv",
-        "csvsplit": ";",
-        "lat": "lat",
-        "lon": "lon",
-        "srs": "EPSG:25830",
-        "id": "idportal",
-        "number": "number",
-        "unit": "unit",
-        "street": "street",
-        "city": "city",
-        "postcode": "postcode",
-        "region": "region",
-        "district": "district"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886168/es/nc/statewide.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "license": {
+                    "text": "CC-BY 4.0",
+                    "attribution": true,
+                    "share-alike": false
+                },
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

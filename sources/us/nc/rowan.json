@@ -9,18 +9,28 @@
         "state": "nc",
         "county": "Rowan"
     },
-    "data": "http://web1.mobile311.com/arcgis/rest/services/NorthCarolina/Rowan2/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "B_ADDRESS",
-        "street": [
-            "ROAD_PRE",
-            "ROAD_NAME",
-            "ROAD_TYPE",
-            "ROAD_SUF"
-        ],
-        "unit": "ADDSUF",
-        "postcode": "ZIPNUM"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885436/us/nc/rowan.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

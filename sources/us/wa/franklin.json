@@ -9,23 +9,31 @@
         "state": "wa",
         "county": "Franklin"
     },
-    "license": "http://gis.co.franklin.wa.us/datadisclaimer.shtml",
-    "protocol": "ESRI",
-    "year": "2018",
-    "data": "https://gisportal.franklin.co.franklin.wa.us:6443/arcgis/rest/services/address/MapServer/1",
-    "website": "http://franklingis.org/",
-    "conform": {
-        "format": "geojson",
-        "number": "HouseNumber",
-        "street": [
-            "DirPrefix",
-            "FeatureName",
-            "FeatureType",
-            "DirSuffix"
-        ],
-        "unit": [
-            "UnitType",
-            "UnitNumber"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "license": "http://gis.co.franklin.wa.us/datadisclaimer.shtml",
+                "protocol": "http",
+                "year": "2018",
+                "data": "http://data.openaddresses.io/runs/709376/us/wa/franklin.zip",
+                "website": "http://franklingis.org/",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
         ]
     }
 }

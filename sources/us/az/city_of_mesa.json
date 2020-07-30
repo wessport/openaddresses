@@ -16,20 +16,29 @@
         "state": "az",
         "city": "Mesa"
     },
-    "data": "https://services2.arcgis.com/1gVyYKfYgW5Nxb1V/arcgis/rest/services/Address/FeatureServer/0",
-    "protocol": "ESRI",
-    "attribution": "City of Mesa",
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "ADDRESSNUMBER",
-            "ADDRESSFRACTION"
-        ],
-        "street": "ADDRESSSTREETNAME",
-        "unit": [
-            "UNITDESIGNATION",
-            "UNITNUMBER"
-        ],
-        "city": "JURISDICTION"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885632/us/az/city_of_mesa.zip",
+                "protocol": "http",
+                "attribution": "City of Mesa",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

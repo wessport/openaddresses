@@ -6,17 +6,28 @@
         },
         "country": "tw"
     },
-    "data": "http://wa.e-land.gov.tw/arcgis/rest/services/Ilan/Address/MapServer/3",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-          "function": "remove_prefix",
-            "field": "ADDRESSALL",
-            "field_to_remove": "ROAD"
-        },
-        "street": "ROAD",
-        "city": "VILLAGENAM",
-        "district": "TOWNNAME"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/768667/tw/ila/wujie.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

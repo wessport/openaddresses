@@ -17,17 +17,30 @@
         "county": "Hartford",
         "city": "avon"
     },
-    "attribution": "City of Avon",
-    "data": "http://54.243.125.146/arcgis/rest/services/AvonCT/AvonCT_Basemap2017/MapServer/21",
-    "website": "http://hosting.tighebond.com/AvonCT_public/index.html",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "SADDNO",
-        "street": "SADDSTNAME",
-        "unit": "SUNIT",
-        "city": "MUNINAME",
-        "district": "CNTYNAME",
-        "region": "STNAME"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "City of Avon",
+                "data": "http://data.openaddresses.io/runs/447860/us/ct/town_of_avon.zip",
+                "website": "http://hosting.tighebond.com/AvonCT_public/index.html",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

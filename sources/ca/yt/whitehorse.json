@@ -3,25 +3,37 @@
         "country": "ca",
         "state": "yk",
         "city": "Whitehorse",
-        "geometry": { "type": "Point", "coordinates": [-135.06, 60.73] }
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -135.06,
+                60.73
+            ]
+        }
     },
-    "data": "http://ww3.whitehorse.ca/features/gis/open_data/Administration/Parcels_Filtered_Address_from_Diamond.zip",
-    "website": "http://data.whitehorse.ca/",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "file": "Parcels_Filtered_Address_from_Diamond/DBO_Parcels_Filtered_Address_from_Diamond.shp",
-        "number": {
-            "function": "regexp",
-            "field": "address",
-            "pattern": "^(\\S+)"
-        },
-        "street": {
-            "function": "regexp",
-            "field": "address",
-            "pattern": "^(?:\\S+ )(.*)",
-            "replace": "$1"
-        },
-        "format": "shapefile-polygon"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885830/ca/yt/whitehorse.zip",
+                "website": "http://data.whitehorse.ca/",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

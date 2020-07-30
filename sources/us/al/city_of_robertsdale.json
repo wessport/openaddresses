@@ -17,14 +17,28 @@
         "county": "Baldwin",
         "city": "Robertsdale"
     },
-    "data": "http://web2.mobile311.com/arcgis/rest/services/Alabama/CityOfRobertsdale/MapServer/17",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "PID",
-        "number": "STREET_NUM",
-        "street": "STREET_NAM",
-        "city": "CITY",
-        "postcode": "ZIPCODE_1"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/797896/us/al/city_of_robertsdale.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

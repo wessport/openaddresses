@@ -16,14 +16,30 @@
         "state": "ct",
         "city": "watertown"
     },
-    "attribution": "City of Watertown",
-    "data": "http://107.20.209.214/ArcGIS/rest/services/WatertownCT/WatertownDynamic/MapServer/0",
-    "website": "http://www.watertownct.org/",
-    "protocol": "ESRI",
-    "conform": {
-        "street": "ParcelPolygon.StreetName",
-        "number": "ParcelPolygon.StreetNumber",
-        "format": "geojson",
-        "postcode": "cama.zip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "City of Watertown",
+                "data": "http://data.openaddresses.io/runs/271036/us/ct/city_of_watertown.zip",
+                "website": "http://www.watertownct.org/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

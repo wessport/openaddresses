@@ -9,23 +9,34 @@
         "state": "va",
         "county": "Clarke"
     },
-    "data": "ftp://ftp.clarkecounty.gov/gis/buildings.zip",
-    "license": {
-        "text": "Public Domain",
-        "attribution": false,
-        "share-alike": false
-    },
-    "year": "2014",
-    "protocol": "ftp",
-    "compression": "zip",
-    "conform": {
-        "file": "buildings/buildings.shp",
-        "number": "number",
-        "street": [
-            "name",
-            "type"
-        ],
-        "format": "shapefile-polygon",
-        "postcode": "zipcode"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/876701/us/va/clarke.zip",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "year": "2014",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

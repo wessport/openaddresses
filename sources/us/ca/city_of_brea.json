@@ -4,15 +4,28 @@
         "state": "ca",
         "city": "Brea"
     },
-    "data": "http://gisweb.cityofbrea.net/arcgis/rest/services/Building/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "unit": "UNIT",
-        "number": "HOUSENUM",
-        "street": ["ADDR_PD", "ADDR_SN", "ADDR_ST"],
-        "city": "CITY",
-        "postcode": "POSTAL",
-        "region": "STATE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885737/us/ca/city_of_brea.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

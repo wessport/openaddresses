@@ -9,11 +9,28 @@
         "state": "la",
         "county": "Natchitoches"
     },
-    "data": "http://services.geoportalmaps.com/arcgis/rest/services/Natchitoches_Services/MapServer/15",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "Address_Number",
-        "street": "Street_Name"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885797/us/la/natchitoches.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

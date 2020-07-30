@@ -2,20 +2,37 @@
     "coverage": {
         "geometry": {
             "type": "Point",
-            "coordinates": [ -118.32687, 34.1834 ]
+            "coordinates": [
+                -118.32687,
+                34.1834
+            ]
         },
         "country": "us",
         "state": "ca",
         "city": "burbank"
     },
-    "data": "http://gis.burbankca.gov/webgis/rest/services/address_points/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "apn",
-        "number": "str_no",
-        "street": ["pre_dir", "str_name", "str_type"],
-        "postcode": "zip",
-        "city": "city"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886035/us/ca/city_of_burbank.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

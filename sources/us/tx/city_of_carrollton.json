@@ -16,16 +16,28 @@
         "state": "tx",
         "city": "Carrollton"
     },
-    "data": "http://maps.cityofcarrollton.com/arcgis/rest/services/Webclstr1/BaseMap/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "Address",
-        "street": [
-            "Direction",
-            "StreetName",
-            "StreetType"
-        ],
-        "unit": "AptNo"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/682895/us/tx/city_of_carrollton.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

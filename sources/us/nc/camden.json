@@ -9,17 +9,28 @@
         "state": "nc",
         "county": "Camden"
     },
-    "data": "https://arcgis4.roktech.net/arcgis/rest/services/CamdenCountyNC/ROKMAPS/MapServer/8",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "Number",
-        "street": {
-            "function": "remove_prefix",
-            "field": "ADDRESS",
-            "field_to_remove": "Number"
-        },
-        "unit": "Suffix",
-        "city": "Town"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/818964/us/nc/camden.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

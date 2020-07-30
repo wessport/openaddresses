@@ -4,21 +4,29 @@
         "state": "on",
         "county": "Southwest Middlesex"
     },
-    "website": "https://www.middlesex.ca/departments/mapping#interactive_mapping",
-    "data": "https://maps.middlesex.ca/arcgis/rest/services/Public/SWM_Address/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "regexp",
-            "field": "FULLADDRES",
-            "pattern": "^([0-9]+)"
-        },
-        "street": {
-            "function": "regexp",
-            "field": "FULLADDRES",
-            "pattern": "^(?:[0-9]+ )(.*)",
-            "replace": "$1"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "https://www.middlesex.ca/departments/mapping#interactive_mapping",
+                "data": "http://data.openaddresses.io/runs/81858/ca/on/southwest-middlesex.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

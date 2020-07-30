@@ -16,19 +16,29 @@
         "state": "sc",
         "city": "Charleston"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSEFULL",
-        "street": [
-            "PREDIR",
-            "STNAME",
-            "STTYPE",
-            "SUFDIR"
-        ],
-        "city": "CMTYNAME",
-        "postcode": "ZIPCODE"
-    },
-    "protocol": "ESRI",
-    "data": "http://gis.charleston-sc.gov/arcgis/rest/services/External/OData_Central/MapServer/0",
-    "website": "http://data.charleston-sc.opendata.arcgis.com/"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/778430/us/sc/city_of_charleston.zip",
+                "website": "http://data.charleston-sc.opendata.arcgis.com/",
+                "compression": "zip"
+            }
+        ]
+    }
 }

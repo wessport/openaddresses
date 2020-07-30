@@ -16,12 +16,28 @@
         "state": "ok",
         "city": "Lawton"
     },
-    "data": "http://www.gislawton.us/arcgis/rest/services/Basemap/MapServer/48",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "House_Num",
-        "street": "Address",
-        "id": "EID"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/245833/us/ok/city_of_lawton.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

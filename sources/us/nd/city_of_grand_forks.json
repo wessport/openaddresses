@@ -17,19 +17,28 @@
         "county": "Grand Forks",
         "city": "Grand Forks"
     },
-    "data": "https://services5.arcgis.com/tEvkdB384rqq9Ook/arcgis/rest/services/OpenDataLayers/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "lsn"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "lsn"
-        },
-        "city": "comm",
-        "postcode": "zipcode"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/599395/us/nd/city_of_grand_forks.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

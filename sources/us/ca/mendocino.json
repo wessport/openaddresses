@@ -9,18 +9,30 @@
         "state": "ca",
         "county": "Mendocino"
     },
-    "data": "https://data.openaddresses.io/cache/uploads/nvkelso/d84a43/mendocino_california_Parcels_10_15_U.zip",
-    "attribution": "Mendocino County",
-    "website": "http://www.co.mendocino.ca.us/econdev/gis/index.htm",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "number": "SITUS_1",
-        "street": [
-            "SITUS_DIR",
-            "SITUS_2"
-        ],
-        "unit": "APT_"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885843/us/ca/mendocino.zip",
+                "attribution": "Mendocino County",
+                "website": "http://www.co.mendocino.ca.us/econdev/gis/index.htm",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

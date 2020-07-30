@@ -1,29 +1,36 @@
 {
-  "coverage": {
-    "US Census": {
-      "geoid": "56001",
-      "name": "Albany County",
-      "state": "Wyoming"
+    "coverage": {
+        "US Census": {
+            "geoid": "56001",
+            "name": "Albany County",
+            "state": "Wyoming"
+        },
+        "country": "us",
+        "state": "wy",
+        "county": "Albany"
     },
-    "country": "us",
-    "state": "wy",
-    "county": "Albany"
-  },
-  "data": "http://arcmobile.co.albany.wy.us/arcgis/rest/services/PublicWebMap/Ownership/MapServer/0",
-  "protocol": "ESRI",
-  "conform": {
-    "number": {
-      "function": "regexp",
-      "field": "LOCATIONAD",
-      "pattern": "^([0-9]+)"
-    },
-    "street": {
-      "function": "regexp",
-      "field": "LOCATIONAD",
-      "pattern": "^(?:[0-9]+ )(.*)",
-      "replace": "$1"
-    },
-    "format": "geojson",
-    "postcode": "mailzipcod"
-  }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886083/us/wy/albany.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
+    }
 }

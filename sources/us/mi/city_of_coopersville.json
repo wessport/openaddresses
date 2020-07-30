@@ -4,7 +4,7 @@
             "type": "Point",
             "coordinates": [
                 -85.934103,
-              	43.06579
+                43.06579
             ]
         },
         "US Census": {
@@ -17,17 +17,28 @@
         "county": "Ottawa",
         "city": "Coopersville"
     },
-    "data": "https://web1.mobile311.com/arcgis/rest/services/Michigan/CoopersvilleMI/MapServer/46",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "PROPSTRE_1",
-        "street": [
-            "PropAddress",
-            "PROPSTREET"
-        ],
-        "city": "PROPCITY",
-        "region": "PROPSTATE",
-        "postcode": "PROPZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/688851/us/mi/city_of_coopersville.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

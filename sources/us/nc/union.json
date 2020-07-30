@@ -9,19 +9,30 @@
         "state": "nc",
         "county": "Union"
     },
-    "data": "http://gis-web.co.union.nc.us/arcgis/rest/services/GoMaps/UnionGoMaps/MapServer/7",
-    "license": "",
-    "year": "11/2013",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "DISPLAY"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "DISPLAY"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886057/us/nc/union.zip",
+                "license": "",
+                "year": "11/2013",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

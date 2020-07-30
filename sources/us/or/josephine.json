@@ -9,18 +9,28 @@
         "state": "or",
         "county": "Josephine"
     },
-    "protocol": "ESRI",
-    "data": "http://gis2.co.josephine.or.us/arcgis/rest/services/GIS/SiteAddress/MapServer/0",
-    "conform": {
-        "format": "geojson",
-        "number": "NUMBER",
-        "street": [
-            "PREFIX",
-            "STREETNAME",
-            "TYPE",
-            "SUFFIX"
-        ],
-        "city": "CITY",
-        "postcode": "ZIPCODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/609121/us/or/josephine.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

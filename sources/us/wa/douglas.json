@@ -9,19 +9,32 @@
         "state": "wa",
         "county": "Douglas"
     },
-    "license": "http://www.douglascountywa.net/departments/tls/gis/",
-    "protocol": "ftp",
-    "compression": "zip",
-    "note": "point shapefile dc_address_pts.shp, address columns: FULL_ADDY, CITY, ZIP",
-    "year": "2014",
-    "data": "ftp://ftp.douglascountywa.net/Downloads/GIS_Base/Cadastral/Addressing/dc_address_pts.zip",
-    "website": "http://www.douglascountywa.net/departments/tls/gis/",
-    "conform": {
-        "format": "shapefile",
-        "number": "BLDG_NUM",
-        "street": "STREET",
-        "city": "CITY",
-        "postcode": "ZIP",
-        "addrtype": "Category"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "license": "http://www.douglascountywa.net/departments/tls/gis/",
+                "protocol": "http",
+                "compression": "zip",
+                "note": "point shapefile dc_address_pts.shp, address columns: FULL_ADDY, CITY, ZIP",
+                "year": "2014",
+                "data": "http://data.openaddresses.io/runs/886464/us/wa/douglas.zip",
+                "website": "http://www.douglascountywa.net/departments/tls/gis/",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

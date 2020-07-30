@@ -1,23 +1,36 @@
 {
     "coverage": {
-        "US Census": {"geoid": "26111", "name": "Midland County", "state": "Michigan"},
+        "US Census": {
+            "geoid": "26111",
+            "name": "Midland County",
+            "state": "Michigan"
+        },
         "country": "us",
         "state": "mi",
         "county": "Midland"
     },
-    "data": "https://services6.arcgis.com/9ALftzD3ElQ7KAgT/arcgis/rest/services/Address/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "AddNo",
-        "street": [
-            "Prefix",
-            "AddName",
-            "AddType",
-            "Suffix"
-        ],
-        "unit": "Unit",
-        "city": "CITY",
-        "postcode": "Zip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/891324/us/mi/midland.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

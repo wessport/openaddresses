@@ -9,14 +9,29 @@
         "state": "co",
         "county": "Pitkin"
     },
-    "attribution": "Pitkin County",
-    "data": "https://maps.pitkincounty.com/download/AddressPoint/shp/AddressPoint.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "number": "street_nu",
-        "street": "name",
-        "format": "shapefile",
-        "postcode": "zip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Pitkin County",
+                "data": "http://data.openaddresses.io/runs/891922/us/co/pitkin.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

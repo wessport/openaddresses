@@ -6,22 +6,34 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-              	-122.953,
-              	49.207
+                -122.953,
+                49.207
             ]
         }
     },
-    "data": "http://opendata.newwestcity.ca/downloads/address-points/ADDRESS_PTS.ZIP",
-    "website": "http://opendata.newwestcity.ca/datasets",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "number": "HOUSE",
-        "street": "STREET",
-        "unit": "UNIT",
-        "city": "CITY",
-        "region": "PROVINCE",
-        "postcode": "PC"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886563/ca/bc/city_of_new_westminster.zip",
+                "website": "http://opendata.newwestcity.ca/datasets",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

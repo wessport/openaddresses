@@ -2,7 +2,10 @@
     "coverage": {
         "geometry": {
             "type": "Point",
-            "coordinates": [ -79.072, 38.154 ]
+            "coordinates": [
+                -79.072,
+                38.154
+            ]
         },
         "US Census": {
             "geoid": "51790",
@@ -13,22 +16,29 @@
         "state": "va",
         "city": "Staunton"
     },
-    "data": "http://gis.ci.staunton.va.us:8087/stagis/rest/services/Services/Parcels/FeatureServer/0",
-    "protocol": "ESRI",
-    "website": "http://gis.ci.staunton.va",
-    "conform": {
-        "format": "geojson",
-        "street": {
-            "function": "regexp",
-            "field": "P_ADDRESS",
-            "pattern": "^(?:[0-9]+ )(.*)",
-            "replace": "$1"
-        },
-        "number": {
-            "function": "regexp",
-            "field": "P_ADDRESS",
-            "pattern": "^([0-9]+)"
-        },
-        "accuracy": 2
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/498242/us/va/city_of_staunton.zip",
+                "protocol": "http",
+                "website": "http://gis.ci.staunton.va",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

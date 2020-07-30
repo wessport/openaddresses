@@ -9,26 +9,28 @@
         "state": "mn",
         "county": "Chippewa"
     },
-    "data": "https://gis.chippewa.mn/arcgis/rest/services/public_LINK/MapServer/2",
-    "protocol": "ESRI",
-    "conform": {
-        "number": {
-            "function": "regexp",
-            "field": "ChippewaTaxData.dbo.tblParcelJoin.PROPERTY_ADDRESS",
-            "pattern": "^([0-9]+)"
-        },
-        "street": {
-            "function": "regexp",
-            "field": "ChippewaTaxData.dbo.tblParcelJoin.PROPERTY_ADDRESS",
-            "pattern": "^(?:[0-9]+ )(.*)",
-            "replace": "$1"
-        },
-        "format": "geojson",
-        "city": {
-          "function": "regexp",
-          "field": "ChippewaTaxData.dbo.tblParcelJoin.PROPERTY_CITY",
-          "pattern": "^([^,]+)"
-        },
-        "postcode": "ChippewaTaxData.dbo.tblParcelJoin.PROPERTY_ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886243/us/mn/chippewa.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,21 +9,35 @@
         "state": "md",
         "county": "Howard"
     },
-    "data": "http://data.howardcountymd.gov/DataDownload/ESRI/address_points.zip",
-    "website": "http://data.howardcountymd.gov/",
-    "license": {
-        "text": "PD",
-        "attribution": false,
-        "share-alike": false
-    },
-    "compression": "zip",
-    "protocol": "http",
-    "year": 2013,
-    "conform": {
-        "street": "streetname",
-        "number": "addressno",
-        "format": "shapefile",
-        "city": "PREMCITY",
-        "postcode": "premzip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886099/us/md/howard.zip",
+                "website": "http://data.howardcountymd.gov/",
+                "license": {
+                    "text": "PD",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "compression": "zip",
+                "protocol": "http",
+                "year": 2013,
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

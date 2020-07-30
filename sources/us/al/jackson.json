@@ -9,17 +9,28 @@
         "state": "al",
         "county": "Jackson"
     },
-    "data": "https://web2.kcsgis.com/kcsgis/rest/services/Jackson/Public2/MapServer/134",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "PARCELNUMB",
-        "number": "STREET_NUM",
-        "street": {
-            "function": "remove_prefix",
-            "field": "ADDRESS",
-            "field_to_remove": "STREET_NUM"
-        },
-        "district": "COUNTY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886112/us/al/jackson.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

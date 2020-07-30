@@ -3,7 +3,7 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -95.670,
+                -95.67,
                 31.759
             ]
         },
@@ -17,18 +17,28 @@
         "county": "Anderson",
         "city": "Palestine"
     },
-    "data": "https://services1.arcgis.com/WdhBVdosVwJuZil0/arcgis/rest/services/Pal_Zone_111416/FeatureServer/2",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "Number",
-        "street": [
-            "Prefix_Dir",
-            "STREET_NAM",
-            "Suffix"
-        ],
-        "postcode": "Zip",
-        "city": "City",
-        "region": "State"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/149999/us/tx/city_of_palestine.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

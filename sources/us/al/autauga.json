@@ -9,16 +9,28 @@
         "state": "al",
         "county": "Autauga"
     },
-    "data": "http://146.148.59.120/arcgis/rest/services/Parcels/Autauga/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "P_HOUSE",
-        "street": "P_STREET",
-        "postcode": {
-            "function": "regexp",
-            "field": "P_CITY",
-            "pattern": "([0-9]{5})$"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/353093/us/al/autauga.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

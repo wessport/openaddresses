@@ -9,16 +9,28 @@
         "state": "wi",
         "county": "Oconto"
     },
-    "data": "https://oc17maps.co.oconto.wi.us/arcgis/rest/services/GeoValidation/ProductionA_MAP/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HouseNum",
-        "street": [
-            "PreDir",
-            "StreetName",
-            "StreetType"
-        ],
-        "unit": "UnitNumber"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/891211/us/wi/oconto.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

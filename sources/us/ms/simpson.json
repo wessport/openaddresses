@@ -9,12 +9,28 @@
         "state": "ms",
         "county": "Simpson"
     },
-    "protocol": "ESRI",
-    "data": "http://gis.cmpdd.org/arcgis/rest/services/Regional/SimpsonHealth/MapServer/4",
-    "conform": {
-        "format": "geojson",
-        "accuracy": 2,
-        "number": "STREET_NUM",
-        "street": "STREET"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/885900/us/ms/simpson.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

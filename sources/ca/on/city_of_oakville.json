@@ -11,15 +11,28 @@
             ]
         }
     },
-    "data": "https://utility.arcgis.com/usrsvcs/servers/27f097ef7ddc4406ba6d2672c6994416/rest/services/ArcGISOnline/AGO_Oakville_Misc_Layers/MapServer/15",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "STREET_NUM",
-        "street": [
-            "STREET_DIR",
-            "STREET_NAME",
-            "STREET_TYPE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/836836/ca/on/city_of_oakville.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
         ]
     }
 }

@@ -8,17 +8,29 @@
         "country": "ru",
         "state": "YAN"
     },
-    "data": "https://karta.yanao.ru/arcgisserver/rest/services/BaseVectors/base_map/MapServer/58",
-    "protocol": "ESRI",
-    "language": "ru",
-    "conform": {
-        "number": {
-            "function": "join",
-            "fields": ["h_nomber","litera"],
-            "separator": ""
-        },
-        "street":  "st_name",
-        "city": "np",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/499417/ru/yan/regionwide.zip",
+                "protocol": "http",
+                "language": "ru",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

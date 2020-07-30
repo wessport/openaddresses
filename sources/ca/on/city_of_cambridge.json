@@ -7,17 +7,32 @@
             "type": "Point",
             "coordinates": [
                 -80.328,
-              	43.401
+                43.401
             ]
         }
     },
-    "data": "https://maps.cambridge.ca/arcgispub/rest/services/OpenData/MapServer/13",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "ADDRESS_POINT_ID",
-        "number": "HOUSE_NUMBER",
-        "street": "STREET_NAME",
-        "unit": "UNIT_NUMBER"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886155/ca/on/city_of_cambridge.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

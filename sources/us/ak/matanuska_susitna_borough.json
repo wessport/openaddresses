@@ -9,20 +9,30 @@
         "state": "ak",
         "county": "matanuska susitna borough"
     },
-    "data": "http://maps.matsugov.us/ArcGIS/rest/services/ParcelViewer/MapServer/7",
-    "website": "http://www.matsugov.us/",
-    "attribution": "Matanuska-Susitna Borough",
-    "protocol": "ESRI",
-    "conform": {
-        "number": "ADRSNUM",
-        "street": [
-            "P_ROADNME",
-            "ROADNME",
-            "S_ROADNME",
-            "PS_ROADNME"
-        ],
-        "unit": "ADRSNUM_S",
-        "city": "COMMUNITY",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/530081/us/ak/matanuska_susitna_borough.zip",
+                "website": "http://www.matsugov.us/",
+                "attribution": "Matanuska-Susitna Borough",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

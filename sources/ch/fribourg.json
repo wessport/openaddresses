@@ -6,17 +6,28 @@
             "alpha2": "CH-FR"
         }
     },
-    "data": "http://www.sit.fr.ch/arcgis/rest/services/Coordonnees/Adresses_rues/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "DEINR",
-        "street": "STRNAME1",
-        "city": {
-            "function": "regexp",
-            "pattern": "^(.*?)(?:\\s+FR)?\\s*$",
-            "field" :"LOCALITE"
-        },
-        "postcode": "PLZ4"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/401113/ch/fribourg.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

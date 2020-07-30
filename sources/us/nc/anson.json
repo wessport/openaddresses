@@ -9,17 +9,29 @@
         "state": "nc",
         "county": "Anson"
     },
-    "data": "http://www.co.anson.nc.us/Portals/2/records/gisdaily.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "website": "http://www.co.anson.nc.us/PublicRecords/GISDataDownloads.aspx",
-    "conform": {
-        "file": "911/address.shp",
-        "srs": "EPSG:3359",
-        "number": "NUMBER",
-        "street": "STREET",
-        "unit": "APT_NUMBER",
-        "city": "COMMUNITY",
-        "format": "shapefile"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/666160/us/nc/anson.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "website": "http://www.co.anson.nc.us/PublicRecords/GISDataDownloads.aspx",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

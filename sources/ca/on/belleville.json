@@ -4,13 +4,29 @@
         "state": "on",
         "county": "Belleville"
     },
-    "protocol": "ESRI",
-    "data": "http://gis.city.belleville.on.ca/arcgis/rest/services/BV/BV_Civic_Add_2014/MapServer/0",
-    "website": "http://gis.city.belleville.on.ca/",
-    "conform":{
-        "format": "geojson",
-        "number": "ADDRESS_NU",
-        "street": "STREET_N_1",
-        "city": "CITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/270828/ca/on/belleville.zip",
+                "website": "http://gis.city.belleville.on.ca/",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

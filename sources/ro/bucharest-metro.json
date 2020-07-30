@@ -1,15 +1,31 @@
 {
     "coverage": {
-      "country": "ro",
-      "city": "Bucharest Metro Area"
+        "country": "ro",
+        "city": "Bucharest Metro Area"
     },
-    "protocol": "ESRI",
-    "data": "http://maps-gisportal.esriro.ro/arcgis/rest/services/SureData/SureData/MapServer/2",
-    "note": "data covers towns/cities of Otopeni, Sinaia, Voluntari, and Chitila",
-    "conform": {
-        "format": "geojson",
-        "number": "NUMAR_POSTAL",
-        "street": "STRADA",
-        "city": "LOCALITATE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/186179/ro/bucharest-metro.zip",
+                "note": "data covers towns/cities of Otopeni, Sinaia, Voluntari, and Chitila",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

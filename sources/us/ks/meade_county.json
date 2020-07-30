@@ -1,19 +1,36 @@
 {
     "coverage": {
-        "US Census": {"geoid": "20119", "name": "Meade County", "state": "Kansas"},
+        "US Census": {
+            "geoid": "20119",
+            "name": "Meade County",
+            "state": "Kansas"
+        },
         "country": "us",
         "state": "ks",
         "county": "Meade"
     },
-    "conform": {
-        "format": "csv",
-        "number": "NUM",
-        "street": "STR",
-        "city": "CITY",
-        "postcode": "ZIP",
-        "lon": "LON",
-        "lat": "LAT"
-    },
-    "data": "https://data.openaddresses.io/cache/us-ks-meade_county.csv",
-    "protocol": "http"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/886936/us/ks/meade_county.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

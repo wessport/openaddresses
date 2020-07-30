@@ -9,18 +9,29 @@
         "state": "nc",
         "county": "McDowell"
     },
-    "website": "https://www.webgis.net/nc/Cleveland/",
-    "data": "https://www.webgis.net/arcgis/rest/services/NC/McDowell/MapServer/215",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "NUMBER",
-        "street": [
-            "PRE_DIR",
-            "ROAD_NAME",
-            "ROAD_TYPE",
-            "SUF_DIR"
-        ],
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "https://www.webgis.net/nc/Cleveland/",
+                "data": "http://data.openaddresses.io/runs/886390/us/nc/mcdowell.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

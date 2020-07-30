@@ -6,27 +6,29 @@
         },
         "country": "tw"
     },
-    "data": "http://ja.miaoli.gov.tw/arcgis/rest/services/Miaoli/miaoliDpDynamic_B/FeatureServer/1",
-    "protocol": "ESRI",
-    "language": "zh",
-    "conform": {
-        "format": "geojson",
-        "number":{
-            "function": "regexp",
-            "field": "NUM",
-            "pattern": "^([0-9\uff10-\uff19]+\u865f?)"
-        },
-        "unit":{
-            "function": "regexp",
-            "field": "NUM",
-            "pattern": "^(?:[0-9\uff10-\uff19]+\u865f?)(.*)"
-        },
-        "street": {
-            "function": "join",
-            "fields": ["ROAD","LANE","ALLEY"],
-            "separator": ""
-        },
-        "city": "VILLAGE",
-        "district": "TOWN"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885491/tw/mia/regionwide-zh.zip",
+                "protocol": "http",
+                "language": "zh",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

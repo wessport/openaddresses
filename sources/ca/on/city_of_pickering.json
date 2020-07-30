@@ -11,19 +11,28 @@
             ]
         }
     },
-    "data": "https://maps.pickering.ca/arcgisinter/rest/services/public/OpenData/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSENUMBE",
-        "street": [
-            "STREET",
-            "STREETTYPE"
-        ],
-        "unit": [
-            "UNITTYPE",
-            "UNITNUMBER"
-        ],
-        "city": "CITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886156/ca/on/city_of_pickering.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,22 +9,28 @@
         "state": "il",
         "county": "Kane"
     },
-    "data": "http://gistech.countyofkane.org/arcgis/rest/services/KaneGIS/MapServer/9",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "Address",
-            "AddressSuffix"
-        ],
-        "street": [
-            "STPrefix",
-            "STName",
-            "STType",
-            "STSuffix"
-        ],
-        "unit": "Unit",
-        "city": "City",
-        "postcode": "Zip5"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/75636/us/il/kane.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

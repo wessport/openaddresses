@@ -9,25 +9,30 @@
         "state": "in",
         "county": "Owen"
     },
-    "data": "https://elb2.39dn.com/arcgis/rest/services/eGISDynamicServices/OwenINDynamic/MapServer/1",
-    "protocol": "ESRI",
-    "skip": true,
-    "note": "39dn requested that we stop using data obtained from their servers on 2017-05-07",
-    "conform": {
-      "number": "STR_NUM",
-      "street": [
-          "PRE_DIR",
-          "STR_NAME",
-          "STR_TYPE",
-          "POST_DIR"
-      ],
-      "unit": [
-          "UNIT_TYPE",
-          "UNIT_NUM"
-      ],
-      "city": "CITY",
-      "region": "STATE",
-      "postcode": "ZIP_CODE",
-      "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/94650/us/in/owen.zip",
+                "protocol": "http",
+                "skip": true,
+                "note": "39dn requested that we stop using data obtained from their servers on 2017-05-07",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

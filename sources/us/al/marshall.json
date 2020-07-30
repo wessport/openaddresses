@@ -9,12 +9,28 @@
         "state": "al",
         "county": "Marshall"
     },
-    "data": "https://demomaps.kcsgis.com/kcsgis/rest/services/Marshall/Public2/MapServer/37",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "SitusAddNumber",
-        "street": "SitusAddName",
-        "city": "SitusAddCity"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/890646/us/al/marshall.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

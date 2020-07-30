@@ -9,15 +9,28 @@
         "state": "ks",
         "county": "Coffey"
     },
-    "protocol": "http",
-    "compression": "zip",
-    "data": "https://data.openaddresses.io/cache/uploads/iandees/903d8a/CF_OpenAddresses.zip",
-    "conform": {
-        "file": "OpenAddresses.shp",
-        "format": "shapefile",
-        "number": "HouseNum",
-        "street": "Street",
-	"postcode": "Zip",
-	"city": "MSAGName"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "compression": "zip",
+                "data": "http://data.openaddresses.io/runs/886838/us/ks/coffey_county.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

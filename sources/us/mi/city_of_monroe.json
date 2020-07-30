@@ -16,18 +16,31 @@
         "state": "mi",
         "city": "monroe"
     },
-    "data": "https://cityofmonroegis.monroemi.gov/arcgis/rest/services/Production/Parcels/Mapserver/0",
-    "protocol": "ESRI",
-    "website": "https://cityofmonroegis.monroemi.gov/Apps/GISViewer/",
-    "license": "",
-    "note": "Data includes polygon shape of parcels. Polygon is found in the SHAPE column. Address data is found in PROPCITY, PROPSTREETCOMBINED, PORPADDRNUM, PROPSTATE, PROPSTREETNAME, PROPZIP.",
-    "conform": {
-        "format": "geojson",
-        "number": "propaddrnum",
-        "street": ["propaddrdirect", "propstreetname"],
-        "city": "propcity",
-        "region": "propstate",
-        "postcode": "propzip",
-        "id": "OBJECTID"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886480/us/mi/city_of_monroe.zip",
+                "protocol": "http",
+                "website": "https://cityofmonroegis.monroemi.gov/Apps/GISViewer/",
+                "license": "",
+                "note": "Data includes polygon shape of parcels. Polygon is found in the SHAPE column. Address data is found in PROPCITY, PROPSTREETCOMBINED, PORPADDRNUM, PROPSTATE, PROPSTREETNAME, PROPZIP.",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

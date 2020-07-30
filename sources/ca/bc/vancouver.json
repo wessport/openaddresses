@@ -3,15 +3,36 @@
         "country": "ca",
         "state": "bc",
         "city": "Vancouver",
-        "geometry": { "type": "Point", "coordinates": [-123.13, 49.28] }
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -123.13,
+                49.28
+            ]
+        }
     },
-    "data": "ftp://webftp.vancouver.ca/OpenData/shape/shape_property_information.zip",
-    "protocol": "ftp",
-    "compression": "zip",
-    "conform": {
-        "file": "property_addresses.shp",
-        "number": "CIVIC_NO",
-        "street": "STREETNAME",
-        "format": "shapefile"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886331/ca/bc/vancouver.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

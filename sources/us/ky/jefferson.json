@@ -9,21 +9,30 @@
         "state": "ky",
         "county": "Jefferson"
     },
-    "website": "http://data.lojic.org/datasets/jefferson-county-ky-address-points",
-    "data": "https://services1.arcgis.com/79kfd2K6fskCAkyg/arcgis/rest/services/OpenDataAddresses/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSENO",
-        "street": [
-            "DIR",
-            "STRNAME",
-            "TYPE"
-        ],
-        "unit": "APT",
-        "city": "MUNI_NAME",
-        "postcode": "ZIPCODE"
-    },
-    "website": "ftp://ftp.lojic.org/Pub/federal/",
-    "attribution": "Metro Louisville,  LOJIC partners"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "ftp://ftp.lojic.org/Pub/federal/",
+                "data": "http://data.openaddresses.io/runs/885406/us/ky/jefferson.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "attribution": "Metro Louisville,  LOJIC partners",
+                "compression": "zip"
+            }
+        ]
+    }
 }

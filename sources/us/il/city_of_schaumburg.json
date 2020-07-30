@@ -16,12 +16,28 @@
         "state": "il",
         "place": "Schaumburg"
     },
-    "data": "http://gisweb.ci.schaumburg.il.us/arcgis/rest/services/OpenData/AddressPointsOpenData/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": ["pipu_loc_no", "pipu_loc_no_suff"],
-        "street": "pipu_loc_street",
-        "unit": "pipu_loc_unit"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/300113/us/il/city_of_schaumburg.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,17 +9,28 @@
         "state": "nj",
         "county": "Morris"
     },
-    "data": "http://morrisgisapps.co.morris.nj.us/GISData/PublicData/Shapefiles/Countywide/Addresses.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "number": "AddNum",
-        "street": "FullName",
-        "unit": "Unit",
-        "city": "City",
-        "postcode": "ZIP",
-        "region": "State",
-        "accuracy": 1
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886005/us/nj/morris.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

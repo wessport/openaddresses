@@ -9,20 +9,29 @@
         "state": "wi",
         "county": "Waupaca"
     },
-    "data": "http://public1.co.waupaca.wi.us/arcgis/rest/services/Public/OpenData/MapServer/24",
-    "website": "http://www.co.waupaca.wi.us/landinformation/Data.aspx",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HSN_W_PRE",
-        "street": [
-            "ROAD_PREFIX",
-            "ROAD_NAME",
-            "ROAD_TYPE",
-            "ROAD_SUFFIX"
-        ],
-        "postcode": "ZIP",
-        "city": "CITY",
-        "region": "STATE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885663/us/wi/waupaca.zip",
+                "website": "http://www.co.waupaca.wi.us/landinformation/Data.aspx",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

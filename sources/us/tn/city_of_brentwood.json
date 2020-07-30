@@ -2,27 +2,37 @@
     "coverage": {
         "geometry": {
             "type": "Point",
-            "coordinates": [ -86.7864990234375, 36.03188706147076 ]
+            "coordinates": [
+                -86.7864990234375,
+                36.03188706147076
+            ]
         },
         "country": "us",
         "state": "tn",
         "city": "Brentwood"
     },
-    "data": "http://gis2.brentwoodtn.gov:6080/arcgis/rest/services/Datasets/Transportation/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "ADDRESS"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "ADDRESS"
-        },
-        "city": "CITY",
-        "district": "COUNTY",
-        "region": "STATE",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886286/us/tn/city_of_brentwood.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

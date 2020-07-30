@@ -9,19 +9,29 @@
         "state": "wi",
         "county": "Iron"
     },
-    "data": "http://maps.ironcountywi.org:6080/arcgis/rest/services/addresses/MapServer/0",
-    "protocol": "ESRI",
-    "note": "Number contains letters",
-    "conform": {
-        "format": "geojson",
-        "number": "FIRENUMBER",
-        "street": [
-            "PRE_DIR",
-            "STREETNAME",
-            "SUFFIX",
-            "POST_DIR"
-        ],
-        "city": "TOWN",
-        "postcode": "ZIPCODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/454694/us/wi/iron.zip",
+                "protocol": "http",
+                "note": "Number contains letters",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

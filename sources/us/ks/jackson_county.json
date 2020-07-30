@@ -9,19 +9,28 @@
         "state": "ks",
         "county": "Jackson"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "PropStNum",
-        "street": [
-            "PropStDir",
-            "PropStName",
-            "PropStSuff",
-            "PropStSuDi"
-        ],
-        "city": "PropCity",
-        "region": "PropState",
-        "postcode": "PropZip"
-    },
-    "data": "http://gis.publicaccessnow.com/arcgis/rest/services/JacksonKs/JacksonKsDynamic/MapServer/0",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/186271/us/ks/jackson_county.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

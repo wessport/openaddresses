@@ -9,17 +9,28 @@
         "state": "nc",
         "county": "Transylvania"
     },
-    "data": "http://www.webgis.net/arcgis/rest/services/NC/Transylvania/MapServer/10",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "LEGAL_ADDR"
-            },
-        "street": {
-            "function": "postfixed_street",
-            "field": "LEGAL_ADDR"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886159/us/nc/transylvania.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,23 +9,34 @@
         "state": "mn",
         "county": "Fillmore"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "BLD_NUM",
-        "street": [
-            "BASENAME",
-            "SUF_DIR"
-        ],
-        "unit": "UNIT",
-        "city": "CITY",
-        "postcode": "ZIP"
-    },
-    "license": {
-        "text": "Indemnification",
-        "attribution": false,
-        "share-alike": false
-    },
-    "protocol": "ESRI",
-    "data": "http://gis.co.fillmore.mn.us/arcgis/rest/services/FillmorePublic/MapServer/0",
-    "website": "http://www.co.fillmore.mn.us/gis"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "license": {
+                    "text": "Indemnification",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/886450/us/mn/fillmore.zip",
+                "website": "http://www.co.fillmore.mn.us/gis",
+                "compression": "zip"
+            }
+        ]
+    }
 }

@@ -11,23 +11,32 @@
             ]
         }
     },
-    "data": "https://opendata.arcgis.com/datasets/16e189882ac94a5091618ee0e0f74ce7_0.zip",
-    "license": {
-        "url": "https://www.lethbridge.ca/Pages/OpenDataLicense.aspx",
-        "attribution": false
-    },
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "accuracy": 2,
-        "number": {
-            "function": "prefixed_number",
-            "field": "Address"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "Address"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886103/ca/ab/city_of_lethbridge.zip",
+                "license": {
+                    "url": "https://www.lethbridge.ca/Pages/OpenDataLicense.aspx",
+                    "attribution": false
+                },
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

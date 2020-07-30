@@ -9,17 +9,28 @@
         "state": "la",
         "county": "St. Charles"
     },
-    "data": "http://www.scpgis.com/arcgis/rest/services/SCPGIS/WEBGIS/MapServer/54",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "FULLADNUM",
-        "street": "STREETNAME",
-        "unit": [
-            "UNIT_TYPE",
-            "STE"
-        ],
-        "city": "MUNICIPALI",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/708614/us/la/st_charles_parish.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,17 +9,29 @@
         "state": "mn",
         "county": "Becker"
     },
-    "website": "https://www.co.becker.mn.us/online_services/GIS_data.aspx",
-    "data": "http://gis-server.co.becker.mn.us/data/gis/shapefiles/drive_pnts.zip",
-    "compression": "zip",
-    "protocol": "http",
-    "conform": {
-        "format": "shapefile",
-        "number": "BLD_NUM",
-        "unit": "UNIT",
-        "street": "BASENAME",
-        "city": "CITY",
-        "postcode":"ZIP",
-        "region":"STATE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "https://www.co.becker.mn.us/online_services/GIS_data.aspx",
+                "data": "http://data.openaddresses.io/runs/886482/us/mn/becker.zip",
+                "compression": "zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

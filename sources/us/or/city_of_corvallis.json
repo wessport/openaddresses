@@ -16,32 +16,28 @@
         "state": "or",
         "city": "Corvallis"
     },
-    "data": "https://data.openaddresses.io/cache/uploads/migurski/d5add2/oregon_state_addresses.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "gdb",
-        "file": "Delivery/addresses_oregon.gdb",
-        "layer": "_Corvallis",
-        "number": {
-            "function": "join",
-            "fields": [
-                "ST_NUMBR",
-                "ST_NSFX"
-            ],
-            "separator": ""
-        },
-        "street": [
-            "ST_PFX",
-            "ST_NAME",
-            "ST_TYPE",
-            "ST_SFX"
-        ],
-        "unit": [
-            "UNIT",
-            "UNITNUM"
-        ],
-        "city": "CITY",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886439/us/or/city_of_corvallis.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

@@ -9,14 +9,28 @@
         "state": "de",
         "county": "Kent"
     },
-    "conform": {
-        "format": "geojson",
-        "number": "Address",
-        "street": "Roadname",
-        "unit": "Apartment",
-        "postcode": "Zipcode",
-        "city": "City"
-    },
-    "data": "https://co.kent.de.us/server/rest/services/AddressesAndRoads/MapServer/0",
-    "protocol": "ESRI"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "data": "http://data.openaddresses.io/runs/885691/us/de/kent.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
 }

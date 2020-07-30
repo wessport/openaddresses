@@ -10,13 +10,28 @@
         "country": "se",
         "city": "Växjö"
     },
-    "data": "https://gis1.vaxjo.se/arcgis/rest/services/Kartgenerering/Grundkarta_WM/MapServer/59",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADRPLATS",
-        "street": "ADROMRADE",
-        "city": "POSTORT",
-        "id": "ACEID"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/401712/se/municipality_of_vaxjo.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,19 +9,29 @@
         "state": "ne",
         "place": "Omaha"
     },
-    "data": "https://gis.dogis.org/arcgis/rest/services/OpenData_layers/MapServer/33",
-    "license": "Imdemnification?",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDRNUM",
-        "street": "FULLNAME",
-        "city": "MUNICIPALITY",
-        "unit": [
-            "UNITTYPE",
-            "UNITID"
-        ],
-        "postcode": "ZIP",
-        "accuracy": 1
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/684019/us/ne/omaha.zip",
+                "license": "Imdemnification?",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

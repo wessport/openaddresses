@@ -9,25 +9,29 @@
         "state": "tn",
         "county": "Blount"
     },
-    "data": "http://204.63.176.116/arcgis/rest/services/AddressPoints_WGS84/MapServer/0",
-    "protocol": "ESRI",
-    "website": "http://www.blountgis.net/blountgis/web-maps/",
-    "conform": {
-        "format": "geojson",
-        "number": "STNUM",
-        "unit": [
-            "UNIT_TYPE",
-            "UNIT_NUM"
-        ],
-        "street": [
-            "PREDIR",
-            "PRETYPE",
-            "NAME",
-            "TYPE",
-            "SUFDIR"
-        ],
-        "city": "CITY",
-        "region": "STATE",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/890934/us/tn/blount.zip",
+                "protocol": "http",
+                "website": "http://www.blountgis.net/blountgis/web-maps/",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,25 +9,35 @@
         "state": "fl",
         "county": "Miami-Dade"
     },
-    "attribution": "Miami-Dade County",
-    "data": "http://gisms.miamidade.gov/ArcGIS/rest/services/WGS84/LandInformation_Address/MapServer/1",
-    "website": "http://gisweb.miamidade.gov/GISSelfServices/GeographicData/MDGeographicData.html",
-    "license": {
-        "text": "Public Domain",
-        "attribution": false,
-        "share-alike": false
-    },
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HSE_NUM",
-        "street": [
-            "PRE_DIR",
-            "ST_NAME",
-            "ST_TYPE",
-            "SUF_DIR"
-        ],
-        "unit": "UNIT",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Miami-Dade County",
+                "data": "http://data.openaddresses.io/runs/869923/us/fl/miami.zip",
+                "website": "http://gisweb.miamidade.gov/GISSelfServices/GeographicData/MDGeographicData.html",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

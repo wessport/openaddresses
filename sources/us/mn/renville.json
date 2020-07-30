@@ -9,17 +9,28 @@
         "state": "mn",
         "county": "Renville"
     },
-    "data": "https://gis.renvillecountymn.com/arcgis/rest/services/Link_Public_Map_Service/MapServer/115",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ANUMBER",
-        "street": ["ST_PRE_TYP", "ST_NAME", "ST_POS_TYP", "ST_POS_DIR"],
-        "addrtype": "PLACE",
-        "city": "POSTCOMM",
-        "district": "CO_NAME",
-        "region": "STATE_CODE",
-        "postcode": "ZIP",
-        "notes": "NOTE_"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886502/us/mn/renville.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

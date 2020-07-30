@@ -9,20 +9,29 @@
         "state": "mn",
         "county": "Steele"
     },
-    "data": "http://www.co.steele.mn.us/arcgis/rest/services/Steele_LINK_public/MapServer/6",
-    "note": "This source includes rural addresses in Steele county, MN",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "BLD_NUM",
-        "street": [
-            "PRE_DIR",
-            "PRE_TYPE",
-            "ST_NAME",
-            "ST_TYPE",
-            "SUF_DIR"
-        ],
-        "city": "CITY",
-        "postcode": "ZIPCODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/855789/us/mn/steele_rural.zip",
+                "note": "This source includes rural addresses in Steele county, MN",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

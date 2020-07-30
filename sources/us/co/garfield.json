@@ -9,20 +9,29 @@
         "state": "co",
         "county": "Garfield"
     },
-    "protocol": "ESRI",
-    "data": "https://gis.garfield-county.com/arcgis/rest/services/Development/GC_ParcelsNew/FeatureServer/0",
-    "website": "https://gis.garfield-county.com/LandExplorer/index.html",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "PHYSADDRESS"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "PHYSADDRESS"
-        },
-        "postcode": "PHYSZIP",
-        "city": "PHYSCITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/884737/us/co/garfield.zip",
+                "website": "https://gis.garfield-county.com/LandExplorer/index.html",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

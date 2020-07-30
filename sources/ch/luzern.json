@@ -10,17 +10,28 @@
         "country": "ch",
         "city": "Luzern"
     },
-    "data": "https://svc-test.geo.lu.ch/agssec/rest/services/basis/basis_gbplan/MapServer/49",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "HAUSNUMMER",
-        "street": "LOK_NAME",
-        "city": {
-            "function": "regexp",
-            "field": "ORTSCHAFT",
-            "pattern": "^(.+?)(?:\\s+LU)?\\s*$"
-        },
-        "postcode": "PLZ"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/288191/ch/luzern.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

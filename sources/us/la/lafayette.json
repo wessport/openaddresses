@@ -9,15 +9,29 @@
         "state": "la",
         "county": "Lafayette"
     },
-    "protocol": "ESRI",
-    "data": "https://services.arcgis.com/fOr4AY8t0ujnJsua/arcgis/rest/services/LCGAddressPoints/FeatureServer/0",
-    "note": "Lafayette consolidated government represents city of Lafayette and other unincorporated ares of Lafayette Parish",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDR_NUM",
-        "street": "FULL_STR_NAME",
-        "unit": "UNIT",
-        "city": "CITY",
-        "postcode": "ZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/885799/us/la/lafayette.zip",
+                "note": "Lafayette consolidated government represents city of Lafayette and other unincorporated ares of Lafayette Parish",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -16,16 +16,28 @@
         "state": "ca",
         "city": "San Luis Obispo"
     },
-    "data": "https://services.arcgis.com/yygmGNIVQrHqSELP/ArcGIS/rest/services/AddressPoints/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "streetNumber",
-        "street": [
-            "streetName",
-            "streetType"
-        ],
-        "unit": "suite",
-        "postcode": "zipCode"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886314/us/ca/city_of_san_luis_obispo.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

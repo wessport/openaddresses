@@ -1,22 +1,36 @@
 {
     "coverage": {
-        "US Census": {"geoid": "29187", "name": "St. Francois County", "state": "Missouri"},
+        "US Census": {
+            "geoid": "29187",
+            "name": "St. Francois County",
+            "state": "Missouri"
+        },
         "country": "us",
         "state": "mo",
         "county": "Saint Francois"
     },
-    "protocol": "ESRI",
-    "data": "https://www.semogis.com/arcgis/rest/services/StFranCo/StFranAssessMap/MapServer/6",
-    "conform": {
-        "format": "geojson",
-        "id": "REALGISDATA__PID",
-        "number": {
-            "function": "prefixed_number",
-            "field": "REALGISDATA__SITUS_LOCATION"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "REALGISDATA__SITUS_LOCATION"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/885536/us/mo/saint_francois.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

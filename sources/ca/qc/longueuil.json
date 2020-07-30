@@ -5,17 +5,36 @@
         "city": "Longueuil",
         "geometry": {
             "type": "Point",
-            "coordinates": [-73.5780032, 45.5112881]
+            "coordinates": [
+                -73.5780032,
+                45.5112881
+            ]
         }
     },
-    "data": "https://www.longueuil.quebec/sites/longueuil/files/donnees_ouvertes/adresses.json",
-    "website": "https://www.longueuil.quebec/fr/donnees-ouvertes/adresses",
-    "license": "https://www.longueuil.quebec/fr/licence-utilisation",
-    "protocol": "http",
-    "conform": {
-        "format": "geojson",
-        "number": "NO_CIVIQUE",
-        "street": "GEOCODE_RUE",
-        "postcode": "CODE_POSTAL"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886180/ca/qc/longueuil.zip",
+                "website": "https://www.longueuil.quebec/fr/donnees-ouvertes/adresses",
+                "license": "https://www.longueuil.quebec/fr/licence-utilisation",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

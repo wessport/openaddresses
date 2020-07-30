@@ -16,16 +16,28 @@
         "state": "wa",
         "city": "Bellevue"
     },
-    "protocol": "ESRI",
-    "data": "http://gisweb.bellevuewa.gov/cobgis/rest/services/Catalog/Catalog_General/MapServer/87",
-    "conform": {
-        "format": "geojson",
-        "number": "HouseNumber",
-        "street": {
-            "function": "remove_prefix",
-            "field": "HouseNumberStreetNameFull",
-            "field_to_remove": "HouseNumber"
-        },
-        "unit": "UnitDetailFull"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/654308/us/wa/city_of_bellevue.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

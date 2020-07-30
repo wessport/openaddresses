@@ -9,21 +9,28 @@
         "state": "wi",
         "county": "Brown"
     },
-    "data": "https://gis.co.brown.wi.us/arcgis/rest/services/Addresses/MapServer/2",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "AddNum",
-            "AddNumSuffix"
-        ],
-        "street": [
-            "StreetPrefix",
-            "StreetName",
-            "StreetSuffix_BC"
-        ],
-        "unit": "UnitID",
-        "city": "Municipality",
-        "postcode": "ZIPCode"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885551/us/wi/brown.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

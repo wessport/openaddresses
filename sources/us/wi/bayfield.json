@@ -9,19 +9,28 @@
         "state": "wi",
         "county": "Bayfield"
     },
-    "data": "http://maps.bayfieldcounty.org/arcgis/rest/services/BFLRMapBasic/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "Number",
-        "street": [
-            "PD",
-            "ROADNAME",
-            "TYPE",
-            "SD"
-        ],
-        "unit": "Unit",
-        "city": "PROPCITY",
-        "postcode": "PROPZIP"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886290/us/wi/bayfield.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

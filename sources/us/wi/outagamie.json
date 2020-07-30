@@ -9,19 +9,28 @@
         "state": "wi",
         "county": "Outagamie"
     },
-    "data": "https://gis.outagamie.org/arcgis/rest/services/Address/ADDRESSES/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ADDRESS_NUM",
-        "unit": "UNIT",
-        "street": [
-            "PREFIX",
-            "STREET_NAME",
-            "SUFFIX"
-        ],
-        "city": "MA_CITY",
-        "postcode": "MA_ZIP",
-        "accuracy": 1
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885572/us/wi/outagamie.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

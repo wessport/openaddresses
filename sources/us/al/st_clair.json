@@ -9,12 +9,28 @@
         "state": "al",
         "county": "St. Clair"
     },
-    "data": "https://map.stclairco.com/arcgis/rest/services/Appraisal/MapServer/150",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "street": "STREET_NAME",
-        "number": "STREET_NUM",
-        "postcode": "ZIPCODE_1"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885502/us/al/st_clair.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

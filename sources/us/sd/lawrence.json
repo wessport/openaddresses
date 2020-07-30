@@ -8,17 +8,28 @@
         "country": "us",
         "state": "sd"
     },
-    "data": "http://web1.mobile311.com/arcgis/rest/services/SouthDakota/LawrenceCounty/MapServer/19",
-    "protocol": "ESRI",
-    "conform": {
-        "number": {
-            "function": "prefixed_number",
-            "field": "SITUS"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "SITUS"
-        },
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885494/us/sd/lawrence.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

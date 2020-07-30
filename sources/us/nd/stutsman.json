@@ -9,26 +9,28 @@
         "state": "nd",
         "county": "Stutsman"
     },
-    "data": "https://data.openaddresses.io/cache/uploads/migurski/43717f/StutsmanAddressPoints.zip",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "number": {
-            "function": "regexp",
-            "field": "DLVRY_ADD",
-            "pattern": "^([0-9]+)"
-        },
-        "street": {
-            "function": "regexp",
-            "field": "DLVRY_ADD",
-            "pattern": "^(?:[0-9]+)(.*?)( (UNIT|LOT).*|$)",
-            "replace": "$1"
-        },
-        "unit": {
-            "function": "regexp",
-            "field": "DLVRY_ADD",
-            "pattern": " ((?:UNIT|LOT) .+)$"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886849/us/nd/stutsman.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

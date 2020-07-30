@@ -9,15 +9,28 @@
         "state": "wv",
         "county": "Preston"
     },
-    "data": "https://ags.agdmaps.com/arcgis/rest/services/PrestonWV/MapServer/254",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "unit": "unit",
-        "number": "number_",
-        "street": "street",
-        "city": "community",
-        "postcode": "zip",
-        "accuracy": 1
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886373/us/wv/preston.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

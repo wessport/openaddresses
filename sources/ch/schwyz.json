@@ -6,29 +6,34 @@
             "alpha2": "CH-SZ"
         }
     },
-    "website": "http://geoshop.sz.ch/client5/index_sz.html?user=sz_public&password=public",
-    "data": "https://data.openaddresses.io/cache/uploads/sergiyprotsiv/559828/ch-sz.csv.zip",
-    "protocol": "http",
-    "skip": true,
-    "compression": "zip",
-    "license": {
-        "attribution": false,
-        "share-alike": false
-    },
-    "conform": {
-        "format": "csv",
-        "file": "ch-sz.csv",
-        "encoding": "utf-8",
-        "id": "GWR_EGID",
-        "number": "Hausnummer",
-        "street": "Lokalisati",
-        "city": {
-            "function": "regexp",
-            "field": "Ortschafts",
-            "pattern": "^(.+?)(?:\\s+SZ)?\\s*$"
-        },
-        "postcode": "PLZ",
-        "lat": "Y",
-        "lon": "X"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "http://geoshop.sz.ch/client5/index_sz.html?user=sz_public&password=public",
+                "data": "http://data.openaddresses.io/runs/175000/ch/schwyz.zip",
+                "protocol": "http",
+                "skip": true,
+                "compression": "zip",
+                "license": {
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

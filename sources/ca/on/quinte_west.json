@@ -5,16 +5,35 @@
         "county": "Quinte West",
         "geometry": {
             "type": "Point",
-            "coordinates": [-77.723, 44.164] 
+            "coordinates": [
+                -77.723,
+                44.164
+            ]
         }
     },
-    "data": "https://services3.arcgis.com/cpi3xYswHz1VWunb/ArcGIS/rest/services/address_points_2020_public/FeatureServer/0",
-    "website": "http://www.quintewestmaps.com/",
-    "protocol": "ESRI",
-    "conform": {
-        "unit": "unit_num",
-        "number": "address_nu",
-        "street": "street_nam",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886469/ca/on/quinte_west.zip",
+                "website": "http://www.quintewestmaps.com/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

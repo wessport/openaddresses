@@ -16,13 +16,28 @@
         "state": "wi",
         "city": "West Bend"
     },
-    "protocol": "ESRI",
-    "data": "https://services5.arcgis.com/WwMTQE8lAPutDxr2/arcgis/rest/services/AddressPt/FeatureServer/0",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSENUMBER",
-        "street": "STREETNAMEID",
-        "postcode": "ZIPCODE",
-        "city": "MAILCITY"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/837555/us/wi/city_of_west_bend.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

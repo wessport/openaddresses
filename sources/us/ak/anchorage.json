@@ -9,27 +9,30 @@
         "state": "ak",
         "county": "Anchorage"
     },
-    "attribution": "Municipality of Anchorage",
-    "data": "https://services2.arcgis.com/Ce3DhLRthdwbHlfF/ArcGIS/rest/services/Addresses_Hosted/FeatureServer/0",
-    "website": "https://moa-muniorg.hub.arcgis.com/pages/data",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": [
-            "HOUSE_NUMBER",
-            "HALF_ADDRESS"
-        ],
-        "street": [
-            "STREET_NAME",
-            "STREET_TYPE",
-            "SUFFIX_DIRECTIONAL"
-        ],
-        "unit": [
-            "UNIT_TYPE",
-            "UNIT_ID"
-        ],
-        "city": "CITY",
-        "region": "STATE",
-        "postcode": "ZIPCODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Municipality of Anchorage",
+                "data": "http://data.openaddresses.io/runs/885783/us/ak/anchorage.zip",
+                "website": "https://moa-muniorg.hub.arcgis.com/pages/data",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

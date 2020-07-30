@@ -1,15 +1,34 @@
 {
     "coverage": {
         "country": "cw",
-        "ISO 3166": {"alpha2": "CW", "country": "Curaçao"}
+        "ISO 3166": {
+            "alpha2": "CW",
+            "country": "Curaçao"
+        }
     },
-    "data": "http://basiskaart.gobiernu.cw/arcgis/rest/services/GeoWeb/BasiskaartCuracaov3/MapServer/57",
-    "website": "http://basiskaart.gobiernu.cw/",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "region": "Curaçao",
-        "number": "Huisnummer",
-        "street": "Straatnaam"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/875606/cw/countrywide.zip",
+                "website": "http://basiskaart.gobiernu.cw/",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

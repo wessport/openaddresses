@@ -4,17 +4,28 @@
         "state": "bc",
         "county": "Central Okanagan"
     },
-    "data": "https://www.rdcogis.com/arcgis/rest/services/Basemaps/RDCO_Basemap/MapServer/4",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "id": "OBJECTID",
-        "number": "ADDR_NBR",
-        "street": [
-            "NAME",
-            "TYPE",
-            "DIRECTION"
-        ],
-        "unit": "UNIT_NBR"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885820/ca/bc/central-okanagan-regional-district.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

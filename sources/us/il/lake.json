@@ -9,23 +9,28 @@
         "state": "il",
         "county": "Lake"
     },
-    "data": "http://maps.lakecountyil.gov/arcgis/rest/services/GISMapping/WABAddress/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "FRG_HOUSE",
-        "street": [
-            "FRG_PREDIR",
-            "FRG_STREET",
-            "FRG_SUFFIX",
-            "FRG_POST"
-        ],
-        "unit": [
-            "FRG_UNIT",
-            "FRG_APT"
-        ],
-        "city": "CITY_LONG",
-        "region": "ST_FINAL",
-        "postcode": "ZIP_FIVE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885493/us/il/lake.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

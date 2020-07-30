@@ -9,12 +9,28 @@
         "state": "ms",
         "county": "Yazoo"
     },
-    "protocol": "ESRI",
-    "data": "http://gis.cmpdd.org/arcgis/rest/services/County/Yazoo_County/MapServer/3",
-    "conform": {
-        "format": "geojson",
-        "accuracy": 2,
-        "number": "STR_NUM",
-        "street": "STR_NAME"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/885943/us/ms/yazoo.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

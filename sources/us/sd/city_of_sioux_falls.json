@@ -16,20 +16,28 @@
         "state": "sd",
         "city": "Sioux Falls"
     },
-    "protocol": "ESRI",
-    "data": "https://gis.siouxfalls.org/arcgis/rest/services/Data/Property/MapServer/0",
-    "conform": {
-        "format": "geojson",
-        "number": "HOUSENUM",
-        "street": [
-            "PR1",
-            "STNM1",
-            "TYP1",
-            "PD1"
-        ],
-        "unit": "ADDRESSNUM_SUF",
-        "city": "MUNICIPALITY",
-        "district": "COUNTY",
-        "postcode": "ZIPCODE"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "protocol": "http",
+                "data": "http://data.openaddresses.io/runs/885601/us/sd/city_of_sioux_falls.zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

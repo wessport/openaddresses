@@ -16,24 +16,34 @@
         "state": "tx",
         "city": "Austin"
     },
-    "website": "https://data.austintexas.gov/Locations-and-Maps/Addresses/mkjr-t5r2",
-    "data": "https://data.austintexas.gov/api/geospatial/mkjr-t5r2?method=export&format=Shapefile",
-    "license": {
-        "text": "Public Domain",
-        "attribution": false,
-        "share-alike": false
-    },
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "number": {
-            "function": "prefixed_number",
-            "field": "full_stree"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "full_stree"
-        },
-        "format": "shapefile"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "website": "https://data.austintexas.gov/Locations-and-Maps/Addresses/mkjr-t5r2",
+                "data": "http://data.openaddresses.io/runs/885585/us/tx/city_of_austin.zip",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

@@ -9,23 +9,30 @@
         "state": "co",
         "county": "Gunnison"
     },
-    "attribution": "Gunnison County",
-    "data": "http://www.gunnisoncounty.org/DocumentCenter/View/2475",
-    "protocol": "http",
-    "compression": "zip",
-    "website": "http://www.gunnisoncounty.org/324/Downloadable-Datasets",
-    "conform": {
-        "number": [
-          "san",
-          "sns"
-        ],
-        "street": [
-          "prd",
-          "rd",
-          "sts",
-          "pod"
-        ],
-        "unit": "UNIT",
-        "format": "shapefile"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Gunnison County",
+                "data": "http://data.openaddresses.io/runs/886476/us/co/gunnison.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "website": "http://www.gunnisoncounty.org/324/Downloadable-Datasets",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

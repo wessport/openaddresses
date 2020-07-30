@@ -9,24 +9,29 @@
         "state": "al",
         "county": "Shelby"
     },
-    "data": "http://maps.shelbyal.com/arcgis/rest/services/AddressNumbersCapture/MapServer/0",
-    "protocol": "ESRI",
-    "attribution": "Shelby County",
-    "conform": {
-        "format": "geojson",
-        "number": "Full_Add_Num",
-        "street": [
-            "Street_Pre_Mod",
-            "Street_Pre_Dir",
-            "Street_Pre_Type",
-            "Street_Name",
-            "Street_Post_Type",
-            "Street_Post_Dir",
-            "Street_Post_Mod"
-        ],
-        "city": "Community",
-        "district": "County",
-        "postcode": "Zip5",
-        "region": "State"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885641/us/al/shelby.zip",
+                "protocol": "http",
+                "attribution": "Shelby County",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

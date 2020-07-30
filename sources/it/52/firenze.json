@@ -4,28 +4,42 @@
             "type": "Point",
             "coordinates": [
                 11.171,
-                43.780
+                43.78
             ]
         },
         "country": "it",
         "state": "Tuscany",
         "city": "Firenze"
     },
-    "data": "http://datigis.comune.fi.it/shp/civici.zip",
-    "website": "http://www.datiopen.it/it/opendata/Comune_di_Firenze_Civici",
-    "license": {
-        "text": "CC by 3.0",
-        "attribution": true,
-        "share-alike": false
-    },
-    "attribution": "Città di Firenze",
-    "protocol": "http",
-    "compression": "zip",
-    "conform": {
-        "format": "shapefile",
-        "accuracy": 1,
-        "srs": "EPSG:3003",
-        "number": "numerocivi",
-        "street": "strada"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886045/it/52/firenze.zip",
+                "website": "http://www.datiopen.it/it/opendata/Comune_di_Firenze_Civici",
+                "license": {
+                    "text": "CC by 3.0",
+                    "attribution": true,
+                    "share-alike": false
+                },
+                "attribution": "Città di Firenze",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                }
+            }
+        ]
     }
 }

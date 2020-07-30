@@ -16,22 +16,29 @@
         "state": "tx",
         "town": "Colleyville"
     },
-    "data": "http://gis4.dfwmaps.com/arcgis/rest/services/ICColleyville/Colleyville_BaseLayers_VE/MapServer/1",
-    "protocol": "ESRI",
-    "conform": {
-        "number": {
-            "function": "regexp",
-            "field": "Situs_Addr",
-            "pattern": "^([0-9]+)( .*)",
-            "replace": "$1"
-        },
-        "street": {
-            "function": "regexp",
-            "field": "Situs_Addr",
-            "pattern": "^(?:[0-9]+ )(.*)",
-            "replace": "$1"
-        },
-        "format": "geojson"
-    },
-    "note": "Situs_Addr can contain unit #, regexp should be revisited"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/498022/us/tx/colleyville.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "note": "Situs_Addr can contain unit #, regexp should be revisited",
+                "compression": "zip"
+            }
+        ]
+    }
 }

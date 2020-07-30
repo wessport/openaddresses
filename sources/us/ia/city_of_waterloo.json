@@ -17,36 +17,28 @@
         "county": "Black Hawk",
         "city": "Waterloo"
     },
-    "data": "https://maps.cityofwaterlooiowa.com/arcgisserver/rest/services/LandRecords/TaxParcels/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": {
-            "function": "prefixed_number",
-            "field": "propertyad"
-        },
-        "street": {
-            "function": "postfixed_street",
-            "field": "propertyad"
-        },
-        "unit": {
-            "function": "postfixed_unit",
-            "field": "propertyad"
-        },
-        "city": {
-            "function": "regexp",
-            "field": "property_2",
-            "pattern": "^(.+?),\\s+IA"
-        },
-        "region": {
-            "function": "regexp",
-            "field": "property_2",
-            "pattern": "(IA)"
-        },
-        "postcode": {
-            "function": "regexp",
-            "field": "property_2",
-            "pattern": ".*,\\s+IA\\s+([0-9]+)$"
-        }
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885764/us/ia/city_of_waterloo.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

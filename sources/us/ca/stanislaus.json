@@ -9,20 +9,29 @@
         "state": "ca",
         "county": "Stanislaus"
     },
-    "attribution": "Stanislaus County",
-    "data": "https://gis2.stancounty.com/arcgis/rest/services/Hosted/Addresses/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "house_num",
-        "unit": "unit",
-        "street": [
-            "pre_dir",
-            "street",
-            "st_sfx",
-            "post_dir"
-        ],
-        "city": "city",
-        "postcode": "zip"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "attribution": "Stanislaus County",
+                "data": "http://data.openaddresses.io/runs/887955/us/ca/stanislaus.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

@@ -9,17 +9,28 @@
         "state": "nc",
         "county": "Caswell"
     },
-    "data": "https://www.webgis.net/arcgis/rest/services/NC/Caswell/MapServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "street": [
-            "ST_PREFIX",
-            "ST_PREFIX_",
-            "ST_NAME",
-            "ST_TYPE",
-            "ST_SUFFIX"
-        ],
-        "number": "POSTADDRES",
-        "format": "geojson"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/886573/us/nc/caswell.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
+        ]
     }
 }

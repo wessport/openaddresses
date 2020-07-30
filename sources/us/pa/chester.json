@@ -9,19 +9,28 @@
         "state": "pa",
         "county": "Chester"
     },
-    "data": "https://services.arcgis.com/G4S1dGvn7PIgYd6Y/arcgis/rest/services/Address_Data_Points/FeatureServer/0",
-    "protocol": "ESRI",
-    "conform": {
-        "format": "geojson",
-        "number": "ST_NUM",
-        "street": [
-            "DIR",
-            "ST_NAME",
-            "ST_TYPE"
-        ],
-        "unit": [
-          "UNIT",
-          "UNIT_N"
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "country",
+                "data": "http://data.openaddresses.io/runs/885590/us/pa/chester.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "csv",
+                    "lon": "LON",
+                    "lat": "LAT",
+                    "number": "NUMBER",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "district": "DISTRICT",
+                    "region": "REGION",
+                    "postcode": "POSTCODE",
+                    "id": "ID"
+                },
+                "compression": "zip"
+            }
         ]
     }
 }
